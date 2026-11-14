@@ -4,7 +4,7 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import aoi, compare, alerts, tiles
+from routers import aoi, compare, alerts, tiles, summary
 
 app = FastAPI(
     title="TerraAlerta NISAR",
@@ -24,6 +24,7 @@ app.include_router(aoi.router, prefix="/api/aois", tags=["aois"])
 app.include_router(compare.router, prefix="/api/aois", tags=["compare"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["alerts"])
 app.include_router(tiles.router, prefix="/api/aois", tags=["tiles"])
+app.include_router(summary.router, prefix="/api/v1", tags=["summary"])
 
 
 @app.get("/health")

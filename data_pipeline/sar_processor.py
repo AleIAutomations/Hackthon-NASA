@@ -76,7 +76,9 @@ def _val(arr, r, c):
 
 
 def _origin(grids, r, c) -> str:
-    """measured se veio de produto real; estimated se foi preenchido."""
+    """measured so se veio de produto real; dados sinteticos/demo sao sempre estimated."""
+    if grids.get("synthetic"):
+        return "estimated"
     return "measured" if grids.get("los_mm") is not None else "estimated"
 
 
@@ -212,6 +214,7 @@ def generate_synthetic_study_area(aoi_id: str, rain_72h: float = 85.0) -> list[d
         "coh_l": coh_l,
         "coh_c": coh_c,
         "los_mm": los_mm,
+        "synthetic": True,  # grade de demonstracao: nunca rotular como measured
     }
 
     cells = build_cells(aoi_id, grids, {"transform": transform}, rain_72h)

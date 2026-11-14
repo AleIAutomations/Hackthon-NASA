@@ -110,3 +110,15 @@ Em conformidade com as regras oficiais do NASA Space Apps Challenge 2026:
 - Código, documentação técnica e tradução gerados com assistência de modelos de IA da Google DeepMind / Gemini sob revisão e engenharia humana.
 - O modelo de risco utiliza física clássica (fator de segurança de talude infinito) somada a aprendizado estatístico explicável (Random Forest), não sendo uma caixa-preta.
 - Todos os materiais gerados por IA são declarados e identificados.
+
+> Arquitetura Climate Intelligence (ENOS): [docs/ARCHITECTURE_CLIMATE_INTELLIGENCE.md](docs/ARCHITECTURE_CLIMATE_INTELLIGENCE.md)
+
+## Inspirações e referências / Inspirations and references
+
+Ideias de apresentação e abordagem tiradas de projetos do mesmo desafio ("Dancing with the SARs"). Nenhum código foi copiado. Detalhes em [docs/COMPETITORS_AND_ELNINO.md](docs/COMPETITORS_AND_ELNINO.md).
+
+- Nova Matrics VI (Fardin-Prodhan): slider antes/depois, divisão de papéis — https://github.com/Fardin-Prodhan/Nova-Matrics---VI
+- Dancing with the SARs: The Hidden Steps (dmanpark): um momento central na demo, validação com dado óptico, marcação de pixels duvidosos — https://github.com/dmanpark/dancing-with-the-sars
+- SARabande / OpenSource-SAR (Sidvortex): rótulo de dado sintético, população exposta, botão radar/óptico, exportação — https://github.com/Sidvortex/OpenSource-SAR
+- MOTUS (Tech-Doomsday): veredito em uma frase, "não detectado" como resultado válido, registro de fontes — https://github.com/Tech-Doomsday/dancing-with-sars-eq
+- Team Zenith (nabil24024004): primeira tela, tabela-resumo de camadas — https://github.com/nabil24024004/Team-Zenith-Dancing-With-SARs

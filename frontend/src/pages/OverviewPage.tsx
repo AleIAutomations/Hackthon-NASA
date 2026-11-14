@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AoiSummary, RiskCell } from "../types";
+import { Headline } from "../components/Headline";
 import { MetricCards } from "../components/dashboard/MetricCards";
 import { Globe3DView } from "../components/Globe3DView";
 import { Map3DView } from "../components/Map3DView";
@@ -30,6 +31,11 @@ export function OverviewPage({
 
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
+      {/* 0. Veredito e dois numeros (dado estimado/real marcado) */}
+      <div className="rounded-2xl border border-slate-800 overflow-hidden">
+        <Headline aoiId={currentAoi.id} />
+      </div>
+
       {/* 1. Indicadores Principais */}
       <MetricCards cells={cells} rain72h={rain72h} loading={loading} />
 

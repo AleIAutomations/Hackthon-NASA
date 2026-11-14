@@ -76,3 +76,7 @@
    - Comparador deslizante (swipe) lado a lado entre banda C e banda L.
    - Gráfico temporal de dois eixos (Chuva em mm vs Deslocamento em mm).
    - Painel operacional da Defesa Civil com simulação de chuvas extremas e cópia de boletim com um clique.
+
+## Climate Intelligence (ENOS / El Niño)
+
+Veja [ARCHITECTURE_CLIMATE_INTELLIGENCE.md](ARCHITECTURE_CLIMATE_INTELLIGENCE.md): ENOS é contexto climático, fora do `risk_score`; Brumadinho exige trilha própria de barragem.
