@@ -1,12 +1,23 @@
 import { useEffect, useState } from "react";
+import { Globe3DView } from "./components/Globe3DView";
 import { Map3DView } from "./components/Map3DView";
 import { BandComparison } from "./components/BandComparison";
 import { InSARTimeSeries } from "./components/InSARTimeSeries";
 import { CivilDefensePanel } from "./components/CivilDefensePanel";
 import { fetchJson } from "./api";
-import { Layers, GitCompare, LineChart, Shield, Satellite, Info } from "lucide-react";
+import {
+  Layers,
+  GitCompare,
+  LineChart,
+  Shield,
+  Satellite,
+  Info,
+  Globe,
+  Map as MapIcon,
+} from "lucide-react";
 
 type Aba = "risco" | "comparar" | "serie" | "defesa";
+type ViewMode = "globe" | "terrain";
 
 interface Aoi {
   id: string;
@@ -29,12 +40,13 @@ export default function App() {
   ]);
   const [aoiId, setAoiId] = useState("serra-do-mar");
   const [aba, setAba] = useState<Aba>("risco");
+  const [viewMode, setViewMode] = useState<ViewMode>("globe");
   const [offline, setOffline] = useState(false);
 
   useEffect(() => {
     fetchJson<{ aois: Aoi[] }>("/api/aois")
       .then((d) => setAois(d.aois))
-      .catch(() => {}); // mantem a lista embutida de fallback
+      .catch(() => {});
 
     const onOffline = () => setOffline(true);
     document.addEventListener("terraalerta:offline", onOffline);
@@ -45,16 +57,24 @@ export default function App() {
 
   return (
     <div className="h-screen w-screen flex flex-col md:flex-row bg-slate-950 text-slate-100 overflow-hidden font-sans">
-      {/* Area principal do mapa / comparador */}
+      {/* Area principal de visualizacao */}
       <div className="flex-1 relative h-full">
         {aba === "comparar" ? (
           <BandComparison aoiId={aoi.id} center={aoi.center} />
+        ) : viewMode === "globe" ? (
+          <Globe3DView
+            aoiId={aoi.id}
+            center={aoi.center}
+            onSelectAoi={(newId) => setAoiId(newId)}
+            onSwitchToDetailed={() => setViewMode("terrain")}
+          />
         ) : (
           <Map3DView aoiId={aoi.id} center={aoi.center} />
         )}
 
-        {/* Seletor de area no topo esquerdo */}
-        <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
+        {/* Barra superior de seletores */}
+        <div className="absolute top-4 left-4 z-20 flex flex-wrap items-center gap-2">
+          {/* Seletor de area */}
           <div className="bg-slate-900/95 border border-slate-700/80 rounded-lg shadow-xl px-3 py-2 flex items-center gap-2 backdrop-blur">
             <Satellite size={16} className="text-blue-400" />
             <select
@@ -69,6 +89,36 @@ export default function App() {
               ))}
             </select>
           </div>
+
+          {/* Alternador de Modo: Globo 3D vs Terreno Local */}
+          {aba !== "comparar" && (
+            <div className="bg-slate-900/95 border border-slate-700/80 rounded-lg shadow-xl p-1 flex items-center gap-1 backdrop-blur text-xs">
+              <button
+                onClick={() => setViewMode("globe")}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium transition ${
+                  viewMode === "globe"
+                    ? "bg-blue-600 text-white shadow"
+                    : "text-slate-300 hover:bg-slate-800"
+                }`}
+                title="Visualização da Terra como Globo Esférico 3D no espaço"
+              >
+                <Globe size={14} />
+                <span>Globo 3D</span>
+              </button>
+              <button
+                onClick={() => setViewMode("terrain")}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md font-medium transition ${
+                  viewMode === "terrain"
+                    ? "bg-blue-600 text-white shadow"
+                    : "text-slate-300 hover:bg-slate-800"
+                }`}
+                title="Visualização plana/inclinada de alta resolução das encostas locais"
+              >
+                <MapIcon size={14} />
+                <span>Terreno 3D</span>
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Selo modo offline */}
