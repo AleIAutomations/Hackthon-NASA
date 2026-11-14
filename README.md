@@ -1,6 +1,7 @@
 # TerraAlerta NISAR
 
-> **Languages / Idiomas**: [English](#english) | [Português](#português)
+> **Languages / Idiomas**: [English](#english) | [Português](#português)  
+> **AI Agents & Collaborators Grounding**: See [AGENT_CONTEXT.md](file:///c:/Users/Alexandre/Downloads/n/Hackthon-NASA/AGENT_CONTEXT.md) for full architecture context and decisions.
 
 ---
 
