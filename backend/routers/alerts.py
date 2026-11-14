@@ -90,6 +90,8 @@ def evaluate(req: AlertRequest):
     if not coords or not isinstance(coords[0], list):
         raise HTTPException(400, "polygon coordinates invalidas")
     ring = coords[0]
+    if ring and isinstance(ring[0], (int, float)):
+        ring = coords
     grid = json.loads(path.read_text(encoding="utf-8"))
 
     dentro = []
