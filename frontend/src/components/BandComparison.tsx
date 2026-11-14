@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import { fetchJson } from "../api";
+import { GLOBE_SATELLITE_STYLE } from "../mapStyles";
 
 interface CompareRow {
   label: string;
@@ -36,9 +37,11 @@ export function BandComparison({
     if (!leftRef.current || !rightRef.current) return;
 
     const opts = {
-      style: "https://demotiles.maplibre.org/style.json",
+      style: GLOBE_SATELLITE_STYLE,
       center: [center.lon, center.lat] as [number, number],
-      zoom: 12,
+      zoom: 12.5,
+      pitch: 45,
+      bearing: -15,
     };
 
     const esq = new maplibregl.Map({ container: leftRef.current, ...opts });
@@ -70,7 +73,12 @@ export function BandComparison({
           tiles: [`/api/aois/${aoiId}/tiles/c/{z}/{x}/{y}.png`],
           tileSize: 256,
         });
-        esq.addLayer({ id: "c", type: "raster", source: "c" });
+        esq.addLayer({
+          id: "c",
+          type: "raster",
+          source: "c",
+          paint: { "raster-opacity": 0.65 },
+        });
       }
     });
 
@@ -81,14 +89,18 @@ export function BandComparison({
           tiles: [`/api/aois/${aoiId}/tiles/l/{z}/{x}/{y}.png`],
           tileSize: 256,
         });
-        dir.addLayer({ id: "l", type: "raster", source: "l" });
+        dir.addLayer({
+          id: "l",
+          type: "raster",
+          source: "l",
+          paint: { "raster-opacity": 0.65 },
+        });
       }
     });
 
     fetchJson<{ regions: CompareRow[] }>(`/api/aois/${aoiId}/compare`)
       .then((d) => setRows(d.regions))
       .catch(() => {
-        // Fallback default statistics
         setRows([
           {
             label: "Mata Atlântica Densa",
@@ -121,7 +133,7 @@ export function BandComparison({
   }, [aoiId, center]);
 
   return (
-    <div className="flex flex-col h-full bg-slate-900">
+    <div className="flex flex-col h-full bg-slate-950">
       <div className="relative flex-1 min-h-[300px]">
         {/* Lado esquerdo: Banda C */}
         <div
@@ -129,7 +141,7 @@ export function BandComparison({
           style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
         >
           <div ref={leftRef} className="absolute inset-0" />
-          <span className="absolute top-3 left-3 bg-slate-900/80 border border-slate-700 text-slate-200 text-xs px-2.5 py-1.5 rounded shadow z-10">
+          <span className="absolute top-3 left-3 bg-slate-900/90 border border-slate-700 text-slate-200 text-xs px-2.5 py-1.5 rounded shadow z-10 font-mono">
             Sentinel-1 · Banda C (5.6 cm) - Ruído sob a mata
           </span>
         </div>
@@ -140,14 +152,14 @@ export function BandComparison({
           style={{ clipPath: `inset(0 0 0 ${pos}%)` }}
         >
           <div ref={rightRef} className="absolute inset-0" />
-          <span className="absolute top-3 right-3 bg-nasa-blue/90 border border-blue-400 text-white text-xs px-2.5 py-1.5 rounded shadow z-10">
+          <span className="absolute top-3 right-3 bg-nasa-blue/90 border border-blue-400 text-white text-xs px-2.5 py-1.5 rounded shadow z-10 font-mono">
             NISAR · Banda L (~24 cm) - Penetra a copa
           </span>
         </div>
 
         {/* Divisor interativo */}
         <div
-          className="absolute top-0 bottom-0 pointer-events-none z-20 border-r-2 border-white/80 shadow"
+          className="absolute top-0 bottom-0 pointer-events-none z-20 border-r-2 border-white/90 shadow-2xl"
           style={{ left: `${pos}%` }}
         />
 
@@ -163,9 +175,9 @@ export function BandComparison({
       </div>
 
       {/* Gráfico comparativo de coerência */}
-      <div className="h-56 p-3 bg-slate-800/90 border-t border-slate-700 flex flex-col justify-between">
+      <div className="h-56 p-3 bg-slate-900/95 border-t border-slate-800 flex flex-col justify-between">
         <div className="flex justify-between items-center mb-1">
-          <span className="text-xs font-semibold text-slate-300">
+          <span className="text-xs font-semibold text-slate-200">
             Coerência Interferométrica Média por Cobertura de Solo
           </span>
           <span className="text-[11px] text-blue-400 font-medium">
