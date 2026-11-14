@@ -1,0 +1,12 @@
+.env
+.netrc
+_netrc
+__pycache__/
+*.pyc
+node_modules/
+dist/
+data_pipeline/downloads/
+backend/data_cache/*.tif
+backend/data_cache/*.h5
+backend/data_cache/*.zip
+!backend/data_cache/.gitkeep

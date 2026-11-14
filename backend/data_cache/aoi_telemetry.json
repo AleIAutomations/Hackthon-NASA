@@ -1,0 +1,3449 @@
+{
+  "generated_at": "2026-11-14",
+  "aois": {
+    "serra-do-mar": {
+      "name": "Serra do Mar - São Sebastião (SP)",
+      "center": {
+        "lat": -23.76,
+        "lon": -45.41
+      },
+      "wkt": "POLYGON((-45.65 -23.82, -45.35 -23.82, -45.35 -23.70, -45.65 -23.70, -45.65 -23.82))",
+      "risk_type": "landslide",
+      "scenes": {
+        "nisar": [
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-11T21:06:39Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001/NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-08T08:50:41Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001/NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_024_D_156S_20261106T211521_20261106T211609_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-06T21:15:21Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_024_D_156S_20261106T211521_20261106T211609_P05036_F_J_001/NISAR_L0_PR_RRSD_035_024_D_156S_20261106T211521_20261106T211609_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L2_PR_GSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-06T21:15:30Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GSLC_V1/NISAR_L2_PR_GSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001/NISAR_L2_PR_GSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "GSLC"
+          },
+          {
+            "granule": "NISAR_L2_PR_GCOV_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-06T21:15:30Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_V1/NISAR_L2_PR_GCOV_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001/NISAR_L2_PR_GCOV_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "GCOV"
+          },
+          {
+            "granule": "NISAR_L1_PR_RSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-06T21:15:30Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L1_RSLC_V1/NISAR_L1_PR_RSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001/NISAR_L1_PR_RSLC_035_024_D_100_4005_DHDH_A_20261106T211530_20261106T211604_P05036_N_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RSLC"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_034_146_A_156S_20261103T085901_20261103T090021_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-03T08:59:01Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_034_146_A_156S_20261103T085901_20261103T090021_P05036_F_J_001/NISAR_L0_PR_RRSD_034_146_A_156S_20261103T085901_20261103T090021_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L2_PR_GCOV_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-10-30T21:07:10Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L2_GCOV_V1/NISAR_L2_PR_GCOV_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001/NISAR_L2_PR_GCOV_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "GCOV"
+          },
+          {
+            "granule": "NISAR_L1_PR_RSLC_034_096_D_101_4005_DHDH_A_20261030T210744_20261030T210749_P05036_N_P_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-10-30T21:07:44Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L1_RSLC_V1/NISAR_L1_PR_RSLC_034_096_D_101_4005_DHDH_A_20261030T210744_20261030T210749_P05036_N_P_J_001/NISAR_L1_PR_RSLC_034_096_D_101_4005_DHDH_A_20261030T210744_20261030T210749_P05036_N_P_J_001.h5",
+            "polarization": null,
+            "processing_level": "RSLC"
+          },
+          {
+            "granule": "NISAR_L1_PR_RSLC_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-10-30T21:07:10Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L1_RSLC_V1/NISAR_L1_PR_RSLC_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001/NISAR_L1_PR_RSLC_034_096_D_100_4005_DHDH_A_20261030T210710_20261030T210749_P05036_N_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RSLC"
+          }
+        ],
+        "sentinel1": [
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T083024_20261112T083051_010301_01492A_7CD9",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:24Z",
+            "url": "https://datapool.asf.alaska.edu/SLC/SC/S1C_IW_SLC__1SDV_20261112T083024_20261112T083051_010301_01492A_7CD9.zip",
+            "polarization": "VV+VH",
+            "processing_level": "SLC"
+          },
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T083024_20261112T083051_010301_01492A_7CD9",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:24Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_SLC/SC/S1C_IW_SLC__1SDV_20261112T083024_20261112T083051_010301_01492A_7CD9.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_SLC"
+          },
+          {
+            "granule": "S1C_IW_RAW__0SDV_20261112T082956_20261112T083029_010301_01492A_1223",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:56Z",
+            "url": "https://datapool.asf.alaska.edu/RAW/SC/S1C_IW_RAW__0SDV_20261112T082956_20261112T083029_010301_01492A_1223.zip",
+            "polarization": "VV+VH",
+            "processing_level": "RAW"
+          },
+          {
+            "granule": "S1C_IW_RAW__0SDV_20261112T082956_20261112T083029_010301_01492A_1223",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:56Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_RAW/SC/S1C_IW_RAW__0SDV_20261112T082956_20261112T083029_010301_01492A_1223.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_RAW"
+          },
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T082958_20261112T083026_010301_01492A_E890",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:58Z",
+            "url": "https://datapool.asf.alaska.edu/SLC/SC/S1C_IW_SLC__1SDV_20261112T082958_20261112T083026_010301_01492A_E890.zip",
+            "polarization": "VV+VH",
+            "processing_level": "SLC"
+          },
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T082958_20261112T083026_010301_01492A_E890",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:58Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_SLC/SC/S1C_IW_SLC__1SDV_20261112T082958_20261112T083026_010301_01492A_E890.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_SLC"
+          },
+          {
+            "granule": "OPERA_L2_RTC-S1_T053-112913-IW2_20261112T083023Z_20261113T180445Z_S1C_30_v1.0",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:23Z",
+            "url": "https://cumulus.asf.earthdatacloud.nasa.gov/OPERA/OPERA_L2_RTC-S1/OPERA_L2_RTC-S1_T053-112913-IW2_20261112T083023Z_20261113T180445Z_S1C_30_v1.0/OPERA_L2_RTC-S1_T053-112913-IW2_20261112T083023Z_20261113T180445Z_S1C_30_v1.0.h5",
+            "polarization": [
+              "VV",
+              "VH"
+            ],
+            "processing_level": "RTC"
+          },
+          {
+            "granule": "S1C_IW_OCN__2SDV_20261112T083000_20261112T083025_010301_01492A_500C",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:00Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_OCN/SC/S1C_IW_OCN__2SDV_20261112T083000_20261112T083025_010301_01492A_500C.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_OCN"
+          },
+          {
+            "granule": "S1C_IW_GRDH_1SDV_20261112T083000_20261112T083025_010301_01492A_57D6",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:00Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_GRD_HD/SC/S1C_IW_GRDH_1SDV_20261112T083000_20261112T083025_010301_01492A_57D6.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_GRD_HD"
+          },
+          {
+            "granule": "S1C_IW_GRDH_1SDV_20261112T083000_20261112T083025_010301_01492A_57D6",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:30:00Z",
+            "url": "https://datapool.asf.alaska.edu/GRD_HD/SC/S1C_IW_GRDH_1SDV_20261112T083000_20261112T083025_010301_01492A_57D6.zip",
+            "polarization": "VV+VH",
+            "processing_level": "GRD_HD"
+          }
+        ],
+        "alos_palsar": [
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/RTC_LOW_RES/A3/AP_27875_PLR_F6710_RT2.zip",
+            "polarization": "quadrature",
+            "processing_level": "RTC_LOW_RES"
+          },
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27875_PLR_F6710_RT1.zip",
+            "polarization": "quadrature",
+            "processing_level": "RTC_HI_RES"
+          },
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/L1.5/A3/ALPSRP278756710-L1.5.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.5"
+          },
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/L1.1/A3/ALPSRP278756710-L1.1.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.1"
+          },
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/L1.0/A3/ALPSRP278756710-L1.0.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.0"
+          },
+          {
+            "granule": "ALPSRP278756710",
+            "platform": "ALOS",
+            "acquisition": "2011-04-19T01:51:51Z",
+            "url": "https://datapool.asf.alaska.edu/KMZ/A3/AP_27875_PLR_F6710.kmz",
+            "polarization": "quadrature",
+            "processing_level": "KMZ"
+          },
+          {
+            "granule": "ALAV2A277514080",
+            "platform": "ALOS",
+            "acquisition": "2011-04-10T13:14:53Z",
+            "url": "https://datapool.asf.alaska.edu/ORI/A3/ALAV2A277514080-OORIRFU.zip",
+            "polarization": null,
+            "processing_level": null
+          },
+          {
+            "granule": "ALAV2A277514070",
+            "platform": "ALOS",
+            "acquisition": "2011-04-10T13:14:45Z",
+            "url": "https://datapool.asf.alaska.edu/ORI/A3/ALAV2A277514070-OORIRFU.zip",
+            "polarization": null,
+            "processing_level": null
+          },
+          {
+            "granule": "ALPSRP271026700",
+            "platform": "ALOS",
+            "acquisition": "2011-02-25T02:03:47Z",
+            "url": "https://datapool.asf.alaska.edu/L1.0/A3/ALPSRP271026700-L1.0.zip",
+            "polarization": "HH",
+            "processing_level": "L1.0"
+          },
+          {
+            "granule": "ALPSRP271026700",
+            "platform": "ALOS",
+            "acquisition": "2011-02-25T02:03:47Z",
+            "url": "https://datapool.asf.alaska.edu/KMZ/A3/AP_27102_FBS_F6700.kmz",
+            "polarization": "HH",
+            "processing_level": "KMZ"
+          }
+        ]
+      },
+      "downloaded": [],
+      "rain_daily": [
+        {
+          "date": "2025-11-14",
+          "rain_mm": 0.36
+        },
+        {
+          "date": "2025-11-15",
+          "rain_mm": 0.55
+        },
+        {
+          "date": "2025-11-16",
+          "rain_mm": 0.92
+        },
+        {
+          "date": "2025-11-17",
+          "rain_mm": 1.34
+        },
+        {
+          "date": "2025-11-18",
+          "rain_mm": 9.19
+        },
+        {
+          "date": "2025-11-19",
+          "rain_mm": 0.77
+        },
+        {
+          "date": "2025-11-20",
+          "rain_mm": 0.44
+        },
+        {
+          "date": "2025-11-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-11-22",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2025-11-23",
+          "rain_mm": 0.73
+        },
+        {
+          "date": "2025-11-24",
+          "rain_mm": 3.59
+        },
+        {
+          "date": "2025-11-25",
+          "rain_mm": 0.91
+        },
+        {
+          "date": "2025-11-26",
+          "rain_mm": 0.17
+        },
+        {
+          "date": "2025-11-27",
+          "rain_mm": 0.82
+        },
+        {
+          "date": "2025-11-28",
+          "rain_mm": 0.4
+        },
+        {
+          "date": "2025-11-29",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-11-30",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2025-12-01",
+          "rain_mm": 0.22
+        },
+        {
+          "date": "2025-12-02",
+          "rain_mm": 8.45
+        },
+        {
+          "date": "2025-12-03",
+          "rain_mm": 1.7
+        },
+        {
+          "date": "2025-12-04",
+          "rain_mm": 1.85
+        },
+        {
+          "date": "2025-12-05",
+          "rain_mm": 1.11
+        },
+        {
+          "date": "2025-12-06",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2025-12-07",
+          "rain_mm": 0.16
+        },
+        {
+          "date": "2025-12-08",
+          "rain_mm": 0.76
+        },
+        {
+          "date": "2025-12-09",
+          "rain_mm": 9.97
+        },
+        {
+          "date": "2025-12-10",
+          "rain_mm": 0.32
+        },
+        {
+          "date": "2025-12-11",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-12-12",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2025-12-13",
+          "rain_mm": 1.34
+        },
+        {
+          "date": "2025-12-14",
+          "rain_mm": 1.34
+        },
+        {
+          "date": "2025-12-15",
+          "rain_mm": 0.85
+        },
+        {
+          "date": "2025-12-16",
+          "rain_mm": 5.91
+        },
+        {
+          "date": "2025-12-17",
+          "rain_mm": 6.57
+        },
+        {
+          "date": "2025-12-18",
+          "rain_mm": 1.74
+        },
+        {
+          "date": "2025-12-19",
+          "rain_mm": 2.77
+        },
+        {
+          "date": "2025-12-20",
+          "rain_mm": 2.34
+        },
+        {
+          "date": "2025-12-21",
+          "rain_mm": 0.35
+        },
+        {
+          "date": "2025-12-22",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2025-12-23",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2025-12-24",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-12-25",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2025-12-26",
+          "rain_mm": 0.27
+        },
+        {
+          "date": "2025-12-27",
+          "rain_mm": 0.78
+        },
+        {
+          "date": "2025-12-28",
+          "rain_mm": 1.14
+        },
+        {
+          "date": "2025-12-29",
+          "rain_mm": 4.83
+        },
+        {
+          "date": "2025-12-30",
+          "rain_mm": 0.63
+        },
+        {
+          "date": "2025-12-31",
+          "rain_mm": 7.65
+        },
+        {
+          "date": "2026-01-01",
+          "rain_mm": 0.33
+        },
+        {
+          "date": "2026-01-02",
+          "rain_mm": 3.63
+        },
+        {
+          "date": "2026-01-03",
+          "rain_mm": 5.42
+        },
+        {
+          "date": "2026-01-04",
+          "rain_mm": 5.01
+        },
+        {
+          "date": "2026-01-05",
+          "rain_mm": 6.32
+        },
+        {
+          "date": "2026-01-06",
+          "rain_mm": 5.93
+        },
+        {
+          "date": "2026-01-07",
+          "rain_mm": 4.74
+        },
+        {
+          "date": "2026-01-08",
+          "rain_mm": 4.64
+        },
+        {
+          "date": "2026-01-09",
+          "rain_mm": 5.28
+        },
+        {
+          "date": "2026-01-10",
+          "rain_mm": 8.8
+        },
+        {
+          "date": "2026-01-11",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2026-01-12",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-01-13",
+          "rain_mm": 1.32
+        },
+        {
+          "date": "2026-01-14",
+          "rain_mm": 6.31
+        },
+        {
+          "date": "2026-01-15",
+          "rain_mm": 19.08
+        },
+        {
+          "date": "2026-01-16",
+          "rain_mm": 3.59
+        },
+        {
+          "date": "2026-01-17",
+          "rain_mm": 12.77
+        },
+        {
+          "date": "2026-01-18",
+          "rain_mm": 4.18
+        },
+        {
+          "date": "2026-01-19",
+          "rain_mm": 19.61
+        },
+        {
+          "date": "2026-01-20",
+          "rain_mm": 6.27
+        },
+        {
+          "date": "2026-01-21",
+          "rain_mm": 0.77
+        },
+        {
+          "date": "2026-01-22",
+          "rain_mm": 1.64
+        },
+        {
+          "date": "2026-01-23",
+          "rain_mm": 3.17
+        },
+        {
+          "date": "2026-01-24",
+          "rain_mm": 4.1
+        },
+        {
+          "date": "2026-01-25",
+          "rain_mm": 5.37
+        },
+        {
+          "date": "2026-01-26",
+          "rain_mm": 6.94
+        },
+        {
+          "date": "2026-01-27",
+          "rain_mm": 3.37
+        },
+        {
+          "date": "2026-01-28",
+          "rain_mm": 5.53
+        },
+        {
+          "date": "2026-01-29",
+          "rain_mm": 5.86
+        },
+        {
+          "date": "2026-01-30",
+          "rain_mm": 13.9
+        },
+        {
+          "date": "2026-01-31",
+          "rain_mm": 0.68
+        },
+        {
+          "date": "2026-02-01",
+          "rain_mm": 4.07
+        },
+        {
+          "date": "2026-02-02",
+          "rain_mm": 11.49
+        },
+        {
+          "date": "2026-02-03",
+          "rain_mm": 24.87
+        },
+        {
+          "date": "2026-02-04",
+          "rain_mm": 7.56
+        },
+        {
+          "date": "2026-02-05",
+          "rain_mm": 5.01
+        },
+        {
+          "date": "2026-02-06",
+          "rain_mm": 4.78
+        },
+        {
+          "date": "2026-02-07",
+          "rain_mm": 20.03
+        },
+        {
+          "date": "2026-02-08",
+          "rain_mm": 2.03
+        },
+        {
+          "date": "2026-02-09",
+          "rain_mm": 10.62
+        },
+        {
+          "date": "2026-02-10",
+          "rain_mm": 14.57
+        },
+        {
+          "date": "2026-02-11",
+          "rain_mm": 5.14
+        },
+        {
+          "date": "2026-02-12",
+          "rain_mm": 1.63
+        },
+        {
+          "date": "2026-02-13",
+          "rain_mm": 1.79
+        },
+        {
+          "date": "2026-02-14",
+          "rain_mm": 0.7
+        },
+        {
+          "date": "2026-02-15",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-02-16",
+          "rain_mm": 0.16
+        },
+        {
+          "date": "2026-02-17",
+          "rain_mm": 0.6
+        },
+        {
+          "date": "2026-02-18",
+          "rain_mm": 2.1
+        },
+        {
+          "date": "2026-02-19",
+          "rain_mm": 2.42
+        },
+        {
+          "date": "2026-02-20",
+          "rain_mm": 1.57
+        },
+        {
+          "date": "2026-02-21",
+          "rain_mm": 5.53
+        },
+        {
+          "date": "2026-02-22",
+          "rain_mm": 5.01
+        },
+        {
+          "date": "2026-02-23",
+          "rain_mm": 13.96
+        },
+        {
+          "date": "2026-02-24",
+          "rain_mm": 2.3
+        },
+        {
+          "date": "2026-02-25",
+          "rain_mm": 3.1
+        },
+        {
+          "date": "2026-02-26",
+          "rain_mm": 10.59
+        },
+        {
+          "date": "2026-02-27",
+          "rain_mm": 7.68
+        },
+        {
+          "date": "2026-02-28",
+          "rain_mm": 1.22
+        },
+        {
+          "date": "2026-03-01",
+          "rain_mm": 0.52
+        },
+        {
+          "date": "2026-03-02",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-03-03",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-03-04",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-03-05",
+          "rain_mm": 0.24
+        },
+        {
+          "date": "2026-03-06",
+          "rain_mm": 0.78
+        },
+        {
+          "date": "2026-03-07",
+          "rain_mm": 5.1
+        },
+        {
+          "date": "2026-03-08",
+          "rain_mm": 2.79
+        },
+        {
+          "date": "2026-03-09",
+          "rain_mm": 4.76
+        },
+        {
+          "date": "2026-03-10",
+          "rain_mm": 22.57
+        },
+        {
+          "date": "2026-03-11",
+          "rain_mm": 18.94
+        },
+        {
+          "date": "2026-03-12",
+          "rain_mm": 9.93
+        },
+        {
+          "date": "2026-03-13",
+          "rain_mm": 0.52
+        },
+        {
+          "date": "2026-03-14",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-03-15",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-03-16",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-03-17",
+          "rain_mm": 0.17
+        },
+        {
+          "date": "2026-03-18",
+          "rain_mm": 0.72
+        },
+        {
+          "date": "2026-03-19",
+          "rain_mm": 2.47
+        },
+        {
+          "date": "2026-03-20",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-03-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-03-22",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-03-23",
+          "rain_mm": 0.21
+        },
+        {
+          "date": "2026-03-24",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-03-25",
+          "rain_mm": 0.19
+        },
+        {
+          "date": "2026-03-26",
+          "rain_mm": 0.14
+        },
+        {
+          "date": "2026-03-27",
+          "rain_mm": 0.45
+        },
+        {
+          "date": "2026-03-28",
+          "rain_mm": 0.81
+        },
+        {
+          "date": "2026-03-29",
+          "rain_mm": 0.42
+        },
+        {
+          "date": "2026-03-30",
+          "rain_mm": 6.22
+        },
+        {
+          "date": "2026-03-31",
+          "rain_mm": 9.93
+        },
+        {
+          "date": "2026-04-01",
+          "rain_mm": 0.5
+        },
+        {
+          "date": "2026-04-02",
+          "rain_mm": 5.18
+        },
+        {
+          "date": "2026-04-03",
+          "rain_mm": 0.95
+        },
+        {
+          "date": "2026-04-04",
+          "rain_mm": 0.47
+        },
+        {
+          "date": "2026-04-05",
+          "rain_mm": 3.35
+        },
+        {
+          "date": "2026-04-06",
+          "rain_mm": 1.38
+        },
+        {
+          "date": "2026-04-07",
+          "rain_mm": 1.72
+        },
+        {
+          "date": "2026-04-08",
+          "rain_mm": 0.5
+        },
+        {
+          "date": "2026-04-09",
+          "rain_mm": 1.0
+        },
+        {
+          "date": "2026-04-10",
+          "rain_mm": 1.43
+        },
+        {
+          "date": "2026-04-11",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-04-12",
+          "rain_mm": 0.17
+        },
+        {
+          "date": "2026-04-13",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-04-14",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-04-15",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-04-16",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-17",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-18",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-19",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-20",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-22",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-23",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-24",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-25",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-26",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-04-27",
+          "rain_mm": 0.66
+        },
+        {
+          "date": "2026-04-28",
+          "rain_mm": 1.28
+        },
+        {
+          "date": "2026-04-29",
+          "rain_mm": 1.33
+        },
+        {
+          "date": "2026-04-30",
+          "rain_mm": 1.17
+        },
+        {
+          "date": "2026-05-01",
+          "rain_mm": 0.76
+        },
+        {
+          "date": "2026-05-02",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-05-03",
+          "rain_mm": 1.82
+        },
+        {
+          "date": "2026-05-04",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-05-05",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-05-06",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-07",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-09",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-05-10",
+          "rain_mm": 2.24
+        },
+        {
+          "date": "2026-05-11",
+          "rain_mm": 0.31
+        },
+        {
+          "date": "2026-05-12",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-13",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-14",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-05-15",
+          "rain_mm": 9.25
+        },
+        {
+          "date": "2026-05-16",
+          "rain_mm": 0.14
+        },
+        {
+          "date": "2026-05-17",
+          "rain_mm": 1.43
+        },
+        {
+          "date": "2026-05-18",
+          "rain_mm": 11.21
+        },
+        {
+          "date": "2026-05-19",
+          "rain_mm": 13.86
+        },
+        {
+          "date": "2026-05-20",
+          "rain_mm": 4.37
+        },
+        {
+          "date": "2026-05-21",
+          "rain_mm": 2.8
+        },
+        {
+          "date": "2026-05-22",
+          "rain_mm": 2.26
+        },
+        {
+          "date": "2026-05-23",
+          "rain_mm": 2.32
+        },
+        {
+          "date": "2026-05-24",
+          "rain_mm": 1.53
+        },
+        {
+          "date": "2026-05-25",
+          "rain_mm": 0.95
+        },
+        {
+          "date": "2026-05-26",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-05-27",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-05-28",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-05-29",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-05-30",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-05-31",
+          "rain_mm": 2.44
+        },
+        {
+          "date": "2026-06-01",
+          "rain_mm": 0.57
+        },
+        {
+          "date": "2026-06-02",
+          "rain_mm": 2.94
+        },
+        {
+          "date": "2026-06-03",
+          "rain_mm": 3.98
+        },
+        {
+          "date": "2026-06-04",
+          "rain_mm": 2.96
+        },
+        {
+          "date": "2026-06-05",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-06",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-07",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-09",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-10",
+          "rain_mm": 0.44
+        },
+        {
+          "date": "2026-06-11",
+          "rain_mm": 7.52
+        },
+        {
+          "date": "2026-06-12",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-06-13",
+          "rain_mm": 3.02
+        },
+        {
+          "date": "2026-06-14",
+          "rain_mm": 2.02
+        },
+        {
+          "date": "2026-06-15",
+          "rain_mm": 13.21
+        },
+        {
+          "date": "2026-06-16",
+          "rain_mm": 4.82
+        },
+        {
+          "date": "2026-06-17",
+          "rain_mm": 0.34
+        },
+        {
+          "date": "2026-06-18",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-06-19",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-20",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-06-21",
+          "rain_mm": 0.11
+        },
+        {
+          "date": "2026-06-22",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-23",
+          "rain_mm": 2.85
+        },
+        {
+          "date": "2026-06-24",
+          "rain_mm": 16.05
+        },
+        {
+          "date": "2026-06-25",
+          "rain_mm": 8.48
+        },
+        {
+          "date": "2026-06-26",
+          "rain_mm": 2.06
+        },
+        {
+          "date": "2026-06-27",
+          "rain_mm": 1.56
+        },
+        {
+          "date": "2026-06-28",
+          "rain_mm": 0.2
+        },
+        {
+          "date": "2026-06-29",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-06-30",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-01",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-02",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-03",
+          "rain_mm": 0.15
+        },
+        {
+          "date": "2026-07-04",
+          "rain_mm": 0.13
+        },
+        {
+          "date": "2026-07-05",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-06",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-07",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-09",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-10",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-11",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2026-07-12",
+          "rain_mm": 0.63
+        },
+        {
+          "date": "2026-07-13",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-07-14",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-07-15",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-16",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-17",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-18",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-19",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-20",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-22",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-23",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-07-24",
+          "rain_mm": 0.57
+        },
+        {
+          "date": "2026-07-25",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-07-26",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-07-27",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-28",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-29",
+          "rain_mm": 2.57
+        },
+        {
+          "date": "2026-07-30",
+          "rain_mm": 0.73
+        },
+        {
+          "date": "2026-07-31",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-08-01",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-02",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-03",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-08-04",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-05",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-06",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-07",
+          "rain_mm": 0.7
+        },
+        {
+          "date": "2026-08-08",
+          "rain_mm": 0.32
+        },
+        {
+          "date": "2026-08-09",
+          "rain_mm": 0.92
+        },
+        {
+          "date": "2026-08-10",
+          "rain_mm": 7.39
+        },
+        {
+          "date": "2026-08-11",
+          "rain_mm": 1.67
+        },
+        {
+          "date": "2026-08-12",
+          "rain_mm": 0.39
+        },
+        {
+          "date": "2026-08-13",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-08-14",
+          "rain_mm": 1.97
+        },
+        {
+          "date": "2026-08-15",
+          "rain_mm": 6.89
+        },
+        {
+          "date": "2026-08-16",
+          "rain_mm": 1.33
+        },
+        {
+          "date": "2026-08-17",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-08-18",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-19",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-20",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-22",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-08-23",
+          "rain_mm": 0.72
+        },
+        {
+          "date": "2026-08-24",
+          "rain_mm": 3.86
+        },
+        {
+          "date": "2026-08-25",
+          "rain_mm": 5.79
+        },
+        {
+          "date": "2026-08-26",
+          "rain_mm": 2.05
+        },
+        {
+          "date": "2026-08-27",
+          "rain_mm": 1.11
+        },
+        {
+          "date": "2026-08-28",
+          "rain_mm": 0.29
+        },
+        {
+          "date": "2026-08-29",
+          "rain_mm": 0.42
+        },
+        {
+          "date": "2026-08-30",
+          "rain_mm": 2.43
+        },
+        {
+          "date": "2026-08-31",
+          "rain_mm": 4.93
+        },
+        {
+          "date": "2026-09-01",
+          "rain_mm": 22.28
+        },
+        {
+          "date": "2026-09-02",
+          "rain_mm": 1.54
+        },
+        {
+          "date": "2026-09-03",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-09-04",
+          "rain_mm": 1.95
+        },
+        {
+          "date": "2026-09-05",
+          "rain_mm": 17.69
+        },
+        {
+          "date": "2026-09-06",
+          "rain_mm": 10.58
+        },
+        {
+          "date": "2026-09-07",
+          "rain_mm": 1.87
+        },
+        {
+          "date": "2026-09-08",
+          "rain_mm": 6.06
+        },
+        {
+          "date": "2026-09-09",
+          "rain_mm": 19.56
+        },
+        {
+          "date": "2026-09-10",
+          "rain_mm": 5.3
+        },
+        {
+          "date": "2026-09-11",
+          "rain_mm": 0.6
+        },
+        {
+          "date": "2026-09-12",
+          "rain_mm": 55.26
+        },
+        {
+          "date": "2026-09-13",
+          "rain_mm": 37.98
+        },
+        {
+          "date": "2026-09-14",
+          "rain_mm": 34.03
+        },
+        {
+          "date": "2026-09-15",
+          "rain_mm": 2.9
+        },
+        {
+          "date": "2026-09-16",
+          "rain_mm": 1.2
+        },
+        {
+          "date": "2026-09-17",
+          "rain_mm": 2.14
+        },
+        {
+          "date": "2026-09-18",
+          "rain_mm": 3.09
+        },
+        {
+          "date": "2026-09-19",
+          "rain_mm": 0.91
+        },
+        {
+          "date": "2026-09-20",
+          "rain_mm": 1.59
+        },
+        {
+          "date": "2026-09-21",
+          "rain_mm": 0.24
+        },
+        {
+          "date": "2026-09-22",
+          "rain_mm": 8.01
+        },
+        {
+          "date": "2026-09-23",
+          "rain_mm": 16.1
+        },
+        {
+          "date": "2026-09-24",
+          "rain_mm": 1.7
+        },
+        {
+          "date": "2026-09-25",
+          "rain_mm": 0.21
+        },
+        {
+          "date": "2026-09-26",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-09-27",
+          "rain_mm": 1.69
+        },
+        {
+          "date": "2026-09-28",
+          "rain_mm": 2.03
+        },
+        {
+          "date": "2026-09-29",
+          "rain_mm": 0.88
+        },
+        {
+          "date": "2026-09-30",
+          "rain_mm": 0.2
+        },
+        {
+          "date": "2026-10-01",
+          "rain_mm": 16.63
+        },
+        {
+          "date": "2026-10-02",
+          "rain_mm": 5.35
+        },
+        {
+          "date": "2026-10-03",
+          "rain_mm": 0.62
+        },
+        {
+          "date": "2026-10-04",
+          "rain_mm": 7.11
+        },
+        {
+          "date": "2026-10-05",
+          "rain_mm": 7.74
+        },
+        {
+          "date": "2026-10-06",
+          "rain_mm": 10.35
+        },
+        {
+          "date": "2026-10-07",
+          "rain_mm": 7.84
+        },
+        {
+          "date": "2026-10-08",
+          "rain_mm": 0.6
+        },
+        {
+          "date": "2026-10-09",
+          "rain_mm": 1.43
+        },
+        {
+          "date": "2026-10-10",
+          "rain_mm": 3.15
+        },
+        {
+          "date": "2026-10-11",
+          "rain_mm": 12.51
+        },
+        {
+          "date": "2026-10-12",
+          "rain_mm": 7.2
+        },
+        {
+          "date": "2026-10-13",
+          "rain_mm": 0.82
+        },
+        {
+          "date": "2026-10-14",
+          "rain_mm": 4.27
+        },
+        {
+          "date": "2026-10-15",
+          "rain_mm": 5.42
+        },
+        {
+          "date": "2026-10-16",
+          "rain_mm": 32.19
+        },
+        {
+          "date": "2026-10-17",
+          "rain_mm": 22.37
+        },
+        {
+          "date": "2026-10-18",
+          "rain_mm": 2.93
+        },
+        {
+          "date": "2026-10-19",
+          "rain_mm": 0.43
+        },
+        {
+          "date": "2026-10-20",
+          "rain_mm": 0.27
+        },
+        {
+          "date": "2026-10-21",
+          "rain_mm": 1.24
+        },
+        {
+          "date": "2026-10-22",
+          "rain_mm": 1.73
+        },
+        {
+          "date": "2026-10-23",
+          "rain_mm": 0.94
+        },
+        {
+          "date": "2026-10-24",
+          "rain_mm": 13.31
+        },
+        {
+          "date": "2026-10-25",
+          "rain_mm": 36.77
+        },
+        {
+          "date": "2026-10-26",
+          "rain_mm": 3.74
+        },
+        {
+          "date": "2026-10-27",
+          "rain_mm": 1.49
+        },
+        {
+          "date": "2026-10-28",
+          "rain_mm": 0.43
+        },
+        {
+          "date": "2026-10-29",
+          "rain_mm": 11.11
+        },
+        {
+          "date": "2026-10-30",
+          "rain_mm": 1.86
+        },
+        {
+          "date": "2026-10-31",
+          "rain_mm": 0.42
+        },
+        {
+          "date": "2026-11-01",
+          "rain_mm": 0.87
+        },
+        {
+          "date": "2026-11-02",
+          "rain_mm": 3.57
+        },
+        {
+          "date": "2026-11-03",
+          "rain_mm": 1.88
+        },
+        {
+          "date": "2026-11-04",
+          "rain_mm": 2.99
+        },
+        {
+          "date": "2026-11-05",
+          "rain_mm": 16.53
+        },
+        {
+          "date": "2026-11-06",
+          "rain_mm": 4.62
+        },
+        {
+          "date": "2026-11-07",
+          "rain_mm": 14.6
+        },
+        {
+          "date": "2026-11-08",
+          "rain_mm": 9.65
+        },
+        {
+          "date": "2026-11-09",
+          "rain_mm": 1.33
+        },
+        {
+          "date": "2026-11-10",
+          "rain_mm": 1.06
+        },
+        {
+          "date": "2026-11-11",
+          "rain_mm": 0.18
+        }
+      ],
+      "sources": {
+        "sar_metadata": "ASF SearchAPI (api.daac.asf.alaska.edu)",
+        "rain": "NASA POWER PRECTOTCORR (power.larc.nasa.gov)"
+      }
+    },
+    "brumadinho": {
+      "name": "Brumadinho - Quadrilátero Ferrífero (MG)",
+      "center": {
+        "lat": -20.12,
+        "lon": -44.12
+      },
+      "wkt": "POLYGON((-44.35 -20.30, -43.90 -20.30, -43.90 -19.95, -44.35 -19.95, -44.35 -20.30))",
+      "risk_type": "dam_subsidence",
+      "scenes": {
+        "nisar": [
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084337_20261113T084417_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-13T08:43:37Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084337_20261113T084417_P05036_F_J_001/NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084337_20261113T084417_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084335_20261113T084337_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-13T08:43:35Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084335_20261113T084337_P05036_F_J_001/NISAR_L0_PR_RRSD_035_117_A_238S_20261113T084335_20261113T084337_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_117_A_156S_20261113T084329_20261113T084335_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-13T08:43:29Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_117_A_156S_20261113T084329_20261113T084335_P05036_F_J_001/NISAR_L0_PR_RRSD_035_117_A_156S_20261113T084329_20261113T084335_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-11T21:06:39Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001/NISAR_L0_PR_RRSD_035_096_D_156S_20261111T210639_20261111T210749_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210637_20261111T210639_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-11T21:06:37Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210637_20261111T210639_P05036_F_J_001/NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210637_20261111T210639_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210557_20261111T210637_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-11T21:05:57Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210557_20261111T210637_P05036_F_J_001/NISAR_L0_PR_RRSD_035_096_D_238S_20261111T210557_20261111T210637_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085153_20261108T085228_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-08T08:51:53Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085153_20261108T085228_P05036_F_J_001/NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085153_20261108T085228_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085151_20261108T085153_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-08T08:51:51Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085151_20261108T085153_P05036_F_J_001/NISAR_L0_PR_RRSD_035_045_A_212S_20261108T085151_20261108T085153_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-08T08:50:41Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001/NISAR_L0_PR_RRSD_035_045_A_156S_20261108T085041_20261108T085151_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          },
+          {
+            "granule": "NISAR_L0_PR_RRSD_034_117_A_238S_20261101T084337_20261101T084416_P05036_F_J_001",
+            "platform": "NISAR",
+            "acquisition": "2026-11-01T08:43:37Z",
+            "url": "https://nisar.asf.earthdatacloud.nasa.gov/NISAR/NISAR_L0B_RRSD_V1/NISAR_L0_PR_RRSD_034_117_A_238S_20261101T084337_20261101T084416_P05036_F_J_001/NISAR_L0_PR_RRSD_034_117_A_238S_20261101T084337_20261101T084416_P05036_F_J_001.h5",
+            "polarization": null,
+            "processing_level": "RRSD"
+          }
+        ],
+        "sentinel1": [
+          {
+            "granule": "S1C_IW_RAW__0SDV_20261112T082906_20261112T082939_010301_01492A_B934",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:06Z",
+            "url": "https://datapool.asf.alaska.edu/RAW/SC/S1C_IW_RAW__0SDV_20261112T082906_20261112T082939_010301_01492A_B934.zip",
+            "polarization": "VV+VH",
+            "processing_level": "RAW"
+          },
+          {
+            "granule": "S1C_IW_RAW__0SDV_20261112T082906_20261112T082939_010301_01492A_B934",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:06Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_RAW/SC/S1C_IW_RAW__0SDV_20261112T082906_20261112T082939_010301_01492A_B934.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_RAW"
+          },
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T082909_20261112T082936_010301_01492A_6422",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:09Z",
+            "url": "https://datapool.asf.alaska.edu/SLC/SC/S1C_IW_SLC__1SDV_20261112T082909_20261112T082936_010301_01492A_6422.zip",
+            "polarization": "VV+VH",
+            "processing_level": "SLC"
+          },
+          {
+            "granule": "S1C_IW_SLC__1SDV_20261112T082909_20261112T082936_010301_01492A_6422",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:09Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_SLC/SC/S1C_IW_SLC__1SDV_20261112T082909_20261112T082936_010301_01492A_6422.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_SLC"
+          },
+          {
+            "granule": "S1C_IW_GRDH_1SDV_20261112T082910_20261112T082935_010301_01492A_362F",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:10Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_GRD_HD/SC/S1C_IW_GRDH_1SDV_20261112T082910_20261112T082935_010301_01492A_362F.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_GRD_HD"
+          },
+          {
+            "granule": "S1C_IW_GRDH_1SDV_20261112T082910_20261112T082935_010301_01492A_362F",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:10Z",
+            "url": "https://datapool.asf.alaska.edu/GRD_HD/SC/S1C_IW_GRDH_1SDV_20261112T082910_20261112T082935_010301_01492A_362F.zip",
+            "polarization": "VV+VH",
+            "processing_level": "GRD_HD"
+          },
+          {
+            "granule": "OPERA_L2_RTC-S1_T053-112891-IW1_20261112T082922Z_20261113T180458Z_S1C_30_v1.0",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:22Z",
+            "url": "https://cumulus.asf.earthdatacloud.nasa.gov/OPERA/OPERA_L2_RTC-S1/OPERA_L2_RTC-S1_T053-112891-IW1_20261112T082922Z_20261113T180458Z_S1C_30_v1.0/OPERA_L2_RTC-S1_T053-112891-IW1_20261112T082922Z_20261113T180458Z_S1C_30_v1.0.h5",
+            "polarization": [
+              "VV",
+              "VH"
+            ],
+            "processing_level": "RTC"
+          },
+          {
+            "granule": "OPERA_L2_RTC-S1_T053-112890-IW1_20261112T082919Z_20261113T180458Z_S1C_30_v1.0",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:19Z",
+            "url": "https://cumulus.asf.earthdatacloud.nasa.gov/OPERA/OPERA_L2_RTC-S1/OPERA_L2_RTC-S1_T053-112890-IW1_20261112T082919Z_20261113T180458Z_S1C_30_v1.0/OPERA_L2_RTC-S1_T053-112890-IW1_20261112T082919Z_20261113T180458Z_S1C_30_v1.0.h5",
+            "polarization": [
+              "VV",
+              "VH"
+            ],
+            "processing_level": "RTC"
+          },
+          {
+            "granule": "OPERA_L2_RTC-S1_T053-112889-IW1_20261112T082916Z_20261113T180458Z_S1C_30_v1.0",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-12T08:29:16Z",
+            "url": "https://cumulus.asf.earthdatacloud.nasa.gov/OPERA/OPERA_L2_RTC-S1/OPERA_L2_RTC-S1_T053-112889-IW1_20261112T082916Z_20261113T180458Z_S1C_30_v1.0/OPERA_L2_RTC-S1_T053-112889-IW1_20261112T082916Z_20261113T180458Z_S1C_30_v1.0.h5",
+            "polarization": [
+              "VV",
+              "VH"
+            ],
+            "processing_level": "RTC"
+          },
+          {
+            "granule": "S1C_IW_RAW__0SDV_20261107T082110_20261107T082142_010228_0146D5_0B9C",
+            "platform": "SENTINEL-1",
+            "acquisition": "2026-11-07T08:21:10Z",
+            "url": "https://datapool.asf.alaska.edu/METADATA_RAW/SC/S1C_IW_RAW__0SDV_20261107T082110_20261107T082142_010228_0146D5_0B9C.iso.xml",
+            "polarization": "VV+VH",
+            "processing_level": "METADATA_RAW"
+          }
+        ],
+        "alos_palsar": [
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/RTC_LOW_RES/A3/AP_27554_PLR_F6790_RT2.zip",
+            "polarization": "quadrature",
+            "processing_level": "RTC_LOW_RES"
+          },
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/RTC_HI_RES/A3/AP_27554_PLR_F6790_RT1.zip",
+            "polarization": "quadrature",
+            "processing_level": "RTC_HI_RES"
+          },
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/L1.5/A3/ALPSRP275546790-L1.5.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.5"
+          },
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/L1.1/A3/ALPSRP275546790-L1.1.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.1"
+          },
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/L1.0/A3/ALPSRP275546790-L1.0.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.0"
+          },
+          {
+            "granule": "ALPSRP275546790",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:57Z",
+            "url": "https://datapool.asf.alaska.edu/KMZ/A3/AP_27554_PLR_F6790.kmz",
+            "polarization": "quadrature",
+            "processing_level": "KMZ"
+          },
+          {
+            "granule": "ALPSRP275546780",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:49Z",
+            "url": "https://datapool.asf.alaska.edu/L1.5/A3/ALPSRP275546780-L1.5.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.5"
+          },
+          {
+            "granule": "ALPSRP275546780",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:49Z",
+            "url": "https://datapool.asf.alaska.edu/L1.1/A3/ALPSRP275546780-L1.1.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.1"
+          },
+          {
+            "granule": "ALPSRP275546780",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:49Z",
+            "url": "https://datapool.asf.alaska.edu/L1.0/A3/ALPSRP275546780-L1.0.zip",
+            "polarization": "quadrature",
+            "processing_level": "L1.0"
+          },
+          {
+            "granule": "ALPSRP275546780",
+            "platform": "ALOS",
+            "acquisition": "2011-03-28T01:44:49Z",
+            "url": "https://datapool.asf.alaska.edu/KMZ/A3/AP_27554_PLR_F6780.kmz",
+            "polarization": "quadrature",
+            "processing_level": "KMZ"
+          }
+        ]
+      },
+      "downloaded": [],
+      "rain_daily": [
+        {
+          "date": "2025-11-14",
+          "rain_mm": 0.43
+        },
+        {
+          "date": "2025-11-15",
+          "rain_mm": 2.11
+        },
+        {
+          "date": "2025-11-16",
+          "rain_mm": 12.07
+        },
+        {
+          "date": "2025-11-17",
+          "rain_mm": 6.4
+        },
+        {
+          "date": "2025-11-18",
+          "rain_mm": 2.18
+        },
+        {
+          "date": "2025-11-19",
+          "rain_mm": 0.96
+        },
+        {
+          "date": "2025-11-20",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2025-11-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-11-22",
+          "rain_mm": 1.28
+        },
+        {
+          "date": "2025-11-23",
+          "rain_mm": 16.59
+        },
+        {
+          "date": "2025-11-24",
+          "rain_mm": 1.84
+        },
+        {
+          "date": "2025-11-25",
+          "rain_mm": 1.09
+        },
+        {
+          "date": "2025-11-26",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-11-27",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-11-28",
+          "rain_mm": 2.82
+        },
+        {
+          "date": "2025-11-29",
+          "rain_mm": 0.4
+        },
+        {
+          "date": "2025-11-30",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-12-01",
+          "rain_mm": 0.57
+        },
+        {
+          "date": "2025-12-02",
+          "rain_mm": 3.6
+        },
+        {
+          "date": "2025-12-03",
+          "rain_mm": 10.14
+        },
+        {
+          "date": "2025-12-04",
+          "rain_mm": 3.92
+        },
+        {
+          "date": "2025-12-05",
+          "rain_mm": 2.15
+        },
+        {
+          "date": "2025-12-06",
+          "rain_mm": 0.28
+        },
+        {
+          "date": "2025-12-07",
+          "rain_mm": 0.58
+        },
+        {
+          "date": "2025-12-08",
+          "rain_mm": 5.51
+        },
+        {
+          "date": "2025-12-09",
+          "rain_mm": 4.73
+        },
+        {
+          "date": "2025-12-10",
+          "rain_mm": 5.78
+        },
+        {
+          "date": "2025-12-11",
+          "rain_mm": 0.31
+        },
+        {
+          "date": "2025-12-12",
+          "rain_mm": 3.09
+        },
+        {
+          "date": "2025-12-13",
+          "rain_mm": 7.42
+        },
+        {
+          "date": "2025-12-14",
+          "rain_mm": 1.32
+        },
+        {
+          "date": "2025-12-15",
+          "rain_mm": 2.92
+        },
+        {
+          "date": "2025-12-16",
+          "rain_mm": 6.42
+        },
+        {
+          "date": "2025-12-17",
+          "rain_mm": 13.08
+        },
+        {
+          "date": "2025-12-18",
+          "rain_mm": 2.76
+        },
+        {
+          "date": "2025-12-19",
+          "rain_mm": 4.19
+        },
+        {
+          "date": "2025-12-20",
+          "rain_mm": 3.16
+        },
+        {
+          "date": "2025-12-21",
+          "rain_mm": 0.31
+        },
+        {
+          "date": "2025-12-22",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2025-12-23",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2025-12-24",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2025-12-25",
+          "rain_mm": 0.64
+        },
+        {
+          "date": "2025-12-26",
+          "rain_mm": 0.73
+        },
+        {
+          "date": "2025-12-27",
+          "rain_mm": 0.19
+        },
+        {
+          "date": "2025-12-28",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2025-12-29",
+          "rain_mm": 0.16
+        },
+        {
+          "date": "2025-12-30",
+          "rain_mm": 2.34
+        },
+        {
+          "date": "2025-12-31",
+          "rain_mm": 2.6
+        },
+        {
+          "date": "2026-01-01",
+          "rain_mm": 2.65
+        },
+        {
+          "date": "2026-01-02",
+          "rain_mm": 1.27
+        },
+        {
+          "date": "2026-01-03",
+          "rain_mm": 13.06
+        },
+        {
+          "date": "2026-01-04",
+          "rain_mm": 19.42
+        },
+        {
+          "date": "2026-01-05",
+          "rain_mm": 20.82
+        },
+        {
+          "date": "2026-01-06",
+          "rain_mm": 3.01
+        },
+        {
+          "date": "2026-01-07",
+          "rain_mm": 1.1
+        },
+        {
+          "date": "2026-01-08",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-01-09",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-01-10",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-01-11",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-01-12",
+          "rain_mm": 1.24
+        },
+        {
+          "date": "2026-01-13",
+          "rain_mm": 8.32
+        },
+        {
+          "date": "2026-01-14",
+          "rain_mm": 4.29
+        },
+        {
+          "date": "2026-01-15",
+          "rain_mm": 0.86
+        },
+        {
+          "date": "2026-01-16",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-01-17",
+          "rain_mm": 1.91
+        },
+        {
+          "date": "2026-01-18",
+          "rain_mm": 6.82
+        },
+        {
+          "date": "2026-01-19",
+          "rain_mm": 5.57
+        },
+        {
+          "date": "2026-01-20",
+          "rain_mm": 8.31
+        },
+        {
+          "date": "2026-01-21",
+          "rain_mm": 31.13
+        },
+        {
+          "date": "2026-01-22",
+          "rain_mm": 46.61
+        },
+        {
+          "date": "2026-01-23",
+          "rain_mm": 11.11
+        },
+        {
+          "date": "2026-01-24",
+          "rain_mm": 9.27
+        },
+        {
+          "date": "2026-01-25",
+          "rain_mm": 1.94
+        },
+        {
+          "date": "2026-01-26",
+          "rain_mm": 1.52
+        },
+        {
+          "date": "2026-01-27",
+          "rain_mm": 0.61
+        },
+        {
+          "date": "2026-01-28",
+          "rain_mm": 0.78
+        },
+        {
+          "date": "2026-01-29",
+          "rain_mm": 8.48
+        },
+        {
+          "date": "2026-01-30",
+          "rain_mm": 11.37
+        },
+        {
+          "date": "2026-01-31",
+          "rain_mm": 3.88
+        },
+        {
+          "date": "2026-02-01",
+          "rain_mm": 5.69
+        },
+        {
+          "date": "2026-02-02",
+          "rain_mm": 10.7
+        },
+        {
+          "date": "2026-02-03",
+          "rain_mm": 6.03
+        },
+        {
+          "date": "2026-02-04",
+          "rain_mm": 11.16
+        },
+        {
+          "date": "2026-02-05",
+          "rain_mm": 4.33
+        },
+        {
+          "date": "2026-02-06",
+          "rain_mm": 1.56
+        },
+        {
+          "date": "2026-02-07",
+          "rain_mm": 4.51
+        },
+        {
+          "date": "2026-02-08",
+          "rain_mm": 9.56
+        },
+        {
+          "date": "2026-02-09",
+          "rain_mm": 10.49
+        },
+        {
+          "date": "2026-02-10",
+          "rain_mm": 1.93
+        },
+        {
+          "date": "2026-02-11",
+          "rain_mm": 6.71
+        },
+        {
+          "date": "2026-02-12",
+          "rain_mm": 0.51
+        },
+        {
+          "date": "2026-02-13",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-02-14",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-02-15",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-02-16",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-02-17",
+          "rain_mm": 0.2
+        },
+        {
+          "date": "2026-02-18",
+          "rain_mm": 3.29
+        },
+        {
+          "date": "2026-02-19",
+          "rain_mm": 4.2
+        },
+        {
+          "date": "2026-02-20",
+          "rain_mm": 4.37
+        },
+        {
+          "date": "2026-02-21",
+          "rain_mm": 2.04
+        },
+        {
+          "date": "2026-02-22",
+          "rain_mm": 3.42
+        },
+        {
+          "date": "2026-02-23",
+          "rain_mm": 13.85
+        },
+        {
+          "date": "2026-02-24",
+          "rain_mm": 15.59
+        },
+        {
+          "date": "2026-02-25",
+          "rain_mm": 8.67
+        },
+        {
+          "date": "2026-02-26",
+          "rain_mm": 8.37
+        },
+        {
+          "date": "2026-02-27",
+          "rain_mm": 4.51
+        },
+        {
+          "date": "2026-02-28",
+          "rain_mm": 0.15
+        },
+        {
+          "date": "2026-03-01",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-03-02",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-03-03",
+          "rain_mm": 2.58
+        },
+        {
+          "date": "2026-03-04",
+          "rain_mm": 1.68
+        },
+        {
+          "date": "2026-03-05",
+          "rain_mm": 0.55
+        },
+        {
+          "date": "2026-03-06",
+          "rain_mm": 15.97
+        },
+        {
+          "date": "2026-03-07",
+          "rain_mm": 10.62
+        },
+        {
+          "date": "2026-03-08",
+          "rain_mm": 0.28
+        },
+        {
+          "date": "2026-03-09",
+          "rain_mm": 5.05
+        },
+        {
+          "date": "2026-03-10",
+          "rain_mm": 7.02
+        },
+        {
+          "date": "2026-03-11",
+          "rain_mm": 6.74
+        },
+        {
+          "date": "2026-03-12",
+          "rain_mm": 10.41
+        },
+        {
+          "date": "2026-03-13",
+          "rain_mm": 17.01
+        },
+        {
+          "date": "2026-03-14",
+          "rain_mm": 2.91
+        },
+        {
+          "date": "2026-03-15",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-03-16",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-03-17",
+          "rain_mm": 0.84
+        },
+        {
+          "date": "2026-03-18",
+          "rain_mm": 6.05
+        },
+        {
+          "date": "2026-03-19",
+          "rain_mm": 10.32
+        },
+        {
+          "date": "2026-03-20",
+          "rain_mm": 16.45
+        },
+        {
+          "date": "2026-03-21",
+          "rain_mm": 4.17
+        },
+        {
+          "date": "2026-03-22",
+          "rain_mm": 0.22
+        },
+        {
+          "date": "2026-03-23",
+          "rain_mm": 1.91
+        },
+        {
+          "date": "2026-03-24",
+          "rain_mm": 2.6
+        },
+        {
+          "date": "2026-03-25",
+          "rain_mm": 0.96
+        },
+        {
+          "date": "2026-03-26",
+          "rain_mm": 0.42
+        },
+        {
+          "date": "2026-03-27",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-03-28",
+          "rain_mm": 0.84
+        },
+        {
+          "date": "2026-03-29",
+          "rain_mm": 0.72
+        },
+        {
+          "date": "2026-03-30",
+          "rain_mm": 1.96
+        },
+        {
+          "date": "2026-03-31",
+          "rain_mm": 13.53
+        },
+        {
+          "date": "2026-04-01",
+          "rain_mm": 4.18
+        },
+        {
+          "date": "2026-04-02",
+          "rain_mm": 0.7
+        },
+        {
+          "date": "2026-04-03",
+          "rain_mm": 1.35
+        },
+        {
+          "date": "2026-04-04",
+          "rain_mm": 1.84
+        },
+        {
+          "date": "2026-04-05",
+          "rain_mm": 1.51
+        },
+        {
+          "date": "2026-04-06",
+          "rain_mm": 1.65
+        },
+        {
+          "date": "2026-04-07",
+          "rain_mm": 0.17
+        },
+        {
+          "date": "2026-04-08",
+          "rain_mm": 3.26
+        },
+        {
+          "date": "2026-04-09",
+          "rain_mm": 1.58
+        },
+        {
+          "date": "2026-04-10",
+          "rain_mm": 0.52
+        },
+        {
+          "date": "2026-04-11",
+          "rain_mm": 2.04
+        },
+        {
+          "date": "2026-04-12",
+          "rain_mm": 0.21
+        },
+        {
+          "date": "2026-04-13",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-04-14",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-04-15",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-04-16",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-04-17",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-18",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-19",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-04-20",
+          "rain_mm": 0.62
+        },
+        {
+          "date": "2026-04-21",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2026-04-22",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-04-23",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-04-24",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-04-25",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-26",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-27",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-28",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-29",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-04-30",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-01",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-05-02",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-03",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2026-05-04",
+          "rain_mm": 0.16
+        },
+        {
+          "date": "2026-05-05",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-05-06",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-07",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-09",
+          "rain_mm": 0.11
+        },
+        {
+          "date": "2026-05-10",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-05-11",
+          "rain_mm": 0.12
+        },
+        {
+          "date": "2026-05-12",
+          "rain_mm": 1.23
+        },
+        {
+          "date": "2026-05-13",
+          "rain_mm": 2.92
+        },
+        {
+          "date": "2026-05-14",
+          "rain_mm": 1.44
+        },
+        {
+          "date": "2026-05-15",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-05-16",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-17",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-18",
+          "rain_mm": 1.09
+        },
+        {
+          "date": "2026-05-19",
+          "rain_mm": 1.37
+        },
+        {
+          "date": "2026-05-20",
+          "rain_mm": 13.15
+        },
+        {
+          "date": "2026-05-21",
+          "rain_mm": 1.22
+        },
+        {
+          "date": "2026-05-22",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-05-23",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-05-24",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-25",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-26",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-27",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-05-28",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-05-29",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-05-30",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-05-31",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-06-01",
+          "rain_mm": 1.83
+        },
+        {
+          "date": "2026-06-02",
+          "rain_mm": 1.3
+        },
+        {
+          "date": "2026-06-03",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-06-04",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-06-05",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-06-06",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-06-07",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-08",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-06-09",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-10",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-06-11",
+          "rain_mm": 5.19
+        },
+        {
+          "date": "2026-06-12",
+          "rain_mm": 4.72
+        },
+        {
+          "date": "2026-06-13",
+          "rain_mm": 0.76
+        },
+        {
+          "date": "2026-06-14",
+          "rain_mm": 0.43
+        },
+        {
+          "date": "2026-06-15",
+          "rain_mm": 0.26
+        },
+        {
+          "date": "2026-06-16",
+          "rain_mm": 0.08
+        },
+        {
+          "date": "2026-06-17",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-18",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-06-19",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-06-20",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-21",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-06-22",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-06-23",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-06-24",
+          "rain_mm": 0.97
+        },
+        {
+          "date": "2026-06-25",
+          "rain_mm": 0.23
+        },
+        {
+          "date": "2026-06-26",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-27",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-06-28",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-29",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-06-30",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-07-01",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-07-02",
+          "rain_mm": 0.04
+        },
+        {
+          "date": "2026-07-03",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-07-04",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-07-05",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-07-06",
+          "rain_mm": 0.18
+        },
+        {
+          "date": "2026-07-07",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-09",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-07-10",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-07-11",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-12",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-13",
+          "rain_mm": 0.94
+        },
+        {
+          "date": "2026-07-14",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-07-15",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-16",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-17",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-07-18",
+          "rain_mm": 0.11
+        },
+        {
+          "date": "2026-07-19",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-20",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-21",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-07-22",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-07-23",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-24",
+          "rain_mm": 2.73
+        },
+        {
+          "date": "2026-07-25",
+          "rain_mm": 1.36
+        },
+        {
+          "date": "2026-07-26",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-07-27",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-07-28",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-07-29",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-07-30",
+          "rain_mm": 0.07
+        },
+        {
+          "date": "2026-07-31",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-01",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-02",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-03",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-04",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-05",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-06",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-07",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-08-08",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-09",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-10",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-11",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-12",
+          "rain_mm": 0.02
+        },
+        {
+          "date": "2026-08-13",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-14",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-15",
+          "rain_mm": 0.33
+        },
+        {
+          "date": "2026-08-16",
+          "rain_mm": 0.47
+        },
+        {
+          "date": "2026-08-17",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-18",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-19",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-20",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-21",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-22",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-08-23",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-08-24",
+          "rain_mm": 1.98
+        },
+        {
+          "date": "2026-08-25",
+          "rain_mm": 1.91
+        },
+        {
+          "date": "2026-08-26",
+          "rain_mm": 2.68
+        },
+        {
+          "date": "2026-08-27",
+          "rain_mm": 10.79
+        },
+        {
+          "date": "2026-08-28",
+          "rain_mm": 0.1
+        },
+        {
+          "date": "2026-08-29",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-08-30",
+          "rain_mm": 1.51
+        },
+        {
+          "date": "2026-08-31",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-09-01",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-09-02",
+          "rain_mm": 9.91
+        },
+        {
+          "date": "2026-09-03",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-09-04",
+          "rain_mm": 0.01
+        },
+        {
+          "date": "2026-09-05",
+          "rain_mm": 6.59
+        },
+        {
+          "date": "2026-09-06",
+          "rain_mm": 5.18
+        },
+        {
+          "date": "2026-09-07",
+          "rain_mm": 1.1
+        },
+        {
+          "date": "2026-09-08",
+          "rain_mm": 1.68
+        },
+        {
+          "date": "2026-09-09",
+          "rain_mm": 3.35
+        },
+        {
+          "date": "2026-09-10",
+          "rain_mm": 13.24
+        },
+        {
+          "date": "2026-09-11",
+          "rain_mm": 0.91
+        },
+        {
+          "date": "2026-09-12",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-09-13",
+          "rain_mm": 9.17
+        },
+        {
+          "date": "2026-09-14",
+          "rain_mm": 13.2
+        },
+        {
+          "date": "2026-09-15",
+          "rain_mm": 18.1
+        },
+        {
+          "date": "2026-09-16",
+          "rain_mm": 2.03
+        },
+        {
+          "date": "2026-09-17",
+          "rain_mm": 1.15
+        },
+        {
+          "date": "2026-09-18",
+          "rain_mm": 0.28
+        },
+        {
+          "date": "2026-09-19",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-09-20",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-09-21",
+          "rain_mm": 0.13
+        },
+        {
+          "date": "2026-09-22",
+          "rain_mm": 3.2
+        },
+        {
+          "date": "2026-09-23",
+          "rain_mm": 5.12
+        },
+        {
+          "date": "2026-09-24",
+          "rain_mm": 0.7
+        },
+        {
+          "date": "2026-09-25",
+          "rain_mm": 0.38
+        },
+        {
+          "date": "2026-09-26",
+          "rain_mm": 0.05
+        },
+        {
+          "date": "2026-09-27",
+          "rain_mm": 0.2
+        },
+        {
+          "date": "2026-09-28",
+          "rain_mm": 0.09
+        },
+        {
+          "date": "2026-09-29",
+          "rain_mm": 0.03
+        },
+        {
+          "date": "2026-09-30",
+          "rain_mm": 0.46
+        },
+        {
+          "date": "2026-10-01",
+          "rain_mm": 1.3
+        },
+        {
+          "date": "2026-10-02",
+          "rain_mm": 3.92
+        },
+        {
+          "date": "2026-10-03",
+          "rain_mm": 19.85
+        },
+        {
+          "date": "2026-10-04",
+          "rain_mm": 7.37
+        },
+        {
+          "date": "2026-10-05",
+          "rain_mm": 3.5
+        },
+        {
+          "date": "2026-10-06",
+          "rain_mm": 0.46
+        },
+        {
+          "date": "2026-10-07",
+          "rain_mm": 0.0
+        },
+        {
+          "date": "2026-10-08",
+          "rain_mm": 0.28
+        },
+        {
+          "date": "2026-10-09",
+          "rain_mm": 1.73
+        },
+        {
+          "date": "2026-10-10",
+          "rain_mm": 3.44
+        },
+        {
+          "date": "2026-10-11",
+          "rain_mm": 2.72
+        },
+        {
+          "date": "2026-10-12",
+          "rain_mm": 1.94
+        },
+        {
+          "date": "2026-10-13",
+          "rain_mm": 1.93
+        },
+        {
+          "date": "2026-10-14",
+          "rain_mm": 3.41
+        },
+        {
+          "date": "2026-10-15",
+          "rain_mm": 2.59
+        },
+        {
+          "date": "2026-10-16",
+          "rain_mm": 2.02
+        },
+        {
+          "date": "2026-10-17",
+          "rain_mm": 6.1
+        },
+        {
+          "date": "2026-10-18",
+          "rain_mm": 0.37
+        },
+        {
+          "date": "2026-10-19",
+          "rain_mm": 0.06
+        },
+        {
+          "date": "2026-10-20",
+          "rain_mm": 0.59
+        },
+        {
+          "date": "2026-10-21",
+          "rain_mm": 2.51
+        },
+        {
+          "date": "2026-10-22",
+          "rain_mm": 6.1
+        },
+        {
+          "date": "2026-10-23",
+          "rain_mm": 6.06
+        },
+        {
+          "date": "2026-10-24",
+          "rain_mm": 3.03
+        },
+        {
+          "date": "2026-10-25",
+          "rain_mm": 5.74
+        },
+        {
+          "date": "2026-10-26",
+          "rain_mm": 4.37
+        },
+        {
+          "date": "2026-10-27",
+          "rain_mm": 0.41
+        },
+        {
+          "date": "2026-10-28",
+          "rain_mm": 0.33
+        },
+        {
+          "date": "2026-10-29",
+          "rain_mm": 3.54
+        },
+        {
+          "date": "2026-10-30",
+          "rain_mm": 16.46
+        },
+        {
+          "date": "2026-10-31",
+          "rain_mm": 5.64
+        },
+        {
+          "date": "2026-11-01",
+          "rain_mm": 13.91
+        },
+        {
+          "date": "2026-11-02",
+          "rain_mm": 8.93
+        },
+        {
+          "date": "2026-11-03",
+          "rain_mm": 2.16
+        },
+        {
+          "date": "2026-11-04",
+          "rain_mm": 0.41
+        },
+        {
+          "date": "2026-11-05",
+          "rain_mm": 2.85
+        },
+        {
+          "date": "2026-11-06",
+          "rain_mm": 3.81
+        },
+        {
+          "date": "2026-11-07",
+          "rain_mm": 22.66
+        },
+        {
+          "date": "2026-11-08",
+          "rain_mm": 12.31
+        },
+        {
+          "date": "2026-11-09",
+          "rain_mm": 6.09
+        },
+        {
+          "date": "2026-11-10",
+          "rain_mm": 1.42
+        },
+        {
+          "date": "2026-11-11",
+          "rain_mm": 0.97
+        }
+      ],
+      "sources": {
+        "sar_metadata": "ASF SearchAPI (api.daac.asf.alaska.edu)",
+        "rain": "NASA POWER PRECTOTCORR (power.larc.nasa.gov)"
+      }
+    }
+  }
+}
