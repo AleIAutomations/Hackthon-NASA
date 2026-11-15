@@ -28,7 +28,7 @@ Using an infinite-slope geotechnical model combined with InSAR coherence and slo
 Watch what happens when we simulate an extreme storm event over our Serra do Mar area of interest. 
 
 The risk grid lights up instantly across the map. Looking at our executive headline banner, Civil Defense teams immediately get the two numbers that matter most:
-1. **10.3 km² at high risk** (all orange and red cells prioritized for ground inspection).
+1. **2.4 km² at high risk** (all orange and red cells prioritized for ground inspection).
 2. **Exposed population: unavailable**—and we state this prominently because WorldPop layers are not yet ingested into the cache. In scientific triage, we never fabricate population numbers.
 
 Every cell in the dashboard displays its provenance: the current demo honestly declares an **estimated demonstration grid** (synthetic scenario with a constant 150 mm soil-saturation scenario), with real NISAR L-band backscatter already processed over both areas (scenes of 2026-07-23 and 2026-10-03) and full pipeline readiness for raw NISAR rasters.
@@ -80,7 +80,7 @@ Thank you.
 ### Slide 4: Central Demo Moment (The Live Map)
 - **Header**: Simulated Storm & Immediate Civil Defense Metrics
 - **Visual**: Screenshot of the interactive dashboard lighting up after rain simulation.
-- **Callout 1**: **10.3 km²** in high risk (orange/red cells).
+- **Callout 1**: **2.4 km²** in high risk (orange/red cells).
 - **Callout 2**: Exposed population: **unavailable** (WorldPop pending—zero fabricated data).
 
 ### Slide 5: Scientific Honesty & Climate Context
