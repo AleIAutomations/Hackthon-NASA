@@ -52,6 +52,13 @@ export function Headline({ aoiId }: { aoiId: string }) {
           demonstração usa {s.scenario_rain_72h_mm?.value ?? 150} mm (simulado).
         </p>
       )}
+      {s.radar_nisar && (
+        <p className="text-[11px] text-emerald-400">
+          Radar NISAR real: {s.radar_nisar.measured_cells} de {s.radar_nisar.total_cells} células com
+          retroespalhamento L-band medido ({s.radar_nisar.product}, cena de {s.radar_nisar.date}).{" "}
+          <span className="text-slate-400">{s.radar_nisar.layers}.</span>
+        </p>
+      )}
       <p className="text-[10px] text-slate-500">{s.disclaimer}</p>
       {e && (
         <div className="rounded-lg border border-slate-800 p-2 text-[11px] text-slate-400">

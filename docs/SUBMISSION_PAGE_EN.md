@@ -8,7 +8,7 @@ TerraAlerta NISAR is a triage tool for civil-defense teams. It combines NISAR L-
 L-band (~24 cm) penetrates vegetation better than Sentinel-1 C-band (~5.6 cm), which is why it suits forested slopes where C-band loses coherence.
 
 ## What we show, and how we label it
-Every value is tagged as **measured**, **derived** or **estimated**. The public demo currently runs on an **estimated demonstration grid**, because the NISAR products over our areas are not yet processed in the cache. The interface says so on screen. Real NISAR scenes over both areas exist (ASF DAAC metadata); processing them is the next step.
+Every value is tagged as **measured**, **derived** or **estimated**. The public demo currently runs on an **estimated demonstration grid**, because coherence and displacement need NISAR interferometric pairs we do not have yet. In Brumadinho the L-band backscatter layer is real NISAR GCOV data (scene of 2026-10-03, ASF DAAC) and is tagged measured; in Serra do Mar the NISAR scenes found do not cover the area yet. The interface says so on screen. Real NISAR scenes over both areas exist (ASF DAAC metadata); processing them is the next step.
 
 - Headline of the dashboard: one-sentence verdict and two numbers (km² at high risk, exposed population). Exposed population is shown as "unavailable" until WorldPop is loaded; we do not invent it.
 - Risk score (0–100) from an infinite-slope factor of safety plus a line-of-sight displacement term. A Random Forest hook exists but is untrained: we have no labelled landslide inventory yet. Four alert levels: green, yellow, orange, red.
@@ -16,7 +16,7 @@ Every value is tagged as **measured**, **derived** or **estimated**. The public 
 - Brumadinho is a dam area. The slope model is not a dam-safety assessment, and the interface says that.
 
 ## NASA data and resources
-- NISAR L-band products (GCOV, GUNW, RSLC/GSLC metadata) via ASF DAAC
+- NISAR L-band products via ASF DAAC: one L2 GCOV scene (2026-10-03) processed over Brumadinho; GUNW/RSLC metadata for both areas
 - NASA POWER (rainfall) and GPM IMERG (planned)
 - Terrain elevation: AWS Terrain Tiles (Terrarium, built from SRTM and other public sources); slope derived per cell. Real, not synthetic.
 - Complementary: Sentinel-1 (ESA), WorldPop, OpenStreetMap

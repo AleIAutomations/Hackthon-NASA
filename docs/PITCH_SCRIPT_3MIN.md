@@ -31,7 +31,7 @@ The risk grid lights up instantly across the map. Looking at our executive headl
 1. **10.3 km² at high risk** (all orange and red cells prioritized for ground inspection).
 2. **Exposed population: unavailable**—and we state this prominently because WorldPop layers are not yet ingested into the cache. In scientific triage, we never fabricate population numbers.
 
-Every cell in the dashboard displays its provenance: the current demo honestly declares an **estimated demonstration grid** (synthetic scenario with a constant 150 mm soil-saturation scenario), with full pipeline readiness for raw NISAR rasters.
+Every cell in the dashboard displays its provenance: the current demo honestly declares an **estimated demonstration grid** (synthetic scenario with a constant 150 mm soil-saturation scenario), with real NISAR L-band backscatter already processed over Brumadinho (scene of 2026-10-03) and full pipeline readiness for raw NISAR rasters.
 
 ---
 

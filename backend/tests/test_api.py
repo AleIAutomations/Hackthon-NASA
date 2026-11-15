@@ -112,3 +112,13 @@ def test_alert_does_not_invent_exposure():
     r = client.post("/api/alerts/evaluate", json={"aoi_id": "serra-do-mar", "polygon": poly, "simulate_rain_mm": 200}).json()
     assert r["population_exposed"] is None and r["buildings_nearby"] is None
     assert r["is_demo"] is True and "demonstra" in r["bulletin_text"].lower()
+
+
+def test_summary_reports_real_nisar_when_present():
+    r = client.get("/api/v1/summary/brumadinho").json()
+    radar = r.get("radar_nisar")
+    if radar:  # so quando o GCOV real foi aplicado ao cache
+        assert radar["measured_cells"] > 0
+        assert "NISAR" in radar["product"]
+        assert "estimados" in radar["layers"]
+        assert r["is_demo"] is True  # coerencia/LOS ainda estimados

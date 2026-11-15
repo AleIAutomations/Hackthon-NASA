@@ -166,7 +166,7 @@ export function Map3DView({
             `<div><b>Coerência L:</b> ${p.coherence_l_band ?? "-"}</div>` +
             `<div><b>Deslocamento LOS:</b> ${p.los_displacement_mm ?? "-"} mm</div>` +
             `<div style="margin-top: 4px; font-style: italic; color: #64748b; font-size: 10px;">` +
-            `Origem do dado: ${p.data_origin}</div>` +
+            `Score: ${p.data_origin}${p.sar_origin === "measured" ? " · Radar NISAR medido (" + p.sar_date + ")" : ""}</div>` +
             `</div>`
         )
         .addTo(map);

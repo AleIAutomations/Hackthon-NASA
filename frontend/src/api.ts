@@ -31,6 +31,7 @@ export interface Summary {
   exposed_population: { value: number | null; origin: string; reason?: string };
   observed_rain_72h?: { value_mm: number; from: string; to: string; source: string } | null;
   scenario_rain_72h_mm?: { value: number };
+  radar_nisar?: { measured_cells: number; total_cells: number; product: string; date: string | null; granule: string | null; layers: string } | null;
   is_demo: boolean;
   disclaimer: string;
   track: string;

@@ -83,6 +83,14 @@ def summary(aoi_id: str):
     lat0 = sum(f["geometry"]["coordinates"][1] for f in feats) / len(feats)
     high = levels.get("laranja", 0) + levels.get("vermelho", 0)
     high_km2 = round(high * _cell_km2(lat0), 1)
+    sar_meas = [f["properties"] for f in feats if f["properties"].get("sar_origin") == "measured"]
+    radar = {
+        "measured_cells": len(sar_meas), "total_cells": len(feats),
+        "product": "NISAR L2 GCOV (L-band), ASF DAAC",
+        "date": sar_meas[0].get("sar_date") if sar_meas else None,
+        "granule": sar_meas[0].get("sar_granule") if sar_meas else None,
+        "layers": "sigma0 HH/HV e razao de despolarizacao (medidos); coerencia e LOS seguem estimados",
+    } if sar_meas else None
     is_demo = origins.get("estimated", 0) > 0  # qualquer celula estimada ja marca demo
     dam = aoi_id == "brumadinho"
 
@@ -108,6 +116,7 @@ def summary(aoi_id: str):
                                  "note": "chuva do cenario de demonstracao, nao observada"},
         "exposed_population": {"value": None, "origin": "unavailable",
                                "reason": "WorldPop ainda nao carregado no cache"},
+        "radar_nisar": radar,
         "alert_levels": dict(levels),
         "data_origin": dict(origins),
         "is_demo": is_demo,
