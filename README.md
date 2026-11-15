@@ -1,124 +1,91 @@
 # TerraAlerta NISAR
 
-> **Languages / Idiomas**: [English](#english) | [Português](#português)  
-> **AI Agents & Collaborators Grounding**: See [AGENT_CONTEXT.md](file:///c:/Users/Alexandre/Downloads/n/Hackthon-NASA/AGENT_CONTEXT.md) for full architecture context and decisions.
+**NASA Space Apps Challenge 2026** · Challenge: *"Dancing with the SARs"*  
+A spatial triage platform combining NISAR L-band radar, Sentinel-1, NASADEM elevation, and rainfall to prioritize slope and terrain inspections for civil defense teams.
 
 ---
 
-<a name="english"></a>
-## English
+## Overview
 
-Landslide and dam-deformation early warning built on NISAR L-band radar, Sentinel-1, NASADEM and NASA POWER rainfall.
+TerraAlerta NISAR evaluates ground deformation and slope vulnerability beneath dense tropical vegetation. Its core scientific edge is leveraging the **L-band radar (~24 cm wavelength)** of the NASA/ISRO NISAR satellite: while C-band radar (Sentinel-1, ~5.6 cm) decorrelates into noise across tropical forest canopies, L-band penetrates foliage down to the ground.
 
-**NASA Space Apps Challenge 2026** - Challenge: *"Dancing with the SARs"*
+The system is designed as a **triage tool to prioritize field inspections**, not an automated landslide forecast. It scores terrain on a grid of roughly 300 m cells (demonstration) into four alert levels (green, yellow, orange, red) using infinite-slope geotechnical physics and InSAR coherence.
 
-### Overview
-TerraAlerta NISAR crosses satellite radar imagery with precipitation and topography to pinpoint on an interactive map where a slope or dam is beginning to deform, prior to catastrophic failure. Its core scientific edge is leveraging the L-band radar (~24 cm wavelength) of the NASA/ISRO NISAR satellite, which penetrates dense tropical forest canopies down to the ground, where C-band radar (Sentinel-1, ~5.6 cm) typically decorrelates into noise.
+### Central Demo Moment
+In the interactive dashboard, users can simulate an extreme storm event and watch the risk map light up in real time, producing two transparent headline metrics:
+- **36.6 km² at high risk** in the Serra do Mar demonstration scenario (orange and red cells combined).
+- **Exposed population: unavailable** (displayed honestly until WorldPop layers are ingested into the cache—we never fabricate human exposure figures).
 
-### Quick Start
+---
+
+## How to run
+
+The application is cache-first and runs offline out-of-the-box using pre-computed demonstration data for both study areas (`serra-do-mar` and `brumadinho`).
+
 ```bash
-# 1. Environment setup (optional Earthdata credentials)
+# 1. Environment setup (Earthdata credentials optional)
 cp .env.example .env
 
-# 2. Run data pipeline (or rely on bundled cache)
-python data_pipeline/fetch_sar_datasets.py
-python data_pipeline/sar_processor.py
-python data_pipeline/ml_risk_model.py
-python scripts/gerar_fallback.py
-
-# 3. Start backend (FastAPI)
+# 2. Start the backend (FastAPI on http://localhost:8000)
 python -m uvicorn main:app --app-dir backend --port 8000
 
-# 4. Start frontend (React + Vite + TypeScript)
+# 3. Start the frontend (Vite + React + TypeScript on http://localhost:5173)
 cd frontend
 npm install
 npm run dev
 ```
 
-No Earthdata account? The pipeline automatically falls back to metadata-only discovery mode, and the application serves the pre-computed high-resolution cache for our two study areas (`serra-do-mar` and `brumadinho`).
-
-### Architecture & NASA Datasets Used
-- **NISAR L-band products (GCOV / GUNW)** via ASF DAAC
-- **Sentinel-1 C-band baseline** via ASF DAAC
-- **NASADEM / SRTM elevation & slope**
-- **NASA POWER daily precipitation (PRECTOTCORR)**
-- **ALOS PALSAR L-band historical records** (ASF DAAC)
-
-### Areas of Interest
-1. **Serra do Mar - São Sebastião (SP), Brazil**: Dense Atlantic rainforest on steep slopes with historical extreme rainfall and fatal landslides (February 2023).
-2. **Brumadinho - Quadrilátero Ferrífero (MG), Brazil**: Tailings dam deformation and mining subsidence monitoring (January 2019 event reference).
-
-### Scientific Honesty Policy
-Every single grid cell is tagged as `measured`, `derived`, or `estimated`. Estimated cells are rendered with dashed borders on the map and explicitly labeled in tooltips and submission disclosures.
-
-### AI / Super Intelligence (SI) Disclosure
-In accordance with the 2026 NASA Space Apps rules:
-- Code generation, documentation, and translation assisted by Google DeepMind / Gemini AI tools under human engineering supervision.
-- Risk prediction architecture is physical (infinite slope stability factor of safety) combined with explainable statistical models (Random Forest), never a black box.
-- All AI-assisted assets are watermarked and declared.
-
----
-
-<a name="português"></a>
-## Português
-
-Sistema de alerta precoce de deslizamento de encostas e deformação de barragens baseado no radar de banda L do satélite NISAR, Sentinel-1, relevo NASADEM e precipitação NASA POWER.
-
-**NASA Space Apps Challenge 2026** - Desafio: *"Dancing with the SARs"*
-
-### Visão Geral
-O **TerraAlerta NISAR** cruza imagens de radar de satélite com chuva e relevo para apontar, em um mapa interativo, onde uma encosta ou uma barragem está começando a se deformar, antes de romper. O diferencial científico central é o uso da banda L do satélite NISAR (NASA/ISRO), cujo comprimento de onda de cerca de 24 cm atravessa a copa densa das árvores e enxerga o solo embaixo da mata tropical, algo que o radar de banda C do Sentinel-1 (~5,6 cm) não consegue fazer bem (decorrelaciona em ruído).
-
-### Inicialização Rápida
+*(Optional)* To test raw data discovery and ingestion pipelines:
 ```bash
-# 1. Configuração do ambiente (credenciais Earthdata opcionais)
-cp .env.example .env
-
-# 2. Executar pipeline de dados (ou utilizar o cache embutido)
 python data_pipeline/fetch_sar_datasets.py
 python data_pipeline/sar_processor.py
 python data_pipeline/ml_risk_model.py
-python scripts/gerar_fallback.py
-
-# 3. Iniciar backend (FastAPI)
-python -m uvicorn main:app --app-dir backend --port 8000
-
-# 4. Iniciar frontend (React + Vite + TypeScript)
-cd frontend
-npm install
-npm run dev
 ```
 
-Sem conta Earthdata? O pipeline entra automaticamente no modo somente-metadados e a aplicação serve o cache embutido de alta resolução das duas áreas de estudo (`serra-do-mar` e `brumadinho`).
+---
 
-### Arquitetura e Dados da NASA Utilizados
-- **NISAR Banda L (produtos GCOV / GUNW)** via ASF DAAC
-- **Sentinel-1 Banda C (baseline de comparação)** via ASF DAAC
-- **NASADEM / SRTM (elevação e declividade do terreno)**
-- **NASA POWER (chuva diária PRECTOTCORR sem necessidade de chave)**
-- **ALOS PALSAR Banda L (série histórica)** via ASF DAAC
+## NASA data used
 
-### Áreas de Estudo Monitoradas
-1. **Serra do Mar - São Sebastião (SP)**: Mata Atlântica densa sobre encostas íngremes com histórico de chuvas extremas e deslizamentos trágicos (carnaval de 2023).
-2. **Brumadinho - Quadrilátero Ferrífero (MG)**: Monitoramento de subsidência e estabilidade de barragens de rejeitos de mineração (evento de referência de janeiro de 2019).
+- **NISAR L-band products (GCOV / GUNW)** via ASF DAAC (metadata discovery and forward-compatible pipeline schemas).
+- **Sentinel-1 C-band baseline** via ASF DAAC (coherence comparison).
+- **NASADEM / SRTM elevation & slope** (30-meter topographic baseline).
+- **NASA POWER daily precipitation (PRECTOTCORR)** (regional meteorological context and historical rainfall series).
+- **ALOS PALSAR historical L-band records** via ASF DAAC (historical coherence reference over forested terrain).
 
-### Política de Honestidade Científica
-Cada célula da malha de risco carrega a etiqueta de sua origem: `measured` (medida), `derived` (derivada) ou `estimated` (estimada). Células estimadas possuem contorno visual destacado e são expressamente identificadas no tooltip e no formulário de submissão.
+---
 
-### Declaração de Uso de IA / Superinteligência (SI)
-Em conformidade com as regras oficiais do NASA Space Apps Challenge 2026:
-- Código, documentação técnica e tradução gerados com assistência de modelos de IA da Google DeepMind / Gemini sob revisão e engenharia humana.
-- O modelo de risco utiliza física clássica (fator de segurança de talude infinito) somada a aprendizado estatístico explicável (Random Forest), não sendo uma caixa-preta.
-- Todos os materiais gerados por IA são declarados e identificados.
+## Areas of Interest
 
-> Arquitetura Climate Intelligence (ENOS): [docs/ARCHITECTURE_CLIMATE_INTELLIGENCE.md](docs/ARCHITECTURE_CLIMATE_INTELLIGENCE.md)
+1. **Serra do Mar - São Sebastião (SP), Brazil**: Steep coastal Atlantic rainforest slopes subject to extreme precipitation and historical landslide disasters (February 2023 reference).
+2. **Brumadinho - Quadrilátero Ferrífero (MG), Brazil**: Mining subsidence and surface terrain monitoring in areas adjacent to tailings dams.
 
-## Inspirações e referências / Inspirations and references
+---
 
-Ideias de apresentação e abordagem tiradas de projetos do mesmo desafio ("Dancing with the SARs"). Nenhum código foi copiado. Detalhes em [docs/COMPETITORS_AND_ELNINO.md](docs/COMPETITORS_AND_ELNINO.md).
+## Honest limits
 
-- Nova Matrics VI (Fardin-Prodhan): slider antes/depois, divisão de papéis — https://github.com/Fardin-Prodhan/Nova-Matrics---VI
-- Dancing with the SARs: The Hidden Steps (dmanpark): um momento central na demo, validação com dado óptico, marcação de pixels duvidosos — https://github.com/dmanpark/dancing-with-the-sars
-- SARabande / OpenSource-SAR (Sidvortex): rótulo de dado sintético, população exposta, botão radar/óptico, exportação — https://github.com/Sidvortex/OpenSource-SAR
-- MOTUS (Tech-Doomsday): veredito em uma frase, "não detectado" como resultado válido, registro de fontes — https://github.com/Tech-Doomsday/dancing-with-sars-eq
-- Team Zenith (nabil24024004): primeira tela, tabela-resumo de camadas — https://github.com/nabil24024004/Team-Zenith-Dancing-With-SARs
+1. **Estimated Demonstration Grid**: The current public demo operates on an **estimated (synthetic) demonstration grid** with a constant 85 mm rainfall scenario. While ASF DAAC scene metadata and coordinates are authentic, raw NISAR rasters are not yet fully processed in the local cache. All synthetic cells are explicitly tagged `estimated` on screen and in tooltips.
+2. **Triage, Not a Forecast**: TerraAlerta is an inspection prioritization tool. It is **not** an operational warning system, **not** a certified landslide forecast, and does not replace in-situ geotechnical sensors or emergency civil defense mandates.
+3. **Brumadinho Is Not a Dam-Safety Assessment**: Terrain subsidence triage near mining structures does **not** evaluate structural dam safety. Dam integrity requires internal piezometers, drainage instrumentation, and certified geotechnical audits.
+4. **ENSO Is Context Only**: El Niño–Southern Oscillation (ENSO) diagnostic data (NOAA CPC bulletin) is displayed strictly as regional climate context and is **not part of the risk score** (`in_risk_score = false`). A seasonal climate outlook is not a local landslide forecast.
+5. **Line-of-Sight Geometry**: InSAR measurements represent 1D line-of-sight (LOS) displacement, not full 3D ground motion vectors.
+
+---
+
+## AI disclosure
+
+In accordance with NASA Space Apps Challenge 2026 rules:
+- Code architecture, technical documentation, and translations were developed with assistance from generative AI tools (Google DeepMind / Gemini and Anthropic Claude within the Antigravity IDE) under human engineering supervision.
+- Risk scoring is driven by physical slope stability (infinite slope factor of safety) and explainable statistical models (Random Forest), never a black box.
+- No AI-generated imagery is presented as measured satellite data, and no NASA emblems appear on synthetic assets.
+
+---
+
+## Inspirations
+
+Presentation ideas, visual workflows, and scientific communication strategies were adapted from fellow projects in the *"Dancing with the SARs"* challenge (no code copied; see [docs/COMPETITORS_AND_ELNINO.md](docs/COMPETITORS_AND_ELNINO.md) for full analysis):
+
+- **Nova Matrics VI** (Fardin-Prodhan): Before/after slider interaction and multi-role views.
+- **Dancing with the SARs: The Hidden Steps** (dmanpark): Defining a central demo moment and flagging uncertain pixels.
+- **SARabande / OpenSource-SAR** (Sidvortex): Explicit synthetic data labeling and honest population exposure metrics.
+- **MOTUS** (Tech-Doomsday): Single-sentence executive verdict and treating "not detected" as a valid outcome.
+- **Team Zenith** (nabil24024004): Structured landing screen and comprehensive multi-layer summary tables.

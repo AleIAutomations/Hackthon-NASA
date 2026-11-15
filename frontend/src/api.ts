@@ -29,6 +29,8 @@ export interface Summary {
   verdict: { pt: string; en: string };
   high_risk_km2: { value: number | null; origin: string };
   exposed_population: { value: number | null; origin: string; reason?: string };
+  observed_rain_72h?: { value_mm: number; from: string; to: string; source: string } | null;
+  scenario_rain_72h_mm?: { value: number };
   is_demo: boolean;
   disclaimer: string;
   track: string;

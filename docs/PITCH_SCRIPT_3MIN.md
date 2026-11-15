@@ -1,59 +1,102 @@
-# TerraAlerta NISAR - 3-Minute Pitch Script & Slide Deck / Roteiro do Pitch e Slides
+# TerraAlerta NISAR — 3-Minute Pitch Script & Slide Deck
 
-> **Languages / Idiomas**: [English](#english) | [Português](#português)
-
----
-
-<a name="english"></a>
-## English
-
-### Timing Breakdown (3 Minutes)
-- **[0:00 - 0:20] The Problem**:
-  In February 2023, extreme rainfall triggered catastrophic landslides along the northern coast of São Paulo. The slopes had been deforming for weeks—millimeters at a time—invisible to optical sensors and hidden beneath dense Atlantic forest.
-- **[0:20 - 0:50] The Solution (NISAR L-band)**:
-  TerraAlerta taps into NISAR, the NASA/ISRO SAR mission. Unlike Sentinel-1 C-band (~5.6 cm) which bounces off leaves and turns to noise, L-band (~24 cm) penetrates through dense canopy directly to the bedrock. Every point on our map is a 30-meter cell scored 0 to 100.
-- **[0:50 - 1:30] C vs L Band Comparison**:
-  Side-by-side comparison: on forested slopes, C-band coherence collapses (noise), while NISAR L-band maintains ground coherence.
-- **[1:30 - 2:10] Physics, Rain & Civil Defense Alert**:
-  We fuse radar interferometry with real NASA POWER rainfall and NASADEM slope. Simulating an extreme 200 mm storm flips vulnerable slopes to red. In under 5 seconds, the Civil Defense bulletin is generated: exposed population, critical slopes, and actionable evacuation guidelines.
-- **[2:10 - 2:40] Generalization (Brumadinho)**:
-  With zero code changes, we monitor Brumadinho: tailings dams and mining subsidence.
-- **[2:40 - 3:00] Conclusion & Honesty**:
-  All cells transparently declare if data is measured, derived, or estimated. Next step: municipal civil defense pilot. Thank you.
-
-### 7 Slides Outline
-1. **Title**: TerraAlerta NISAR - L-band radar watching slopes beneath the forest.
-2. **The Problem**: Pre-failure ground motion is invisible under dense canopies.
-3. **The Solution**: Multi-source fusion (NISAR + NASA POWER + NASADEM) to risk score.
-4. **NASA Data Used**: NISAR (GCOV/GUNW), Sentinel-1, NASADEM, NASA POWER.
-5. **Interactive Demo**: 3D Risk Map, C vs L Swipe, Rainfall vs Displacement timeseries.
-6. **Civil Defense & Impact**: Immediate actionable dispatch, exposed population estimates.
-7. **Team, Disclosure & References**: Full scientific citations, open source Apache 2.0.
+**NASA Space Apps Challenge 2026** · Challenge: *"Dancing with the SARs"*  
+**Project:** TerraAlerta NISAR (Triage & Inspection Prioritization Platform)
 
 ---
 
-<a name="português"></a>
-## Português
+## Pitch Timing Breakdown (3 Minutes)
 
-### Divisão do Tempo de Apresentação (3 Minutos)
-- **[0:00 - 0:20] O Problema**:
-  Em fevereiro de 2023, chuvas extremas provocaram deslizamentos devastadores no litoral norte de São Paulo. O solo daqueles morros estava se movendo havia semanas — milímetros por semana — mas de forma invisível a olho nu e completamente oculto pela densa Mata Atlântica.
-- **[0:20 - 0:50] A Solução (Banda L do NISAR)**:
-  O TerraAlerta utiliza o satélite NISAR (NASA/ISRO). Enquanto a banda C do Sentinel-1 (~5,6 cm) reflete na folhagem e se perde em ruído, a banda L (~24 cm) atravessa o dossel da mata e atinge o solo e a rocha matriz. Cada ponto colorido no mapa é uma célula de 30 metros com score de risco calculado de 0 a 100.
-- **[0:50 - 1:30] Comparativo Banda C vs Banda L**:
-  Demonstração lado a lado: na mata densa, a coerência da banda C despenca para perto de zero (ruído total), enquanto a banda L do NISAR preserva a coerência do solo.
-- **[1:30 - 2:10] Física do Solo, Chuva e Boletim da Defesa Civil**:
-  Cruzamos a interferometria com a chuva diária real da NASA POWER e com a declividade do NASADEM. Simulando uma tempestade extrema de 200 mm, os taludes vulneráveis mudam para alerta vermelho. Em menos de 5 segundos, o painel da Defesa Civil gera o boletim operacional: número de taludes críticos, população exposta e diretrizes de evacuação preventiva.
-- **[2:10 - 2:40] Generalização (Brumadinho)**:
-  Sem alterar uma linha de código, monitoramos o Quadrilátero Ferrífero: barragens de rejeitos e subsidência de mineração.
-- **[2:40 - 3:00] Conclusão e Transparência**:
-  Toda célula indica se a grandeza foi medida ou estimada. Próximo passo: projeto-piloto com uma Defesa Civil municipal. Muito obrigado.
+### [0:00 - 0:25] The Problem & The Scientific Edge
+In February 2023, extreme downpours triggered catastrophic landslides along the northern coast of São Paulo, Brazil. The slopes had been creeping for weeks, but ground deformation was completely concealed beneath dense Atlantic rainforest. 
 
-### Conteúdo dos 7 Slides
-1. **Slide 1 - Capa**: TerraAlerta NISAR - Radar de banda L vigiando encostas sob a copa das árvores.
-2. **Slide 2 - O Problema**: A deformação do terreno precede a ruptura, mas é invisível sob florestas densas.
-3. **Slide 3 - A Solução**: Fusão multi-sensores (NISAR + Chuva NASA POWER + Relevo NASADEM) em score de risco.
-4. **Slide 4 - Dados da NASA**: Produtos NISAR (GCOV/GUNW), Sentinel-1, NASADEM e NASA POWER.
-5. **Slide 5 - Demonstração Interativa**: Globo 3D, divisor deslizante C vs L e gráfico de deformação x chuva.
-6. **Slide 6 - Impacto e Defesa Civil**: Geração instantânea de boletins com cálculo de população em risco.
-7. **Slide 7 - Equipe e Referências**: Divulgação de uso de IA, referências científicas e licença aberta Apache 2.0.
+Optical satellites cannot see through clouds or canopies, and Sentinel-1 C-band radar (~5.6 cm wavelength) scatters off leaves and turns to noise. 
+
+This is where the NASA/ISRO **NISAR L-band radar (~24 cm wavelength)** changes the equation: its longer wavelength penetrates through dense tropical forest canopies directly to the bedrock.
+
+---
+
+### [0:25 - 0:55] What TerraAlerta Does: Triage, Not a Forecast
+TerraAlerta NISAR is an **inspection triage platform** for Civil Defense teams—not an automated landslide forecast. 
+
+Using an infinite-slope geotechnical model combined with InSAR coherence and slope geometry, we classify terrain across a ~300 m grid into four actionable alert levels: Green, Yellow, Orange, and Red. This allows emergency managers to prioritize where geotechnical crews must conduct field visits before disaster strikes.
+
+---
+
+### [0:55 - 1:45] Central Demo Moment: Simulating Storms & The Two Headline Metrics
+*(Presenter demonstrates live on screen)*:
+Watch what happens when we simulate an extreme storm event over our Serra do Mar area of interest. 
+
+The risk grid lights up instantly across the map. Looking at our executive headline banner, Civil Defense teams immediately get the two numbers that matter most:
+1. **36.6 km² at high risk** (all orange and red cells prioritized for ground inspection).
+2. **Exposed population: unavailable**—and we state this prominently because WorldPop layers are not yet ingested into the cache. In scientific triage, we never fabricate population numbers.
+
+Every cell in the dashboard displays its provenance: the current demo honestly declares an **estimated demonstration grid** (synthetic scenario with a constant 85 mm baseline), with full pipeline readiness for raw NISAR rasters.
+
+---
+
+### [1:45 - 2:15] C vs L Band Swipe & Climate Context (ENSO)
+*(Presenter switches to the Comparison and Climate views)*:
+Swiping across our radar comparison tool reveals the physical reason NISAR is essential: in forested zones, C-band coherence collapses (0.15–0.25), while NISAR L-band maintains high ground coherence (0.65–0.78).
+
+In the Climate Intelligence panel, we surface the official NOAA Climate Prediction Center ENOS bulletin. Crucially, **ENSO is large-scale context only and is not part of the risk score**. A seasonal climate outlook indicates regional moisture tendencies, but it is never treated as a local landslide forecast.
+
+---
+
+### [2:15 - 2:40] Second Area: Brumadinho (Mining Terrain Triage)
+With zero code modifications, our spatial pipeline generalizes to our second area of interest: Brumadinho, in Minas Gerais. 
+
+Here, TerraAlerta tracks surface deformation and terrain subsidence in areas surrounding mining operations. Crucially, we clearly state that **this is not a structural dam-safety assessment**—evaluating dam integrity requires internal piezometers, drainage sensors, and certified geotechnical audits.
+
+---
+
+### [2:40 - 3:00] Honest Limits, Impact & Next Steps
+We built TerraAlerta around radical transparency:
+- **Triage over false prediction**: Prioritizing site visits rather than claiming automated forecasts.
+- **Data integrity**: Explicit labeling of estimated demo data and no invented population counts.
+- **Open science**: Open-source architecture ready to ingest raw NISAR GCOV and GUNW granules upon public release.
+
+Thank you.
+
+---
+
+## 7-Slide Deck Outline
+
+### Slide 1: Title & Vision
+- **Header**: TerraAlerta NISAR — Radar Triage Beneath the Forest Canopy
+- **Visual**: Satellite render of NISAR passing over South America alongside an aerial view of Serra do Mar.
+- **Key Message**: Triage and inspection prioritization for civil defense using L-band radar penetration.
+
+### Slide 2: The Physical Challenge
+- **Header**: Why C-Band Fails in Tropical Slopes
+- **Visual**: Diagram showing Sentinel-1 C-band (~5.6 cm) scattering off tree foliage vs. NISAR L-band (~24 cm) penetrating to the ground.
+- **Key Metric**: C-band coherence drops below 0.20 in rainforest; L-band preserves coherence above 0.70.
+
+### Slide 3: The Architecture
+- **Header**: Physics-Grounded Spatial Triage
+- **Visual**: Multi-layer stack (NASADEM slope + InSAR coherence + precipitation scenario) feeding into infinite-slope factor of safety.
+- **Key Message**: Triage to prioritize inspection, not a black-box forecast.
+
+### Slide 4: Central Demo Moment (The Live Map)
+- **Header**: Simulated Storm & Immediate Civil Defense Metrics
+- **Visual**: Screenshot of the interactive dashboard lighting up after rain simulation.
+- **Callout 1**: **36.6 km²** in high risk (orange/red cells).
+- **Callout 2**: Exposed population: **unavailable** (WorldPop pending—zero fabricated data).
+
+### Slide 5: Scientific Honesty & Climate Context
+- **Header**: Radical Provenance & ENSO Separation
+- **Visual**: Badge showing `DADO ESTIMADO · DEMONSTRAÇÃO` alongside the Climate Intelligence card.
+- **Key Principle**: ENSO is seasonal climate context only, strictly outside the risk score (`in_risk_score = false`).
+
+### Slide 6: Multi-Hazard Generalization (Brumadinho)
+- **Header**: Mining Terrain Subsidence Monitoring
+- **Visual**: Brumadinho area map showing ground displacement vectors.
+- **Mandatory Disclaimer**: Surface terrain deformation triage is **not a structural dam-safety assessment**.
+
+### Slide 7: Impact, AI Disclosure & Team
+- **Header**: Open Science for Resilient Communities
+- **Bullets**:
+  - Full AI tool disclosure (Google Gemini & Anthropic Claude under human engineering).
+  - NASA data: NISAR (ASF DAAC), Sentinel-1, NASADEM, NASA POWER.
+  - License: Open Source (Apache 2.0).
+- **Call to Action**: Ready for operational municipal civil defense pilots.

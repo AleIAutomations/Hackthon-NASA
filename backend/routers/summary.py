@@ -46,6 +46,24 @@ def _cells(aoi_id: str) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))["features"]
 
 
+def _observed_rain(aoi_id: str) -> dict | None:
+    """Ultimos 3 dias da serie NASA POWER (PRECTOTCORR) guardada no cache."""
+    path = CACHE / "aoi_telemetry.json"
+    if not path.exists():
+        return None
+    serie = json.loads(path.read_text(encoding="utf-8"))["aois"].get(aoi_id, {}).get("rain_daily") or []
+    if len(serie) < 3:
+        return None
+    ult = serie[-3:]
+    return {
+        "value_mm": round(sum(x["rain_mm"] for x in ult), 1),
+        "from": ult[0]["date"],
+        "to": ult[-1]["date"],
+        "source": "NASA POWER PRECTOTCORR",
+        "origin": "measured",
+    }
+
+
 def _cell_km2(lat: float) -> float:
     return (STEP_LON * 111.32 * math.cos(math.radians(lat))) * (STEP_LAT * 110.57)
 
@@ -85,6 +103,9 @@ def summary(aoi_id: str):
         "verdict": {"pt": pt, "en": en},
         "high_risk_km2": {"value": high_km2, "origin": "estimated" if is_demo else "derived",
                           "method": "celulas laranja+vermelho x area da celula"},
+        "observed_rain_72h": _observed_rain(aoi_id),
+        "scenario_rain_72h_mm": {"value": 85.0, "origin": "estimated",
+                                 "note": "chuva do cenario de demonstracao, nao observada"},
         "exposed_population": {"value": None, "origin": "unavailable",
                                "reason": "WorldPop ainda nao carregado no cache"},
         "alert_levels": dict(levels),

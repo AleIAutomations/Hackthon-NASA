@@ -99,3 +99,9 @@ def test_summary_marks_demo_and_no_invented_population():
 def test_enso_is_context_only():
     r = client.get("/api/v1/climate/enso").json()
     assert r["in_risk_score"] is False and r["role"] == "context_only"
+
+
+def test_summary_separates_observed_and_scenario_rain():
+    r = client.get("/api/v1/summary/serra-do-mar").json()
+    assert r["observed_rain_72h"]["origin"] == "measured"
+    assert r["scenario_rain_72h_mm"]["origin"] == "estimated"
