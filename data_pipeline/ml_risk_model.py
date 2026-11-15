@@ -97,10 +97,12 @@ def score_cells(features: list[dict], model=None) -> list[dict]:
 
     for i, f in enumerate(features):
         p = f["properties"]
+        real_insar = p.get("coherence_origin") == "measured"
+        # Com coerencia real, ela nao vira gatilho (baixa coerencia em floresta e normal)
         phys = physical_score(
             p.get("slope_deg") or 0.0,
             p.get("rain_72h_mm") or 0.0,
-            p.get("coherence_l_band"),
+            None if real_insar else p.get("coherence_l_band"),
         )
         # Se ha deslocamento pronunciado, ajusta o score estatistico
         los = p.get("los_displacement_mm")
@@ -110,7 +112,8 @@ def score_cells(features: list[dict], model=None) -> list[dict]:
         else:
             # Calibracao empirica suplementar se modelo ML nao treinado
             bonus_los = 0.0
-            if los is not None and los < -10.0:  # subsidencia / movimento encosta
+            # LOS real de um par de 12 dias tem ruido atmosferico (~1 cm): nao entra no score
+            if not real_insar and los is not None and los < -10.0:  # subsidencia / movimento encosta
                 bonus_los = min(30.0, abs(los) * 1.5)
             score = min(100.0, phys + bonus_los)
             stat = None
