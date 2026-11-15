@@ -9,7 +9,7 @@ A spatial triage platform combining NISAR L-band radar, Sentinel-1, terrain elev
 
 TerraAlerta NISAR evaluates ground deformation and slope vulnerability beneath dense tropical vegetation. Its core scientific edge is leveraging the **L-band radar (~24 cm wavelength)** of the NASA/ISRO NISAR satellite: while C-band radar (Sentinel-1, ~5.6 cm) decorrelates into noise across tropical forest canopies, L-band penetrates foliage down to the ground.
 
-The system is designed as a **triage tool to prioritize field inspections**, not an automated landslide forecast. It scores terrain on a grid of roughly 300 m cells (demonstration) into four alert levels (green, yellow, orange, red) using infinite-slope geotechnical physics and InSAR coherence.
+The system is designed as a **triage tool to prioritize field inspections**, not an automated landslide forecast. It scores terrain on a grid of roughly 300 m cells (demonstration) into four alert levels (green, yellow, orange, red) using infinite-slope geotechnical physics, real terrain slope, a rainfall scenario and real NISAR backscatter. Real InSAR coherence and displacement (Serra do Mar) are displayed but not scored.
 
 ### Central Demo Moment
 In the interactive dashboard, users can simulate an extreme storm event and watch the risk map light up in real time, producing two transparent headline metrics:
