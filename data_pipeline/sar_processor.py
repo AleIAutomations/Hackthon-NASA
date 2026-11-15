@@ -134,7 +134,7 @@ def export_geojson(aoi_id: str, features: list[dict]) -> Path:
     return out
 
 
-def generate_synthetic_study_area(aoi_id: str, rain_72h: float = 85.0) -> list[dict]:
+def generate_synthetic_study_area(aoi_id: str, rain_72h: float = 150.0) -> list[dict]:
     """Gera grade sintetica fisicamente coerente para a AOI se dados brutos de satelite nao estiverem baixados."""
     if aoi_id == "serra-do-mar":
         min_lon, max_lon, min_lat, max_lat = -45.48, -45.36, -23.82, -23.72

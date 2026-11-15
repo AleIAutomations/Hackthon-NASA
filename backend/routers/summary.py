@@ -104,7 +104,7 @@ def summary(aoi_id: str):
         "high_risk_km2": {"value": high_km2, "origin": "estimated" if is_demo else "derived",
                           "method": "celulas laranja+vermelho x area da celula"},
         "observed_rain_72h": _observed_rain(aoi_id),
-        "scenario_rain_72h_mm": {"value": 85.0, "origin": "estimated",
+        "scenario_rain_72h_mm": {"value": 150.0, "origin": "estimated",
                                  "note": "chuva do cenario de demonstracao, nao observada"},
         "exposed_population": {"value": None, "origin": "unavailable",
                                "reason": "WorldPop ainda nao carregado no cache"},

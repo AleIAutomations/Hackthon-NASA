@@ -27,7 +27,7 @@ export function OverviewPage({
   const [viewMode, setViewMode] = useState<"globe" | "terrain">("globe");
   const [showSim, setShowSim] = useState(false);
 
-  const rain72h = cells.length ? cells[0].properties.rain_72h_mm || 85.0 : 85.0;
+  const rain72h = cells.length ? cells[0].properties.rain_72h_mm || 150.0 : 150.0;
 
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">

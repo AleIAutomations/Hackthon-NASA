@@ -18,7 +18,7 @@ Every value is tagged as **measured**, **derived** or **estimated**. The public 
 ## NASA data and resources
 - NISAR L-band products (GCOV, GUNW, RSLC/GSLC metadata) via ASF DAAC
 - NASA POWER (rainfall) and GPM IMERG (planned)
-- NASADEM (terrain)
+- Terrain elevation: AWS Terrain Tiles (Terrarium, built from SRTM and other public sources); slope derived per cell. Real, not synthetic.
 - Complementary: Sentinel-1 (ESA), WorldPop, OpenStreetMap
 
 ## Honest limits

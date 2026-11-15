@@ -49,7 +49,7 @@ export function Headline({ aoiId }: { aoiId: string }) {
         <p className="text-[11px] text-slate-400">
           Chuva observada (NASA POWER, {s.observed_rain_72h.from} a {s.observed_rain_72h.to}):{" "}
           <b className="text-slate-200">{s.observed_rain_72h.value_mm} mm</b>. O cenário de
-          demonstração usa {s.scenario_rain_72h_mm?.value ?? 85} mm (simulado).
+          demonstração usa {s.scenario_rain_72h_mm?.value ?? 150} mm (simulado).
         </p>
       )}
       <p className="text-[10px] text-slate-500">{s.disclaimer}</p>

@@ -1,7 +1,7 @@
 # TerraAlerta NISAR
 
 **NASA Space Apps Challenge 2026** · Challenge: *"Dancing with the SARs"*  
-A spatial triage platform combining NISAR L-band radar, Sentinel-1, NASADEM elevation, and rainfall to prioritize slope and terrain inspections for civil defense teams.
+A spatial triage platform combining NISAR L-band radar, Sentinel-1, terrain elevation, and rainfall to prioritize slope and terrain inspections for civil defense teams.
 
 ---
 
@@ -13,7 +13,7 @@ The system is designed as a **triage tool to prioritize field inspections**, not
 
 ### Central Demo Moment
 In the interactive dashboard, users can simulate an extreme storm event and watch the risk map light up in real time, producing two transparent headline metrics:
-- **36.6 km² at high risk** in the Serra do Mar demonstration scenario (orange and red cells combined).
+- **10.3 km² at high risk** in the Serra do Mar demonstration scenario (orange and red cells combined).
 - **Exposed population: unavailable** (displayed honestly until WorldPop layers are ingested into the cache—we never fabricate human exposure figures).
 
 ---
@@ -48,7 +48,7 @@ python data_pipeline/ml_risk_model.py
 
 - **NISAR L-band products (GCOV / GUNW)** via ASF DAAC (metadata discovery and forward-compatible pipeline schemas).
 - **Sentinel-1 C-band baseline** via ASF DAAC (coherence comparison).
-- **NASADEM / SRTM elevation & slope** (30-meter topographic baseline).
+- **Real terrain slope**: elevation from public AWS Terrain Tiles (Terrarium, zoom 12; built from SRTM and other sources), slope derived per cell by `data_pipeline/real_slope.py` and applied with `data_pipeline/apply_real_terrain.py`. Slope is tagged `derived`; the SAR layers in the demo remain `estimated`.
 - **NASA POWER daily precipitation (PRECTOTCORR)** (regional meteorological context and historical rainfall series).
 - **ALOS PALSAR historical L-band records** via ASF DAAC (historical coherence reference over forested terrain).
 
@@ -63,7 +63,7 @@ python data_pipeline/ml_risk_model.py
 
 ## Honest limits
 
-1. **Estimated Demonstration Grid**: The current public demo operates on an **estimated (synthetic) demonstration grid** with a constant 85 mm rainfall scenario. While ASF DAAC scene metadata and coordinates are authentic, raw NISAR rasters are not yet fully processed in the local cache. All synthetic cells are explicitly tagged `estimated` on screen and in tooltips.
+1. **Estimated Demonstration Grid**: The current public demo operates on an **estimated (synthetic) demonstration grid** with a constant 150 mm (soil-saturation) rainfall scenario. While ASF DAAC scene metadata and coordinates are authentic, raw NISAR rasters are not yet fully processed in the local cache. All synthetic cells are explicitly tagged `estimated` on screen and in tooltips.
 2. **Triage, Not a Forecast**: TerraAlerta is an inspection prioritization tool. It is **not** an operational warning system, **not** a certified landslide forecast, and does not replace in-situ geotechnical sensors or emergency civil defense mandates.
 3. **Brumadinho Is Not a Dam-Safety Assessment**: Terrain subsidence triage near mining structures does **not** evaluate structural dam safety. Dam integrity requires internal piezometers, drainage instrumentation, and certified geotechnical audits.
 4. **ENSO Is Context Only**: El Niño–Southern Oscillation (ENSO) diagnostic data (NOAA CPC bulletin) is displayed strictly as regional climate context and is **not part of the risk score** (`in_risk_score = false`). A seasonal climate outlook is not a local landslide forecast.
