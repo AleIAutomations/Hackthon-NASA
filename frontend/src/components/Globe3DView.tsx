@@ -188,7 +188,7 @@ export function Globe3DView({
         labelsData={studyAreas}
         labelLat="lat"
         labelLng="lng"
-        labelText="name"
+        labelText={(d: any) => String(d.name).normalize("NFD").replace(/[\u0300-\u036f]/g, "")}
         labelSize={1.4}
         labelDotRadius={0.6}
         labelColor={() => "#38bdf8"}

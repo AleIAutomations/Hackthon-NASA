@@ -28,7 +28,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
-              Análise retrospectiva de deslocamento milimétrico em linha de visada (LOS) cruzado com precipitação diária.
+              Chuva diária real (NASA POWER) cruzada com uma curva de LOS simulada e ilustrativa. Não é medição NISAR.
             </p>
           </div>
         </div>
@@ -99,10 +99,10 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
         <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-slate-300 font-bold">
             <Info size={14} className="text-blue-400" />
-            <span>Lacuna Instrumental (27/07 - 10/08/2026)</span>
+            <span>Lacuna ilustrativa (27/07 - 10/08/2026)</span>
           </div>
           <p className="text-slate-400 text-[11px] leading-relaxed">
-            Identificada no gráfico em cinza. Período oficial de manutenção e calibração de rotina do instrumento orbital NISAR, sem dados válidos adquiridos na janela.
+            Faixa cinza do gráfico, ilustrativa: mostra como um período sem aquisições apareceria na série. Não está confirmada como janela oficial de manutenção do NISAR.
           </p>
         </div>
       </div>

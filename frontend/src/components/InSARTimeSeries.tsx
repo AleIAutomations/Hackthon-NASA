@@ -122,7 +122,7 @@ export function InSARTimeSeries({ aoiId }: { aoiId: string }) {
                 stroke="#ef4444"
                 strokeWidth={2}
                 dot={false}
-                name="Deslocamento LOS (mm)"
+                name="LOS simulado (mm) - ilustrativo, nao medido"
                 connectNulls
               />
             </ComposedChart>
@@ -131,7 +131,7 @@ export function InSARTimeSeries({ aoiId }: { aoiId: string }) {
       </div>
 
       <div className="bg-slate-800/80 p-2.5 rounded border border-slate-700 text-xs text-slate-300">
-        <span className="font-semibold text-amber-400">Diagnóstico Geotécnico:</span> Picos de precipitação aceleram a inclinação da curva de deslocamento LOS. A aceleração contínua sem retorno ao equilíbrio elástico é o sinal precursor de ruptura.
+        <span className="font-semibold text-amber-400">Diagnóstico Geotécnico:</span> A curva de LOS é uma simulação ilustrativa calculada a partir da chuva (não é medição NISAR); a chuva diária é real (NASA POWER). Em dados reais, aceleração contínua do LOS sem retorno ao equilíbrio seria um sinal a investigar em campo.
       </div>
     </div>
   );
