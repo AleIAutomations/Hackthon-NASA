@@ -120,7 +120,7 @@ def test_summary_reports_real_nisar_when_present():
     if radar:  # so quando o GCOV real foi aplicado ao cache
         assert radar["measured_cells"] > 0
         assert "NISAR" in radar["product"]
-        assert "estimados" in radar["layers"]
+        assert "fora do score" in radar["layers"]
         assert r["is_demo"] is True  # coerencia/LOS ainda estimados
 
 

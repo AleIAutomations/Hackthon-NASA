@@ -39,10 +39,14 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
     (c) => c.properties.alert_level === "laranja"
   ).length;
 
-  const displacements = cells
-    .map((c) => c.properties.los_displacement_mm)
-    .filter((v): v is number => v !== null && v !== undefined);
-  const minLos = displacements.length ? Math.min(...displacements) : -3.5;
+  // Coerencia L-band medida (par NISAR GUNW). O LOS de um par de 12 dias e ruido e nao e destacado.
+  const cohMeasured = cells
+    .filter((c) => (c.properties as any).coherence_origin === "measured")
+    .map((c) => c.properties.coherence_l_band)
+    .filter((v): v is number => typeof v === "number");
+  const meanCoh = cohMeasured.length
+    ? cohMeasured.reduce((acc, v) => acc + v, 0) / cohMeasured.length
+    : null;
 
   const maxLevel: RiskLevel =
     maxScore >= 75
@@ -125,21 +129,21 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
         </p>
       </div>
 
-      {/* 4. Deformacao LOS */}
+      {/* 4. Coerencia L-band medida */}
       <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 flex flex-col justify-between ">
         <div className="flex items-center justify-between text-slate-400 text-xs">
-          <span className="font-semibold">Deslocamento LOS Máx.</span>
-          <ProvenanceBadge origin="estimated" />
+          <span className="font-semibold">Coerência L-band média</span>
+          <ProvenanceBadge origin={meanCoh === null ? "estimated" : "measured"} />
         </div>
         <div className="flex items-baseline gap-2 mt-1">
-          <span className="text-2xl font-black text-amber-400 font-mono">
-            {minLos.toFixed(1)}
+          <span className="text-2xl font-black text-cyan-400 font-mono">
+            {meanCoh === null ? "indisponível" : meanCoh.toFixed(2).replace(".", ",")}
           </span>
-          <span className="text-xs text-slate-400 font-mono">mm</span>
-          <TrendingDown size={14} className="text-amber-400 ml-auto" />
         </div>
         <p className="text-[10px] text-slate-500 mt-1">
-          Linha de visada radar (afastamento)
+          {meanCoh === null
+            ? "Sem par interferométrico NISAR válido nesta área"
+            : "Par NISAR GUNW de 12 dias, só exibida (não entra no score)"}
         </p>
       </div>
     </div>

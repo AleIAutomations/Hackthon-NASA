@@ -13,3 +13,4 @@ backend/data_cache/*.zip
 _to_delete/
 frontend/vite.config.ts.timestamp-*
 downloads_gunw/
+data_pipeline/landslides_glc.csv

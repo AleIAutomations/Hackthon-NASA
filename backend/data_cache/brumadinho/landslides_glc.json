@@ -1,0 +1,25 @@
+{
+ "aoi_id": "brumadinho",
+ "source": "NASA Global Landslide Catalog (publico)",
+ "origin": "measured",
+ "bbox": [
+  -44.33,
+  -20.33,
+  -43.91,
+  -19.93
+ ],
+ "count": 1,
+ "events": [
+  {
+   "lon": -43.9107,
+   "lat": -19.944,
+   "date": "01/02/2012 08:00:00 AM",
+   "title": "Belo Horizonte, Minas Gerais state",
+   "trigger": "downpour",
+   "size": "medium",
+   "fatalities": "2",
+   "accuracy_km": "10km",
+   "source": "laht"
+  }
+ ]
+}

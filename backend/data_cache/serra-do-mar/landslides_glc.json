@@ -1,0 +1,13 @@
+{
+ "aoi_id": "serra-do-mar",
+ "source": "NASA Global Landslide Catalog (publico)",
+ "origin": "measured",
+ "bbox": [
+  -45.63,
+  -23.97,
+  -45.21,
+  -23.57
+ ],
+ "count": 0,
+ "events": []
+}

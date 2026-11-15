@@ -64,10 +64,11 @@ python data_pipeline/ml_risk_model.py
 ## Honest limits
 
 1. **Estimated Demonstration Grid**: The current public demo operates on an **estimated (synthetic) demonstration grid** with a constant 150 mm (soil-saturation) rainfall scenario. Terrain slope is real (derived from public elevation tiles). In both areas the L-band backscatter (sigma0 HH/HV and depolarization ratio) comes from a real NISAR L2 GCOV scene (ASF DAAC): Serra do Mar 2026-07-23 (1,598 of 1,600 cells) and Brumadinho 2026-10-03 (1,600 of 1,600), tagged `measured`. In Serra do Mar, L-band coherence and line-of-sight displacement come from a real NISAR GUNW pair (2026-10-06 to 2026-10-18, 1,600 cells, tagged `measured`); the 12-day LOS signal is at the noise level (about 1 cm), so it is displayed but does **not** enter the score. Brumadinho's GUNW has no valid unwrapped phase over the area. The score (slope, simulated rain, radar) stays `estimated`. Every value is tagged on screen and in tooltips.
-2. **Triage, Not a Forecast**: TerraAlerta is an inspection prioritization tool. It is **not** an operational warning system, **not** a certified landslide forecast, and does not replace in-situ geotechnical sensors or emergency civil defense mandates.
-3. **Brumadinho Is Not a Dam-Safety Assessment**: Terrain subsidence triage near mining structures does **not** evaluate structural dam safety. Dam integrity requires internal piezometers, drainage instrumentation, and certified geotechnical audits.
-4. **ENSO Is Context Only**: El Niño–Southern Oscillation (ENSO) diagnostic data (NOAA CPC bulletin) is displayed strictly as regional climate context and is **not part of the risk score** (`in_risk_score = false`). A seasonal climate outlook is not a local landslide forecast.
-5. **Line-of-Sight Geometry**: InSAR measurements represent 1D line-of-sight (LOS) displacement, not full 3D ground motion vectors.
+2. **No Validation Against Real Landslides Yet**: We checked the NASA Global Landslide Catalog and found 0 events inside the Serra do Mar area and 1 (located within 10 km only) near Brumadinho, so no hit rate can be computed. See `docs/VALIDATION.md`.
+3. **Triage, Not a Forecast**: TerraAlerta is an inspection prioritization tool. It is **not** an operational warning system, **not** a certified landslide forecast, and does not replace in-situ geotechnical sensors or emergency civil defense mandates.
+4. **Brumadinho Is Not a Dam-Safety Assessment**: Terrain subsidence triage near mining structures does **not** evaluate structural dam safety. Dam integrity requires internal piezometers, drainage instrumentation, and certified geotechnical audits.
+5. **ENSO Is Context Only**: El Niño–Southern Oscillation (ENSO) diagnostic data (NOAA CPC bulletin) is displayed strictly as regional climate context and is **not part of the risk score** (`in_risk_score = false`). A seasonal climate outlook is not a local landslide forecast.
+6. **Line-of-Sight Geometry**: InSAR measurements represent 1D line-of-sight (LOS) displacement, not full 3D ground motion vectors.
 
 ---
 

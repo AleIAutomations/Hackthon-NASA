@@ -89,7 +89,7 @@ def summary(aoi_id: str):
         "product": "NISAR L2 GCOV (L-band), ASF DAAC",
         "date": sar_meas[0].get("sar_date") if sar_meas else None,
         "granule": sar_meas[0].get("sar_granule") if sar_meas else None,
-        "layers": "sigma0 HH/HV e razao de despolarizacao (medidos); coerencia e LOS seguem estimados",
+        "layers": "sigma0 HH/HV e razao de despolarizacao (medidos); coerencia e LOS medidos so na Serra do Mar e fora do score",
     } if sar_meas else None
     is_demo = origins.get("estimated", 0) > 0  # qualquer celula estimada ja marca demo
     dam = aoi_id == "brumadinho"
