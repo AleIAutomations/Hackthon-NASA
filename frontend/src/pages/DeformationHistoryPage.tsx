@@ -82,7 +82,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
             <span>Deslocamento em Linha de Visada (LOS)</span>
           </div>
           <p className="text-slate-400 text-[11px] leading-relaxed">
-            Medido em milímetros. Valores negativos representam afastamento do solo em relação à linha do satélite (subsidência e escorregamento do corpo do talude encosta abaixo).
+            Valores expressos em milímetros. Valores negativos representam afastamento do solo em relação à linha do satélite (subsidência e escorregamento do corpo do talude encosta abaixo).
           </p>
         </div>
 

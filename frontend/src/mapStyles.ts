@@ -2,6 +2,7 @@ import type { StyleSpecification } from "maplibre-gl";
 
 export const GLOBE_SATELLITE_STYLE: StyleSpecification = {
   version: 8,
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   projection: {
     type: "globe" as any,
   },
@@ -59,6 +60,7 @@ export const GLOBE_SATELLITE_STYLE: StyleSpecification = {
 
 export const NASA_BLUEMARBLE_STYLE: StyleSpecification = {
   version: 8,
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   projection: {
     type: "globe" as any,
   },
@@ -111,6 +113,7 @@ export const NASA_BLUEMARBLE_STYLE: StyleSpecification = {
 
 export const CARTO_DARK_STYLE: StyleSpecification = {
   version: 8,
+  glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
   projection: {
     type: "globe" as any,
   },

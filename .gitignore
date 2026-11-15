@@ -11,3 +11,4 @@ backend/data_cache/*.h5
 backend/data_cache/*.zip
 !backend/data_cache/.gitkeep
 _to_delete/
+frontend/vite.config.ts.timestamp-*

@@ -45,6 +45,9 @@ export function Topbar({
         <div className="flex items-center gap-2 bg-slate-950 border border-slate-700/80 rounded-lg px-3 py-1.5 shadow-sm">
           <MapPin size={14} className="text-red-400 shrink-0" />
           <select
+            id="aoi-selector"
+            name="aoi-selector"
+            aria-label="Selecionar Área de Interesse"
             value={selectedAoiId}
             onChange={(e) => onSelectAoi(e.target.value)}
             className="bg-transparent text-xs font-semibold text-slate-200 outline-none cursor-pointer"
