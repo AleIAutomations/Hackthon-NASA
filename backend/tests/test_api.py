@@ -122,3 +122,10 @@ def test_summary_reports_real_nisar_when_present():
         assert "NISAR" in radar["product"]
         assert "estimados" in radar["layers"]
         assert r["is_demo"] is True  # coerencia/LOS ainda estimados
+
+
+def test_both_areas_have_real_nisar_radar():
+    for aoi in ("serra-do-mar", "brumadinho"):
+        r = client.get(f"/api/v1/summary/{aoi}").json()
+        assert r["radar_nisar"]["measured_cells"] >= 1500
+        assert r["radar_nisar"]["date"]
