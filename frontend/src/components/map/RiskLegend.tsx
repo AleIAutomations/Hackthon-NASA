@@ -32,7 +32,7 @@ export function RiskLegend({ compact = false }: { compact?: boolean }) {
 
   if (compact) {
     return (
-      <div className="bg-slate-900/95 border border-slate-800 rounded-lg p-2.5 shadow-xl text-xs backdrop-blur flex items-center gap-3">
+      <div className="bg-slate-900/95 border border-slate-800 rounded p-2.5  text-xs  flex items-center gap-3">
         <span className="text-[11px] font-semibold text-slate-300">Risco:</span>
         <div className="flex items-center gap-2">
           {levels.map((l) => (
@@ -47,7 +47,7 @@ export function RiskLegend({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <div className="bg-slate-950/80 border border-slate-800/90 rounded-xl p-3.5 space-y-3 text-xs shadow-xl backdrop-blur">
+    <div className="bg-slate-950/80 border border-slate-800/90 rounded-md p-3.5 space-y-3 text-xs  ">
       <div className="flex items-center justify-between border-b border-slate-800 pb-2">
         <span className="font-bold text-slate-100 flex items-center gap-1.5">
           <Info size={14} className="text-blue-400" />

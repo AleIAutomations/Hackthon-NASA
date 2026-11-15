@@ -13,9 +13,9 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* Top Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-md p-4  flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
+          <div className="w-12 h-12 rounded-md bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
             <TrendingDown size={24} />
           </div>
           <div>
@@ -34,11 +34,11 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
         </div>
 
         {/* Seletor de Janela Temporal */}
-        <div className="flex items-center gap-2 text-xs bg-slate-950 p-1 rounded-xl border border-slate-800">
+        <div className="flex items-center gap-2 text-xs bg-slate-950 p-1 rounded-md border border-slate-800">
           <Calendar size={13} className="text-slate-400 ml-2" />
           <button
             onClick={() => setPeriod("90")}
-            className={`px-3 py-1.5 rounded-lg transition ${
+            className={`px-3 py-1.5 rounded transition ${
               period === "90"
                 ? "bg-blue-600 text-white font-semibold"
                 : "text-slate-400 hover:text-slate-200"
@@ -48,7 +48,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
           </button>
           <button
             onClick={() => setPeriod("180")}
-            className={`px-3 py-1.5 rounded-lg transition ${
+            className={`px-3 py-1.5 rounded transition ${
               period === "180"
                 ? "bg-blue-600 text-white font-semibold"
                 : "text-slate-400 hover:text-slate-200"
@@ -58,7 +58,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
           </button>
           <button
             onClick={() => setPeriod("365")}
-            className={`px-3 py-1.5 rounded-lg transition ${
+            className={`px-3 py-1.5 rounded transition ${
               period === "365"
                 ? "bg-blue-600 text-white font-semibold"
                 : "text-slate-400 hover:text-slate-200"
@@ -70,13 +70,13 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
       </div>
 
       {/* Grafico ComposedChart */}
-      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col min-h-[460px]">
+      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-md overflow-hidden  p-4 flex flex-col min-h-[460px]">
         <InSARTimeSeries aoiId={currentAoi.id} />
       </div>
 
       {/* Cards de Diagnostico Geotecnico */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-red-400 font-bold">
             <TrendingDown size={14} />
             <span>Deslocamento em Linha de Visada (LOS)</span>
@@ -86,7 +86,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
           </p>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-cyan-400 font-bold">
             <CloudRain size={14} />
             <span>Gatilho Hidrológico (NASA POWER)</span>
@@ -96,7 +96,7 @@ export function DeformationHistoryPage({ currentAoi }: DeformationHistoryPagePro
           </p>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-slate-300 font-bold">
             <Info size={14} className="text-blue-400" />
             <span>Lacuna ilustrativa (27/07 - 10/08/2026)</span>

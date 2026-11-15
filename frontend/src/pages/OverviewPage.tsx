@@ -32,7 +32,7 @@ export function OverviewPage({
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* 0. Veredito e dois numeros (dado estimado/real marcado) */}
-      <div className="rounded-2xl border border-slate-800 overflow-hidden">
+      <div className="rounded-md border border-slate-800 overflow-hidden">
         <Headline aoiId={currentAoi.id} />
       </div>
 
@@ -42,10 +42,10 @@ export function OverviewPage({
       {/* 2. Grid Central: Mapa / Globo como Protagonista + Painel Lateral de Risco */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 min-h-[580px]">
         {/* Area do Mapa (8 colunas) */}
-        <div className="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden relative shadow-2xl flex flex-col">
+        <div className="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-md overflow-hidden relative  flex flex-col">
           {/* Header sobre o mapa com alternadores de camera */}
           <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
-            <div className="bg-slate-950/90 border border-slate-800 rounded-lg p-1 flex items-center gap-1 shadow-xl backdrop-blur text-xs">
+            <div className="bg-slate-950/90 border border-slate-800 rounded p-1 flex items-center gap-1   text-xs">
               <button
                 onClick={() => setViewMode("globe")}
                 className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md font-semibold transition ${
@@ -74,7 +74,7 @@ export function OverviewPage({
 
             <button
               onClick={() => setShowSim(!showSim)}
-              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold shadow-xl border backdrop-blur transition ${
+              className={`flex items-center gap-1.5 px-3 py-2 rounded text-xs font-semibold  border  transition ${
                 showSim
                   ? "bg-cyan-600 text-white border-cyan-400"
                   : "bg-slate-950/90 text-cyan-300 border-cyan-500/30 hover:bg-slate-900"
@@ -118,7 +118,7 @@ export function OverviewPage({
           )}
 
           {/* Painel Operacional da Defesa Civil */}
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl flex-1 flex flex-col">
+          <div className="bg-slate-900 border border-slate-800 rounded-md overflow-hidden  flex-1 flex flex-col">
             <CivilDefensePanel aoiId={currentAoi.id} />
           </div>
 

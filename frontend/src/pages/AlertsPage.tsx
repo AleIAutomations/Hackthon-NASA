@@ -46,9 +46,9 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* Top Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-md p-4  flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
+          <div className="w-12 h-12 rounded-md bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-500 shrink-0">
             <ShieldAlert size={24} />
           </div>
           <div>
@@ -68,7 +68,7 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl text-xs flex items-center gap-2 shadow-lg shadow-red-950/60 transition"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-md text-xs flex items-center gap-2   transition"
         >
           <Send size={14} />
           <span>Transmitir Alerta / Despacho</span>
@@ -78,13 +78,13 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
       {/* Grid Principal */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1">
         {/* Painel Operacional (7 colunas) */}
-        <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col">
+        <div className="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-md overflow-hidden  flex flex-col">
           <CivilDefensePanel aoiId={currentAoi.id} />
         </div>
 
         {/* Historico de Alertas e Exposicao (5 colunas) */}
         <div className="lg:col-span-5 flex flex-col gap-4">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3 shadow-xl">
+          <div className="bg-slate-900 border border-slate-800 rounded-md p-4 space-y-3 ">
             <h3 className="font-bold text-sm text-slate-100 flex items-center gap-2">
               <Users size={16} className="text-cyan-400" />
               <span>Estimativa de Exposição de Comunidades</span>
@@ -94,17 +94,17 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
             </p>
 
             <div className="grid grid-cols-2 gap-3 pt-1">
-              <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div className="bg-slate-950 p-3 rounded-md border border-slate-800">
                 <span className="text-[10px] text-slate-400 block">População no Setor:</span>
-                <span className="text-xl font-black text-cyan-400">
+                <span className="text-xl font-semibold text-cyan-400">
                   {lastBulletin.population_exposed != null ? `~${lastBulletin.population_exposed.toLocaleString()}` : "indisponível"}
                 </span>
                 <span className="text-[10px] text-slate-500 block">habitantes</span>
               </div>
 
-              <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
+              <div className="bg-slate-950 p-3 rounded-md border border-slate-800">
                 <span className="text-[10px] text-slate-400 block">Edificações Próximas:</span>
-                <span className="text-xl font-black text-slate-200">
+                <span className="text-xl font-semibold text-slate-200">
                   {lastBulletin.buildings_nearby != null ? `~${lastBulletin.buildings_nearby.toLocaleString()}` : "indisponível"}
                 </span>
                 <span className="text-[10px] text-slate-500 block">estruturas civis</span>
@@ -123,7 +123,7 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
             </div>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl space-y-2 text-xs">
+          <div className="bg-slate-900 border border-slate-800 rounded-md p-4  space-y-2 text-xs">
             <div className="flex items-center gap-1.5 text-amber-400 font-semibold">
               <AlertTriangle size={15} />
               <span>Salvaguarda e Protocolos Oficiais</span>

@@ -11,9 +11,9 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* Top Banner Explicativo de Física do Radar */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-slate-900 border border-slate-800 rounded-md p-4  flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+          <div className="w-12 h-12 rounded-md bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-cyan-400 shrink-0">
             <GitCompare size={24} />
           </div>
           <div>
@@ -33,7 +33,7 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
 
         {/* Fichas Técnicas das Missões */}
         <div className="flex items-center gap-3 text-xs">
-          <div className="bg-slate-950 px-3 py-2 rounded-xl border border-slate-800">
+          <div className="bg-slate-950 px-3 py-2 rounded-md border border-slate-800">
             <div className="flex items-center gap-1.5 text-slate-400 text-[10px]">
               <Satellite size={12} className="text-slate-400" />
               <span>Sentinel-1 (ESA)</span>
@@ -41,7 +41,7 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
             <span className="font-bold text-slate-200">Banda C (λ ~5.6 cm)</span>
           </div>
 
-          <div className="bg-slate-950 px-3 py-2 rounded-xl border border-blue-500/40">
+          <div className="bg-slate-950 px-3 py-2 rounded-md border border-blue-500/40">
             <div className="flex items-center gap-1.5 text-blue-400 text-[10px]">
               <Satellite size={12} className="text-cyan-400" />
               <span>NISAR (NASA/ISRO)</span>
@@ -52,13 +52,13 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
       </div>
 
       {/* Componente Central: Comparador Deslizante (Swipe) e Graficos de Coerencia */}
-      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl min-h-[520px] flex flex-col">
+      <div className="flex-1 bg-slate-900 border border-slate-800 rounded-md overflow-hidden  min-h-[520px] flex flex-col">
         <BandComparison aoiId={currentAoi.id} center={currentAoi.center} />
       </div>
 
       {/* Grid de Fundamentos Cientificos */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-slate-300 font-bold">
             <Layers size={14} className="text-cyan-400" />
             <span>1. Comprimento de Onda &amp; Copa</span>
@@ -68,7 +68,7 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
           </p>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-slate-300 font-bold">
             <Sparkles size={14} className="text-blue-400" />
             <span>2. Penetração da Banda L</span>
@@ -78,13 +78,13 @@ export function SARComparisonPage({ currentAoi }: SARComparisonPageProps) {
           </p>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 space-y-1.5">
+        <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 space-y-1.5">
           <div className="flex items-center gap-1.5 text-slate-300 font-bold">
             <Info size={14} className="text-amber-400" />
             <span>3. Transparência Metodológica</span>
           </div>
           <p className="text-slate-400 text-[11px] leading-relaxed">
-            As estatísticas de coerência são computadas em sub-regiões homogêneas (mata atlântica, encosta aberta e área urbana). Nenhuma imagem foi modificada para favorecer artificialmente qualquer sensor.
+            Os valores do gráfico são referências ilustrativas por tipo de cobertura. Não foram calculados dos pares NISAR ou Sentinel-1 deste projeto. A coerência medida no nosso par NISAR da Serra do Mar está no Monitoramento e nas Fontes de Dados.
           </p>
         </div>
       </div>

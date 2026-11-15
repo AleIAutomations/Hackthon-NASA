@@ -94,12 +94,12 @@ export function CivilDefensePanel({ aoiId }: { aoiId: string }) {
 
         {bulletin && (
           <div
-            className={`border rounded-lg p-3 space-y-2.5 transition-all ${
+            className={`border rounded p-3 space-y-2.5 transition-all ${
               COR[bulletin.alert_level] || "border-slate-700 bg-slate-800"
             }`}
           >
             <div className="flex justify-between items-center">
-              <span className="text-xs font-extrabold uppercase tracking-wider flex items-center gap-1">
+              <span className="text-xs font-extrabold   flex items-center gap-1">
                 <AlertTriangle size={14} />
                 Nível {bulletin.alert_level}
               </span>

@@ -63,8 +63,8 @@ export function InSARTimeSeries({ aoiId }: { aoiId: string }) {
         ) : (
           <ResponsiveContainer width="100%" height={320}>
             <ComposedChart data={days} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
-              <XAxis dataKey="date" minTickGap={35} tick={{ fill: "#94a3b8", fontSize: 10 }} />
+              <CartesianGrid strokeDasharray="3 3" stroke="rgb(var(--n-800))" />
+              <XAxis dataKey="date" minTickGap={35} tick={{ fill: "rgb(var(--n-400))", fontSize: 10 }} />
               <YAxis
                 yAxisId="mm"
                 orientation="left"
@@ -81,19 +81,19 @@ export function InSARTimeSeries({ aoiId }: { aoiId: string }) {
                 yAxisId="rain"
                 orientation="right"
                 reversed
-                tick={{ fill: "#38bdf8", fontSize: 10 }}
+                tick={{ fill: "rgb(var(--a-400))", fontSize: 10 }}
                 label={{
                   value: "Chuva (mm)",
                   angle: 90,
                   position: "insideRight",
-                  fill: "#38bdf8",
+                  fill: "rgb(var(--a-400))",
                   fontSize: 10,
                 }}
               />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "#0f172a",
-                  borderColor: "#334155",
+                  backgroundColor: "rgb(var(--n-900))",
+                  borderColor: "rgb(var(--n-800))",
                   borderRadius: "6px",
                   fontSize: "12px",
                 }}
@@ -104,14 +104,14 @@ export function InSARTimeSeries({ aoiId }: { aoiId: string }) {
                 yAxisId="mm"
                 x1="2026-07-27"
                 x2="2026-08-10"
-                fill="#94a3b8"
+                fill="rgb(var(--n-400))"
                 fillOpacity={0.2}
-                label={{ value: "Lacuna Instrumento", fill: "#94a3b8", fontSize: 9 }}
+                label={{ value: "Lacuna Instrumento", fill: "rgb(var(--n-400))", fontSize: 9 }}
               />
               <Bar
                 yAxisId="rain"
                 dataKey="rain_mm"
-                fill="#38bdf8"
+                fill="rgb(var(--a-400))"
                 name="Chuva Diária (mm) - NASA POWER"
                 opacity={0.8}
               />

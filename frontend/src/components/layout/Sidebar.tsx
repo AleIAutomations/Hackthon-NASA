@@ -90,13 +90,13 @@ export function Sidebar({
       <div>
         <div className="p-4 border-b border-slate-800 flex items-center justify-between">
           <div className="flex items-center gap-3 overflow-hidden">
-            <div className="w-10 h-10 rounded-xl bg-blue-950 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0 shadow-lg shadow-blue-950/50">
+            <div className="w-10 h-10 rounded-md bg-blue-950 border border-blue-500/40 flex items-center justify-center text-blue-400 shrink-0  ">
               <Satellite size={22} />
             </div>
             {!collapsed && (
               <div className="overflow-hidden">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-extrabold text-slate-100 text-sm tracking-tight">
+                  <span className="font-extrabold text-slate-100 text-sm ">
                     TerraAlerta
                   </span>
                   <span className="text-[10px] px-1.5 py-0.2 bg-blue-500/20 text-blue-400 font-mono rounded">
@@ -127,9 +127,9 @@ export function Sidebar({
               <button
                 key={item.key}
                 onClick={() => onNavigate(item.key)}
-                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition text-left group ${
+                className={`w-full flex items-center gap-3 px-3 py-2.5 rounded text-xs font-medium transition text-left group ${
                   isActive
-                    ? "bg-blue-600/20 text-blue-300 border border-blue-500/30 shadow-sm"
+                    ? "bg-blue-600/20 text-blue-300 border border-blue-500/30 "
                     : "text-slate-400 hover:text-slate-100 hover:bg-slate-900"
                 }`}
                 title={collapsed ? item.label : undefined}

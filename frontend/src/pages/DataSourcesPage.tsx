@@ -93,9 +93,9 @@ export function DataSourcesPage() {
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* Top Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex items-center justify-between">
+      <div className="bg-slate-900 border border-slate-800 rounded-md p-4  flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+          <div className="w-12 h-12 rounded-md bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
             <Database size={24} />
           </div>
           <div>
@@ -114,7 +114,7 @@ export function DataSourcesPage() {
         {sources.map((src) => (
           <div
             key={src.name}
-            className="bg-slate-900 border border-slate-800 rounded-2xl p-4 flex flex-col justify-between shadow-xl space-y-3"
+            className="bg-slate-900 border border-slate-800 rounded-md p-4 flex flex-col justify-between  space-y-3"
           >
             <div>
               <div className="flex items-start justify-between gap-2 border-b border-slate-800 pb-2.5">
@@ -152,7 +152,7 @@ export function DataSourcesPage() {
                   </div>
                 </div>
 
-                <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800 text-[10px] text-amber-300/80 leading-relaxed">
+                <div className="bg-slate-950 p-2.5 rounded border border-slate-800 text-[10px] text-amber-300/80 leading-relaxed">
                   <strong className="text-amber-400">Limitações Conhecidas:</strong> {src.limitations}
                 </div>
               </div>

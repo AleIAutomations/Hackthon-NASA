@@ -23,7 +23,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
         {[1, 2, 3, 4].map((i) => (
           <div
             key={i}
-            className="bg-slate-900/80 border border-slate-800 rounded-xl p-3.5 animate-pulse h-24"
+            className="bg-slate-900/80 border border-slate-800 rounded-md p-3.5  h-24"
           />
         ))}
       </div>
@@ -63,7 +63,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
       {/* 1. Score Maximo */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between shadow-lg">
+      <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 flex flex-col justify-between ">
         <div className="flex items-center justify-between text-slate-400 text-xs">
           <span className="font-semibold">Score Máximo de Risco</span>
           <ProvenanceBadge origin="derived" />
@@ -74,7 +74,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
           </span>
           <span className="text-xs text-slate-400 font-mono">/ 100</span>
           <span
-            className={`ml-auto text-[10px] font-bold uppercase px-2 py-0.5 rounded border ${levelColor}`}
+            className={`ml-auto text-[10px] font-bold  px-2 py-0.5 rounded border ${levelColor}`}
           >
             {maxLevel}
           </span>
@@ -85,7 +85,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
       </div>
 
       {/* 2. Taludes em Alerta */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between shadow-lg">
+      <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 flex flex-col justify-between ">
         <div className="flex items-center justify-between text-slate-400 text-xs">
           <span className="font-semibold">Taludes Monitorados</span>
           <AlertTriangle size={14} className="text-orange-400" />
@@ -106,7 +106,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
       </div>
 
       {/* 3. Chuva 72h */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between shadow-lg">
+      <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 flex flex-col justify-between ">
         <div className="flex items-center justify-between text-slate-400 text-xs">
           <span className="font-semibold">Precipitação 72h</span>
           <ProvenanceBadge origin="derived" />
@@ -126,7 +126,7 @@ export function MetricCards({ cells, rain72h, loading }: MetricCardsProps) {
       </div>
 
       {/* 4. Deformacao LOS */}
-      <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-3.5 flex flex-col justify-between shadow-lg">
+      <div className="bg-slate-900/90 border border-slate-800 rounded-md p-3.5 flex flex-col justify-between ">
         <div className="flex items-center justify-between text-slate-400 text-xs">
           <span className="font-semibold">Deslocamento LOS Máx.</span>
           <ProvenanceBadge origin="estimated" />

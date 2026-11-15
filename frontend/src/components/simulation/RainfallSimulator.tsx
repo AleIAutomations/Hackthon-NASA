@@ -44,10 +44,10 @@ export function RainfallSimulator({
   }
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-4 shadow-xl">
+    <div className="bg-slate-900 border border-slate-800 rounded-md p-4 space-y-4 ">
       <div className="flex items-center justify-between border-b border-slate-800 pb-3">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-blue-500/10 text-cyan-400 flex items-center justify-center border border-blue-500/30">
+          <div className="w-8 h-8 rounded bg-blue-500/10 text-cyan-400 flex items-center justify-center border border-blue-500/30">
             <CloudRain size={18} />
           </div>
           <div>
@@ -78,7 +78,7 @@ export function RainfallSimulator({
           step={5}
           value={rainMm}
           onChange={(e) => setRainMm(Number(e.target.value))}
-          className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+          className="w-full h-2 bg-slate-950 rounded appearance-none cursor-pointer accent-cyan-400"
         />
 
         <div className="flex justify-between text-[10px] text-slate-500 font-mono">
@@ -90,7 +90,7 @@ export function RainfallSimulator({
       </div>
 
       {/* Comparacao de Cenarios */}
-      <div className="grid grid-cols-2 gap-3 text-xs bg-slate-950/70 p-3 rounded-lg border border-slate-800">
+      <div className="grid grid-cols-2 gap-3 text-xs bg-slate-950/70 p-3 rounded border border-slate-800">
         <div>
           <span className="text-[10px] text-slate-400 block">Cenário Base (NASA POWER):</span>
           <span className="font-bold text-slate-200 text-sm">
@@ -114,7 +114,7 @@ export function RainfallSimulator({
         <button
           onClick={handleSimulate}
           disabled={loading}
-          className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-2 px-3 rounded-lg text-xs transition flex items-center justify-center gap-2 shadow-lg shadow-cyan-950/50 disabled:opacity-50"
+          className="flex-1    hover: hover: text-white font-semibold py-2 px-3 rounded text-xs transition flex items-center justify-center gap-2   disabled:opacity-50"
         >
           <Play size={14} />
           <span>{loading ? "Calculando Fator de Segurança..." : "Executar Simulação de Risco"}</span>
@@ -123,7 +123,7 @@ export function RainfallSimulator({
         {result && (
           <button
             onClick={handleReset}
-            className="p-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg text-xs transition"
+            className="p-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded text-xs transition"
             title="Resetar simulação"
           >
             <RotateCcw size={14} />
@@ -133,11 +133,11 @@ export function RainfallSimulator({
 
       {/* Resultado da Simulacao */}
       {result && (
-        <div className="p-3 rounded-lg border border-cyan-500/30 bg-cyan-950/20 space-y-2 animate-fadeIn text-xs">
+        <div className="p-3 rounded border border-cyan-500/30 bg-cyan-950/20 space-y-2 animate-fadeIn text-xs">
           <div className="flex items-center justify-between">
             <span className="font-bold text-slate-200">Resultado do Recálculo Físico:</span>
             <span
-              className={`text-[10px] uppercase font-bold px-2 py-0.5 rounded ${
+              className={`text-[10px]  font-bold px-2 py-0.5 rounded ${
                 result.alert_level === "vermelho"
                   ? "bg-red-500/20 text-red-400 border border-red-500/40"
                   : "bg-orange-500/20 text-orange-400 border border-orange-500/40"
@@ -169,7 +169,7 @@ export function RainfallSimulator({
       )}
 
       {/* Aviso Permanente de Honestidade Cientifica */}
-      <div className="flex items-start gap-2 bg-amber-950/20 border border-amber-500/30 p-2.5 rounded-lg text-[10px] text-amber-300/90 leading-relaxed">
+      <div className="flex items-start gap-2 bg-amber-950/20 border border-amber-500/30 p-2.5 rounded text-[10px] text-amber-300/90 leading-relaxed">
         <AlertTriangle size={14} className="shrink-0 text-amber-400 mt-0.5" />
         <span>
           <strong>Aviso de Integridade Científica:</strong> Simulação conceitual baseada na equação de talude infinito. Não representa previsão meteorológica oficial nem substitui laudos da Defesa Civil.

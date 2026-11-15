@@ -19,9 +19,9 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* Top Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-xl flex items-center justify-between">
+      <div className="bg-slate-900 border border-slate-800 rounded-md p-4  flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+          <div className="w-12 h-12 rounded-md bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
             <FileText size={24} />
           </div>
           <div>
@@ -39,14 +39,14 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
             <>
               <button
                 onClick={handlePrint}
-                className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition"
+                className="bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-2 rounded-md text-xs font-semibold flex items-center gap-1.5 transition"
               >
                 <Printer size={14} />
                 <span>Imprimir / Salvar PDF</span>
               </button>
               <button
                 onClick={onClearReports}
-                className="p-2 text-slate-400 hover:text-red-400 hover:bg-slate-800 rounded-xl transition"
+                className="p-2 text-slate-400 hover:text-red-400 hover:bg-slate-800 rounded-md transition"
                 title="Limpar histórico local"
               >
                 <Trash2 size={16} />
@@ -59,8 +59,8 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
       {/* Grid Principal */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1">
         {/* Lista de Boletins (4 colunas) */}
-        <div className="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3 overflow-y-auto shadow-xl text-xs">
-          <h3 className="font-bold text-xs text-slate-300 uppercase tracking-wider">
+        <div className="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-md p-4 space-y-3 overflow-y-auto  text-xs">
+          <h3 className="font-bold text-xs text-slate-300  ">
             Boletins Gerados ({reports.length})
           </h3>
 
@@ -87,9 +87,9 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
                   <button
                     key={rep.id}
                     onClick={() => setSelectedReport(rep)}
-                    className={`w-full p-3 rounded-xl border text-left transition space-y-1.5 ${
+                    className={`w-full p-3 rounded-md border text-left transition space-y-1.5 ${
                       isSelected
-                        ? "bg-slate-800/90 border-blue-500 shadow-md"
+                        ? "bg-slate-800/90 border-blue-500 "
                         : "bg-slate-950/70 border-slate-800/80 hover:border-slate-700"
                     }`}
                   >
@@ -97,7 +97,7 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
                       <span className="font-bold text-slate-200 truncate">
                         {rep.aoiName}
                       </span>
-                      <span className={`text-[9px] uppercase font-bold px-1.5 py-0.5 rounded border ${levelColor}`}>
+                      <span className={`text-[9px]  font-bold px-1.5 py-0.5 rounded border ${levelColor}`}>
                         {rep.level}
                       </span>
                     </div>
@@ -113,7 +113,7 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
         </div>
 
         {/* Visualizador do Laudo / Parecer Técnico (8 colunas) */}
-        <div className="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
+        <div className="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-md p-6  flex flex-col justify-between overflow-y-auto">
           {selectedReport ? (
             <div className="space-y-6">
               {/* Cabecalho Oficial do Laudo */}
@@ -138,7 +138,7 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
                 <div className="text-right">
                   <span className="text-xs text-slate-400 block">Classificação de Risco:</span>
                   <span
-                    className={`inline-block mt-1 font-black text-sm uppercase px-3 py-1 rounded-lg border ${
+                    className={`inline-block mt-1 font-black text-sm  px-3 py-1 rounded border ${
                       selectedReport.level === "vermelho"
                         ? "bg-red-500/20 text-red-400 border-red-500/40"
                         : "bg-orange-500/20 text-orange-400 border-orange-500/40"
@@ -151,19 +151,19 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
 
               {/* Indicadores do Laudo */}
               <div className="grid grid-cols-3 gap-3">
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                <div className="bg-slate-950 p-3 rounded-md border border-slate-800">
                   <span className="text-[10px] text-slate-400 block">Score Máximo</span>
                   <span className="text-xl font-black text-slate-100">
                     {selectedReport.maxScore} / 100
                   </span>
                 </div>
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                <div className="bg-slate-950 p-3 rounded-md border border-slate-800">
                   <span className="text-[10px] text-slate-400 block">Taludes Críticos</span>
                   <span className="text-xl font-black text-red-400">
                     {selectedReport.criticalSlopes} setores
                   </span>
                 </div>
-                <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
+                <div className="bg-slate-950 p-3 rounded-md border border-slate-800">
                   <span className="text-[10px] text-slate-400 block">População em Risco</span>
                   <span className="text-xl font-black text-cyan-400">
                     {selectedReport.exposedPopulation != null ? `~${selectedReport.exposedPopulation.toLocaleString()} hab.` : "indisponível"}
@@ -173,10 +173,10 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
 
               {/* Texto Completo do Boletim */}
               <div className="space-y-2">
-                <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <h4 className="text-xs font-bold text-slate-300  ">
                   Parecer Descritivo e Diretrizes de Ação:
                 </h4>
-                <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 font-mono text-xs text-slate-200 leading-relaxed">
+                <div className="p-4 rounded-md bg-slate-950 border border-slate-800 font-mono text-xs text-slate-200 leading-relaxed">
                   {selectedReport.bulletinText}
                 </div>
               </div>

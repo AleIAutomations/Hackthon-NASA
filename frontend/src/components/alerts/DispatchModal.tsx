@@ -34,8 +34,8 @@ export function DispatchModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-fadeIn">
-      <div className="bg-slate-900 border border-slate-700/80 rounded-2xl w-full max-w-lg shadow-2xl overflow-hidden text-xs">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80  animate-fadeIn">
+      <div className="bg-slate-900 border border-slate-700/80 rounded-md w-full max-w-lg  overflow-hidden text-xs">
         {/* Header do Modal */}
         <div className="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
           <div className="flex items-center gap-2 text-red-400 font-bold text-sm">
@@ -52,10 +52,10 @@ export function DispatchModal({
 
         {/* Corpo */}
         <div className="p-5 space-y-4">
-          <div className="p-3 rounded-lg border border-red-500/30 bg-red-950/20 text-slate-200 space-y-1.5">
+          <div className="p-3 rounded border border-red-500/30 bg-red-950/20 text-slate-200 space-y-1.5">
             <div className="flex items-center justify-between font-bold text-xs text-red-300">
               <span>{aoiName}</span>
-              <span className="uppercase px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/40">
+              <span className=" px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/40">
                 Nível {bulletin.alert_level}
               </span>
             </div>
@@ -110,7 +110,7 @@ export function DispatchModal({
           </div>
 
           {/* Termo de Seguranca Obrigatorio */}
-          <div className="flex items-start gap-2 bg-slate-950 p-3 rounded-lg border border-slate-800">
+          <div className="flex items-start gap-2 bg-slate-950 p-3 rounded border border-slate-800">
             <input
               type="checkbox"
               id="confirmDispatch"
@@ -131,14 +131,14 @@ export function DispatchModal({
         <div className="p-4 border-t border-slate-800 flex items-center justify-end gap-2 bg-slate-950/60">
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-medium transition"
+            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded font-medium transition"
           >
             Cancelar
           </button>
           <button
             onClick={handleSend}
             disabled={!confirmed || dispatched}
-            className="px-4 py-2 bg-red-600 hover:bg-red-700 disabled:opacity-40 text-white rounded-lg font-bold transition flex items-center gap-1.5 shadow-lg shadow-red-950/60"
+            className="px-4 py-2 bg-red-600 hover:bg-red-700 disabled:opacity-40 text-white rounded font-bold transition flex items-center gap-1.5  "
           >
             {dispatched ? (
               <>

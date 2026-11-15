@@ -2,34 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Public Sans Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./fonts/public-sans-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Public Sans Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("./fonts/public-sans-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Tema escuro (padrao) e claro. Tudo na interface usa estas variaveis. */
+:root {
+  --n-50: 244 247 246;
+  --n-100: 230 236 234;
+  --n-200: 205 215 212;
+  --n-300: 168 182 178;
+  --n-400: 133 150 145;
+  --n-500: 99 116 111;
+  --n-600: 66 82 78;
+  --n-700: 46 60 57;
+  --n-800: 36 49 46;
+  --n-900: 24 34 32;
+  --n-950: 15 22 21;
+  --a-300: 164 202 230;
+  --a-400: 120 176 220;
+  --a-500: 74 144 200;
+  --a-600: 46 110 168;
+  --a-700: 36 88 140;
+  --a-800: 28 66 108;
+  --a-950: 12 28 48;
+  --ok-300: 110 231 183;
+  --ok-400: 52 211 153;
+  --ok-500: 16 185 129;
+  --ok-600: 5 150 105;
+  --ok-700: 4 120 87;
+  --ok-950: 2 44 34;
+  --wn-200: 253 230 138;
+  --wn-300: 252 211 77;
+  --wn-400: 251 191 36;
+  --wn-500: 245 158 11;
+  --wn-700: 180 83 9;
+  --wn-950: 69 26 3;
+  --or-400: 251 146 60;
+  --or-500: 249 115 22;
+  --or-700: 194 65 12;
+  --or-950: 67 20 7;
+  --rd-300: 252 165 165;
+  --rd-400: 248 113 113;
+  --rd-500: 239 68 68;
+  --rd-600: 220 38 38;
+  --rd-700: 185 28 28;
+  --rd-950: 69 10 10;
+  --map-popup-bg: 24 34 32;
+  color-scheme: dark;
+}
+:root.light {
+  --n-50: 12 21 19;
+  --n-100: 22 33 31;
+  --n-200: 38 51 47;
+  --n-300: 62 76 72;
+  --n-400: 85 100 95;
+  --n-500: 118 132 127;
+  --n-600: 160 172 168;
+  --n-700: 190 200 197;
+  --n-800: 205 213 211;
+  --n-900: 247 249 248;
+  --n-950: 232 236 236;
+  --a-300: 22 70 112;
+  --a-400: 28 88 138;
+  --a-500: 38 105 160;
+  --a-600: 31 90 138;
+  --a-700: 24 70 112;
+  --a-800: 20 56 92;
+  --a-950: 224 236 246;
+  --ok-300: 4 110 80;
+  --ok-400: 4 120 87;
+  --ok-500: 5 150 105;
+  --ok-600: 4 120 87;
+  --ok-700: 6 95 70;
+  --ok-950: 220 244 234;
+  --wn-200: 120 70 5;
+  --wn-300: 133 77 14;
+  --wn-400: 161 98 7;
+  --wn-500: 180 83 9;
+  --wn-700: 133 77 14;
+  --wn-950: 254 243 199;
+  --or-400: 194 65 12;
+  --or-500: 217 80 8;
+  --or-700: 154 52 18;
+  --or-950: 255 237 213;
+  --rd-300: 153 27 27;
+  --rd-400: 185 28 28;
+  --rd-500: 220 38 38;
+  --rd-600: 185 28 28;
+  --rd-700: 153 27 27;
+  --rd-950: 254 226 226;
+  --map-popup-bg: 247 249 248;
+  color-scheme: light;
+}
+
 html, body, #root {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #020617;
+  background-color: rgb(var(--n-950));
+  color: rgb(var(--n-100));
+  font-family: "Public Sans Variable", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--a-400));
+  outline-offset: 2px;
 }
 
 /* MapLibre Popup Styling */
 .maplibregl-popup-content {
-  background: rgba(15, 23, 42, 0.95) !important;
-  color: #f8fafc !important;
-  border: 1px solid rgba(51, 65, 85, 0.8) !important;
+  background: rgb(var(--map-popup-bg)) !important;
+  color: rgb(var(--n-100)) !important;
+  border: 1px solid rgb(var(--n-800)) !important;
   border-radius: 8px !important;
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
   padding: 10px 14px !important;
-  backdrop-filter: blur(8px);
+  
 }
 
 .maplibregl-popup-anchor-top .maplibregl-popup-tip {
-  border-bottom-color: rgba(15, 23, 42, 0.95) !important;
+  border-bottom-color: rgb(var(--map-popup-bg)) !important;
 }
 .maplibregl-popup-anchor-bottom .maplibregl-popup-tip {
-  border-top-color: rgba(15, 23, 42, 0.95) !important;
+  border-top-color: rgb(var(--map-popup-bg)) !important;
 }
 .maplibregl-popup-anchor-left .maplibregl-popup-tip {
-  border-right-color: rgba(15, 23, 42, 0.95) !important;
+  border-right-color: rgb(var(--map-popup-bg)) !important;
 }
 .maplibregl-popup-anchor-right .maplibregl-popup-tip {
-  border-left-color: rgba(15, 23, 42, 0.95) !important;
+  border-left-color: rgb(var(--map-popup-bg)) !important;
 }

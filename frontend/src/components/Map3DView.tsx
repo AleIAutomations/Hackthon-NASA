@@ -156,7 +156,7 @@ export function Map3DView({
       popup
         .setLngLat((f.geometry as any).coordinates)
         .setHTML(
-          `<div style="color: #0f172a; font-family: sans-serif; font-size: 11px; padding: 2px;">` +
+          `<div style="color: rgb(var(--n-100)); font-family: inherit; font-size: 11px; padding: 2px;">` +
             `<div style="font-weight: 800; font-size: 12px; margin-bottom: 4px; color: ${
               LEVEL_COLOR[p.alert_level] || "#0B3D91"
             };">` +
@@ -165,7 +165,7 @@ export function Map3DView({
             `<div><b>Chuva Acumulada 72h:</b> ${p.rain_72h_mm ?? "-"} mm</div>` +
             `<div><b>Coerência L:</b> ${p.coherence_l_band ?? "-"}</div>` +
             `<div><b>Deslocamento LOS:</b> ${p.los_displacement_mm ?? "-"} mm</div>` +
-            `<div style="margin-top: 4px; font-style: italic; color: #64748b; font-size: 10px;">` +
+            `<div style="margin-top: 4px; font-style: italic; color: rgb(var(--n-400)); font-size: 10px;">` +
             `Score: ${p.data_origin}${p.sar_origin === "measured" ? " · Radar NISAR medido (" + p.sar_date + ")" : ""}</div>` +
             `</div>`
         )
@@ -262,7 +262,7 @@ export function Map3DView({
 
       {/* Controles de Camera Rapida e Estilos na parte inferior */}
       <div className="absolute bottom-5 left-4 z-20 flex flex-wrap items-center gap-2">
-        <div className="bg-slate-900/90 border border-slate-700/80 rounded-lg p-1.5 flex items-center gap-1 shadow-2xl backdrop-blur">
+        <div className="bg-slate-900/90 border border-slate-700/80 rounded p-1.5 flex items-center gap-1  ">
           <button
             onClick={flyToGlobe}
             className="flex items-center gap-1.5 px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-100 rounded text-xs font-medium transition"
@@ -281,7 +281,7 @@ export function Map3DView({
           </button>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-700/80 rounded-lg p-1.5 flex items-center gap-1 shadow-2xl backdrop-blur text-xs">
+        <div className="bg-slate-900/90 border border-slate-700/80 rounded p-1.5 flex items-center gap-1   text-xs">
           <Layers size={13} className="text-slate-400 ml-1" />
           <button
             onClick={() => changeStyle("satellite")}

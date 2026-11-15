@@ -69,5 +69,6 @@ def compare(aoi_id: str):
     return {
         "aoi_id": aoi_id,
         "regions": rows,
-        "source": "NISAR (banda L) vs Sentinel-1 (banda C), via ASF",
+        "source": "valores ilustrativos de referencia por cobertura (nao calculados dos pares deste projeto)",
+        "data_origin": "illustrative",
     }

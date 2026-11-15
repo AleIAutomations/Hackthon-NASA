@@ -172,7 +172,7 @@ export function Globe3DView({
         pointRadius="size"
         pointsMerge={false}
         pointLabel={(d: any) => `
-          <div style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; padding: 8px 12px; border-radius: 6px; font-family: sans-serif; font-size: 11px; border: 1px solid #334155; box-shadow: 0 8px 20px rgba(0,0,0,0.7);">
+          <div style="background: rgb(var(--map-popup-bg)); color: rgb(var(--n-100)); padding: 8px 12px; border-radius: 6px; font-family: sans-serif; font-size: 11px; border: 1px solid #334155; box-shadow: 0 8px 20px rgba(0,0,0,0.7);">
             <div style="font-weight: bold; color: ${d.color}; font-size: 12px; margin-bottom: 2px;">
               SCORE SAR: ${d.score}/100 (${d.level.toUpperCase()})
             </div>
@@ -207,7 +207,7 @@ export function Globe3DView({
 
       {/* Controles Flutuantes do Globo no Canto Inferior Esquerdo */}
       <div className="absolute bottom-5 left-5 z-20 flex flex-wrap items-center gap-2">
-        <div className="bg-slate-900/90 border border-slate-700/80 rounded-lg p-1.5 flex items-center gap-1 shadow-2xl backdrop-blur">
+        <div className="bg-slate-900/90 border border-slate-700/80 rounded p-1.5 flex items-center gap-1  ">
           <button
             onClick={() => setAutoRotate(!autoRotate)}
             className={`flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-medium transition ${
@@ -254,7 +254,7 @@ export function Globe3DView({
           </button>
         </div>
 
-        <div className="bg-slate-900/90 border border-slate-700/80 rounded-lg p-1.5 flex items-center gap-1 shadow-2xl backdrop-blur text-xs">
+        <div className="bg-slate-900/90 border border-slate-700/80 rounded p-1.5 flex items-center gap-1   text-xs">
           <button
             onClick={() => setTexture("day")}
             className={`px-2.5 py-1 rounded transition ${
@@ -280,7 +280,7 @@ export function Globe3DView({
         {onSwitchToDetailed && (
           <button
             onClick={onSwitchToDetailed}
-            className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded-lg text-xs font-bold shadow-2xl flex items-center gap-1.5 transition"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-2 rounded text-xs font-bold  flex items-center gap-1.5 transition"
             title="Alternar para o mapa detalhado de alta resolução com relevo"
           >
             <Maximize2 size={13} />
@@ -290,7 +290,7 @@ export function Globe3DView({
       </div>
 
       {/* Dica de Interatividade no Canto Superior Direito */}
-      <div className="absolute top-4 right-4 z-20 pointer-events-none bg-slate-900/80 border border-slate-800 text-slate-300 text-[11px] px-3 py-1.5 rounded-lg shadow backdrop-blur flex items-center gap-2">
+      <div className="absolute top-4 right-4 z-20 pointer-events-none bg-slate-900/80 border border-slate-800 text-slate-300 text-[11px] px-3 py-1.5 rounded shadow  flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
         <span>Arraste com o mouse para girar o globo · Scroll para zoom</span>
       </div>

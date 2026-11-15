@@ -11,7 +11,7 @@ export function StatusIndicator({
   if (!isOnline) {
     return (
       <div
-        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 animate-pulse"
+        className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/40 "
         title="Operando no modo Offline com Cache Local das áreas de estudo"
       >
         <WifiOff size={13} />

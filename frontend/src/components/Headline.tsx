@@ -29,14 +29,14 @@ export function Headline({ aoiId }: { aoiId: string }) {
       )}
       <p className="text-sm font-semibold text-slate-100 leading-snug">{s.verdict.pt}</p>
       <div className="grid grid-cols-2 gap-2">
-        <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
+        <div className="rounded border border-slate-800 bg-slate-950/60 p-2">
           <div className="text-xl font-bold text-orange-400">
             {s.high_risk_km2.value ?? "—"}
             <span className="text-xs font-normal text-slate-400"> km²</span>
           </div>
           <div className="text-[10px] text-slate-500">em risco alto (derivado)</div>
         </div>
-        <div className="rounded-lg border border-slate-800 bg-slate-950/60 p-2">
+        <div className="rounded border border-slate-800 bg-slate-950/60 p-2">
           <div className="text-xl font-bold text-slate-200">
             {pop === null ? "indisponível" : pop.toLocaleString("pt-BR")}
           </div>
@@ -61,7 +61,7 @@ export function Headline({ aoiId }: { aoiId: string }) {
       )}
       <p className="text-[10px] text-slate-500">{s.disclaimer}</p>
       {e && (
-        <div className="rounded-lg border border-slate-800 p-2 text-[11px] text-slate-400">
+        <div className="rounded border border-slate-800 p-2 text-[11px] text-slate-400">
           <span className="font-semibold text-slate-300">Contexto climático (ENOS):</span>{" "}
           {e.state}, anomalia Niño-3.4 {e.indices_c.nino34 > 0 ? "+" : ""}
           {e.indices_c.nino34} °C ({e.provenance.source}, {e.provenance.published}). Contexto,

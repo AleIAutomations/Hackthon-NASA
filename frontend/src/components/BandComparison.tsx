@@ -159,7 +159,7 @@ export function BandComparison({
 
         {/* Divisor interativo */}
         <div
-          className="absolute top-0 bottom-0 pointer-events-none z-20 border-r-2 border-white/90 shadow-2xl"
+          className="absolute top-0 bottom-0 pointer-events-none z-20 border-r-2 border-white/90 "
           style={{ left: `${pos}%` }}
         />
 
@@ -187,18 +187,18 @@ export function BandComparison({
         <div className="flex-1">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={rows} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-              <XAxis dataKey="label" tick={{ fill: "#94a3b8", fontSize: 11 }} />
-              <YAxis domain={[0, 1]} tick={{ fill: "#94a3b8", fontSize: 11 }} />
+              <XAxis dataKey="label" tick={{ fill: "rgb(var(--n-400))", fontSize: 11 }} />
+              <YAxis domain={[0, 1]} tick={{ fill: "rgb(var(--n-400))", fontSize: 11 }} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: "#0f172a",
-                  borderColor: "#334155",
+                  backgroundColor: "rgb(var(--n-900))",
+                  borderColor: "rgb(var(--n-800))",
                   borderRadius: "6px",
                   fontSize: "12px",
                 }}
               />
               <Legend wrapperStyle={{ fontSize: "11px" }} />
-              <Bar dataKey="coherence_c" name="Coerência Banda C (Sentinel-1)" fill="#94a3b8" />
+              <Bar dataKey="coherence_c" name="Coerência Banda C (Sentinel-1)" fill="rgb(var(--n-400))" />
               <Bar dataKey="coherence_l" name="Coerência Banda L (NISAR)" fill="#0B3D91" />
             </BarChart>
           </ResponsiveContainer>
