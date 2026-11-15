@@ -45,6 +45,11 @@ export function Headline({ aoiId }: { aoiId: string }) {
           </div>
         </div>
       </div>
+      <details className="group text-[11px] text-slate-400">
+        <summary className="cursor-pointer select-none text-slate-300 font-medium">
+          Proveniência, chuva observada e contexto climático
+        </summary>
+        <div className="mt-2 space-y-3">
       {s.observed_rain_72h && (
         <p className="text-[11px] text-slate-400">
           Chuva observada (NASA POWER, {s.observed_rain_72h.from} a {s.observed_rain_72h.to}):{" "}
@@ -68,6 +73,8 @@ export function Headline({ aoiId }: { aoiId: string }) {
           não entra no score. {e.caveat}
         </div>
       )}
+        </div>
+      </details>
     </section>
   );
 }

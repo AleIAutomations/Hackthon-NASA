@@ -32,12 +32,14 @@ export function OverviewPage({
   return (
     <div className="h-full w-full flex flex-col p-4 gap-4 overflow-y-auto">
       {/* 0. Veredito e dois numeros (dado estimado/real marcado) */}
-      <div className="rounded-md border border-slate-800 overflow-hidden">
+      <div className="shrink-0 rounded-md border border-slate-800 overflow-hidden">
         <Headline aoiId={currentAoi.id} />
       </div>
 
       {/* 1. Indicadores Principais */}
-      <MetricCards cells={cells} rain72h={rain72h} loading={loading} />
+      <div className="shrink-0">
+        <MetricCards cells={cells} rain72h={rain72h} loading={loading} />
+      </div>
 
       {/* 2. Grid Central: Mapa / Globo como Protagonista + Painel Lateral de Risco */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 min-h-[580px]">
