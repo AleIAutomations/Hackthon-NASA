@@ -51,14 +51,14 @@ export const apiService = {
             name: "Serra do Mar - São Sebastião (SP)",
             center: { lat: -23.76, lon: -45.41 },
             risk_type: "landslide",
-            scene_counts: { nisar: 4, sentinel1: 12, alos_palsar: 6 },
+            scene_counts: { nisar: 10, sentinel1: 10, alos_palsar: 10 },
           },
           {
             id: "brumadinho",
             name: "Brumadinho - Quadrilátero Ferrífero (MG)",
             center: { lat: -20.12, lon: -44.12 },
             risk_type: "dam_subsidence",
-            scene_counts: { nisar: 3, sentinel1: 14, alos_palsar: 8 },
+            scene_counts: { nisar: 10, sentinel1: 10, alos_palsar: 10 },
           },
         ],
         source: "Cache Local Embutido (Offline)",
@@ -102,7 +102,7 @@ export const apiService = {
       }));
       return {
         daily,
-        source: "NASA POWER PRECTOTCORR (Cache Local)",
+        source: "NASA POWER PRECTOTCORR (chuva, medido). Deformação LOS e coerência: ilustrativas/estimadas, não NISAR processado.",
         offline: true,
       };
     }
@@ -196,26 +196,8 @@ export const apiService = {
       });
       return data;
     } catch {
-      const isSim = req.simulate_rain_mm !== undefined && req.simulate_rain_mm > 100;
-      return {
-        alert_level: isSim ? "vermelho" : "laranja",
-        max_score: isSim ? 88.5 : 62.4,
-        mean_score: isSim ? 67.2 : 41.8,
-        cells_inside: 1600,
-        cells_critical: isSim ? 34 : 8,
-        population_exposed: isSim ? 28500 : 9200,
-        buildings_nearby: isSim ? 7800 : 2500,
-        simulated: req.simulate_rain_mm !== undefined,
-        bulletin_text: `TERRAALERTA - Nível ${isSim ? "VERMELHO" : "LARANJA"}: ${
-          isSim ? 34 : 8
-        } taludes críticos no setor monitorado de ${req.aoi_id}. ${
-          req.simulate_rain_mm
-            ? `Simulação de chuva extrema de ${req.simulate_rain_mm} mm em 72h. `
-            : ""
-        }Recomendada vistoria de campo imediata e acionamento preventivo dos protocolos da Defesa Civil.`,
-        source: "TerraAlerta Risk Engine (Modo Local/Fallback)",
-        generated_at: new Date().toISOString(),
-      };
+      const { buildOfflineBulletin } = await import("../offlineBulletin");
+      return buildOfflineBulletin(req.aoi_id, req.simulate_rain_mm);
     }
   },
 };

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { apiService } from "../services/api";
 import { AoiSummary, AlertBulletin } from "../types";
 import { CivilDefensePanel } from "../components/CivilDefensePanel";
 import { DispatchModal } from "../components/alerts/DispatchModal";
@@ -11,21 +12,19 @@ interface AlertsPageProps {
 
 export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [lastBulletin, setLastBulletin] = useState<AlertBulletin>({
-    alert_level: "laranja",
-    max_score: 64.5,
-    mean_score: 43.1,
-    cells_inside: 1600,
-    cells_critical: 12,
-    population_exposed: 18400,
-    buildings_nearby: 5200,
-    bulletin_text: `TERRAALERTA - Nível LARANJA: 12 taludes críticos (score max 64.5/100) no setor monitorado da ${currentAoi.name}. Recomendada vistoria imediata em campo e emissão de aviso preventivo aos moradores.`,
-    source: "TerraAlerta Risk Engine",
-    generated_at: new Date().toISOString(),
-  });
+  const [lastBulletin, setLastBulletin] = useState<AlertBulletin | null>(null);
+
+  useEffect(() => {
+    let vivo = true;
+    setLastBulletin(null);
+    apiService.evaluateAlert({ aoi_id: currentAoi.id }).then((b) => vivo && setLastBulletin(b));
+    return () => {
+      vivo = false;
+    };
+  }, [currentAoi.id]);
 
   function handleConfirmDispatch(channel: "webhook" | "sms_demo") {
-    if (onSaveReport) {
+    if (onSaveReport && lastBulletin) {
       onSaveReport({
         id: `REP-${Date.now()}`,
         aoiId: currentAoi.id,
@@ -34,10 +33,14 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
         level: lastBulletin.alert_level,
         maxScore: lastBulletin.max_score,
         criticalSlopes: lastBulletin.cells_critical,
-        exposedPopulation: lastBulletin.population_exposed || 0,
+        exposedPopulation: lastBulletin.population_exposed ?? null,
         bulletinText: lastBulletin.bulletin_text,
       });
     }
+  }
+
+  if (!lastBulletin) {
+    return <div className="p-6 text-sm text-slate-400">Calculando boletim…</div>;
   }
 
   return (
@@ -94,7 +97,7 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
               <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
                 <span className="text-[10px] text-slate-400 block">População no Setor:</span>
                 <span className="text-xl font-black text-cyan-400">
-                  ~{lastBulletin.population_exposed?.toLocaleString()}
+                  {lastBulletin.population_exposed != null ? `~${lastBulletin.population_exposed.toLocaleString()}` : "indisponível"}
                 </span>
                 <span className="text-[10px] text-slate-500 block">habitantes</span>
               </div>
@@ -102,7 +105,7 @@ export function AlertsPage({ currentAoi, onSaveReport }: AlertsPageProps) {
               <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
                 <span className="text-[10px] text-slate-400 block">Edificações Próximas:</span>
                 <span className="text-xl font-black text-slate-200">
-                  ~{lastBulletin.buildings_nearby?.toLocaleString()}
+                  {lastBulletin.buildings_nearby != null ? `~${lastBulletin.buildings_nearby.toLocaleString()}` : "indisponível"}
                 </span>
                 <span className="text-[10px] text-slate-500 block">estruturas civis</span>
               </div>

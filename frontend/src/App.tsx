@@ -21,14 +21,14 @@ export default function App() {
       name: "Serra do Mar - São Sebastião (SP)",
       center: { lat: -23.76, lon: -45.41 },
       risk_type: "landslide",
-      scene_counts: { nisar: 4, sentinel1: 12, alos_palsar: 6 },
+      scene_counts: { nisar: 10, sentinel1: 10, alos_palsar: 10 },
     },
     {
       id: "brumadinho",
       name: "Brumadinho - Quadrilátero Ferrífero (MG)",
       center: { lat: -20.12, lon: -44.12 },
       risk_type: "dam_subsidence",
-      scene_counts: { nisar: 3, sentinel1: 14, alos_palsar: 8 },
+      scene_counts: { nisar: 10, sentinel1: 10, alos_palsar: 10 },
     },
   ]);
   const [selectedAoiId, setSelectedAoiId] = useState<string>("serra-do-mar");
@@ -44,20 +44,7 @@ export default function App() {
       const saved = localStorage.getItem("terraalerta_reports");
       if (saved) return JSON.parse(saved);
     } catch {}
-    return [
-      {
-        id: "REP-20261114-01",
-        aoiId: "serra-do-mar",
-        aoiName: "Serra do Mar - São Sebastião (SP)",
-        timestamp: "14/11/2026 11:30",
-        level: "laranja",
-        maxScore: 68.4,
-        criticalSlopes: 14,
-        exposedPopulation: 18500,
-        bulletinText:
-          "TERRAALERTA - Nível LARANJA: 14 taludes críticos (score max 68.4/100) no setor monitorado da Serra do Mar. Recomendada vistoria imediata em campo e emissão de aviso preventivo aos moradores.",
-      },
-    ];
+    return [];
   });
 
   // Salva no storage quando adicionar relatorio

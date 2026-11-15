@@ -166,7 +166,7 @@ export function ReportsPage({ reports, onClearReports }: ReportsPageProps) {
                 <div className="bg-slate-950 p-3 rounded-xl border border-slate-800">
                   <span className="text-[10px] text-slate-400 block">População em Risco</span>
                   <span className="text-xl font-black text-cyan-400">
-                    ~{selectedReport.exposedPopulation.toLocaleString()} hab.
+                    {selectedReport.exposedPopulation != null ? `~${selectedReport.exposedPopulation.toLocaleString()} hab.` : "indisponível"}
                   </span>
                 </div>
               </div>

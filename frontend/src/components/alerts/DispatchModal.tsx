@@ -68,7 +68,7 @@ export function DispatchModal({
             <div className="bg-slate-950 p-2.5 rounded border border-slate-800">
               <span className="text-[10px] text-slate-400 block">População Exposta:</span>
               <span className="font-bold text-sm text-slate-100">
-                ~{bulletin.population_exposed?.toLocaleString() || "Calculando..."} hab.
+                {bulletin.population_exposed != null ? `~${bulletin.population_exposed.toLocaleString()} hab.` : "indisponível"}
               </span>
             </div>
             <div className="bg-slate-950 p-2.5 rounded border border-slate-800">

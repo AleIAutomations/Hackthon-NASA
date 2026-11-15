@@ -11,7 +11,7 @@ L-band (~24 cm) penetrates vegetation better than Sentinel-1 C-band (~5.6 cm), w
 Every value is tagged as **measured**, **derived** or **estimated**. The public demo currently runs on an **estimated demonstration grid**, because the NISAR products over our areas are not yet processed in the cache. The interface says so on screen. Real NISAR scenes over both areas exist (ASF DAAC metadata); processing them is the next step.
 
 - Headline of the dashboard: one-sentence verdict and two numbers (km² at high risk, exposed population). Exposed population is shown as "unavailable" until WorldPop is loaded; we do not invent it.
-- Risk score (0–100) from an infinite-slope factor of safety plus a Random Forest. Four alert levels: green, yellow, orange, red.
+- Risk score (0–100) from an infinite-slope factor of safety plus a line-of-sight displacement term. A Random Forest hook exists but is untrained: we have no labelled landslide inventory yet. Four alert levels: green, yellow, orange, red.
 - Climate context card (ENSO, NOAA CPC bulletin of 2026-11-12). It is context only and **not part of the risk score**. A seasonal outlook is not a landslide forecast.
 - Brumadinho is a dam area. The slope model is not a dam-safety assessment, and the interface says that.
 

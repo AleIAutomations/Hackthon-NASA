@@ -58,8 +58,8 @@ export interface AlertBulletin {
   mean_score: number;
   cells_inside: number;
   cells_critical: number;
-  population_exposed?: number;
-  buildings_nearby?: number;
+  population_exposed?: number | null;
+  buildings_nearby?: number | null;
   simulated?: boolean;
   bulletin_text: string;
   source: string;
@@ -87,7 +87,7 @@ export interface ReportItem {
   level: RiskLevel;
   maxScore: number;
   criticalSlopes: number;
-  exposedPopulation: number;
+  exposedPopulation: number | null;
   simulatedRain?: number;
   bulletinText: string;
 }

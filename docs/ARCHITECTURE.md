@@ -19,7 +19,7 @@
    - `auth_earthdata.py`: NASA Earthdata login and fallback
    - `fetch_sar_datasets.py`: ASF SearchAPI granule metadata & NASA POWER daily rain
    - `sar_processor.py`: Decibel conversion, HH/HV depolarization, slope derivation, LOS displacement
-   - `ml_risk_model.py`: Hybrid physical infinite-slope safety factor (FS) + Random Forest risk score (0-100)
+   - `ml_risk_model.py`: Physical infinite-slope safety factor (FS) + LOS-displacement term, score 0-100 (Random Forest hook present, untrained: no labelled inventory yet)
 
 3. **Local Cache (`backend/data_cache/`)**:
    - Pre-generated GeoJSON risk grids and telemetry for offline resilience during evaluation.
@@ -57,7 +57,7 @@
    - `auth_earthdata.py`: Autenticação Earthdata com fallback silencioso para modo metadados.
    - `fetch_sar_datasets.py`: Consulta à SearchAPI do ASF e ingestão de chuva diária da NASA POWER.
    - `sar_processor.py`: Conversão de potência para dB, razão de despolarização HV/HH, declividade e deslocamento em linha de visada (LOS).
-   - `ml_risk_model.py`: Modelo híbrido combinando a equação física do talude infinito (fator de segurança FS) com Random Forest calibrado.
+   - `ml_risk_model.py`: Fator de segurança do talude infinito (FS) + termo de deslocamento LOS (score 0-100). Há gancho para Random Forest, ainda não treinado por falta de inventário rotulado.
 
 3. **Cache Local (`backend/data_cache/`)**:
    - Grades GeoJSON e telemetrias pré-processadas que garantem execução e apresentação 100% offline.

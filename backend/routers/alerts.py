@@ -112,9 +112,8 @@ def evaluate(req: AlertRequest):
     nivel = _nivel(maximo)
     criticos = sum(1 for s in scores if s >= 75)
 
-    # Estimativa populacional proporcional
-    pop_estimada = int(len(dentro) * 18.5)
-    edificios_estimados = int(len(dentro) * 5.2)
+    # Sem WorldPop/OSM no cache nao ha como estimar exposicao: nao inventamos numero.
+    demo = all(p.get("data_origin") != "measured" for p in dentro)
 
     if req.simulate_rain_mm is not None:
         gatilho = f"Simulacao: chuva extrema de {req.simulate_rain_mm:.0f} mm em 72h. "
@@ -125,7 +124,8 @@ def evaluate(req: AlertRequest):
         f"TERRAALERTA - Nivel {nivel.upper()}: {criticos} taludes "
         f"criticos (score max {maximo:.0f}/100) no setor monitorado. "
         f"{gatilho}"
-        "Recomendada vistoria imediata e aviso preventivo aos moradores."
+        + ("Cenario de demonstracao (dados estimados). " if demo else "")
+        + "Triagem para priorizar vistoria de campo; a decisao e da Defesa Civil."
     )
 
     gen_at = datetime.now(timezone.utc).isoformat()
@@ -142,8 +142,10 @@ def evaluate(req: AlertRequest):
         "mean_score": round(sum(scores) / len(scores), 1),
         "cells_inside": len(dentro),
         "cells_critical": criticos,
-        "population_exposed": pop_estimada,
-        "buildings_nearby": edificios_estimados,
+        "population_exposed": None,
+        "buildings_nearby": None,
+        "exposure_note": "indisponivel: WorldPop/OSM ainda nao carregados no cache",
+        "is_demo": demo,
         "simulated": req.simulate_rain_mm is not None,
         "bulletin_text": texto,
         "source": "TerraAlerta Risk Engine",

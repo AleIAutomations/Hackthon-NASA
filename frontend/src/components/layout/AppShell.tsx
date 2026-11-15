@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Sidebar, NavItemKey } from "./Sidebar";
 import { Topbar } from "./Topbar";
 import { AoiSummary } from "../../types";
+import { DEMO_BANNER, DEMO_DATA } from "../../config";
 
 interface AppShellProps {
   currentView: NavItemKey;
@@ -54,6 +55,12 @@ export function AppShell({
           isCacheFirst={isCacheFirst}
           lastUpdated={lastUpdated}
         />
+
+        {DEMO_DATA && (
+          <div role="status" className="px-4 py-1.5 text-[11px] bg-amber-500/10 border-b border-amber-500/30 text-amber-200">
+            {DEMO_BANNER}
+          </div>
+        )}
 
         <main className="flex-1 relative overflow-hidden bg-slate-950">
           {children}

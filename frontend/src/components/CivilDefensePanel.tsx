@@ -8,8 +8,8 @@ interface Bulletin {
   mean_score: number;
   cells_inside: number;
   cells_critical: number;
-  population_exposed?: number;
-  buildings_nearby?: number;
+  population_exposed?: number | null;
+  buildings_nearby?: number | null;
   bulletin_text: string;
 }
 
@@ -43,21 +43,10 @@ export function CivilDefensePanel({ aoiId }: { aoiId: string }) {
       setBulletin(resp);
       setChuva(simularChuva);
     } catch {
-      // Fallback em caso de backend offline
-      setBulletin({
-        alert_level: simularChuva ? "vermelho" : "laranja",
-        max_score: simularChuva ? 89.4 : 64.2,
-        mean_score: simularChuva ? 68.1 : 41.5,
-        cells_inside: 120,
-        cells_critical: simularChuva ? 42 : 11,
-        population_exposed: simularChuva ? 2200 : 850,
-        buildings_nearby: simularChuva ? 680 : 260,
-        bulletin_text: `TERRAALERTA - Nível ${simularChuva ? "VERMELHO" : "LARANJA"}: ${
-          simularChuva ? 42 : 11
-        } taludes críticos no setor monitorado da ${aoiId}. ${
-          simularChuva ? "Simulação: tempestade extrema de 200 mm/72h. " : ""
-        }Recomendada vistoria imediata e acionamento preventivo de evacuação.`,
-      });
+      // API offline: boletim calculado sobre o cache local
+      const { buildOfflineBulletin } = await import("../offlineBulletin");
+      setBulletin(await buildOfflineBulletin(aoiId, simularChuva ? 200 : undefined));
+      setChuva(simularChuva);
       setChuva(simularChuva);
     } finally {
       setLoading(false);
@@ -134,22 +123,22 @@ export function CivilDefensePanel({ aoiId }: { aoiId: string }) {
                   {bulletin.cells_critical} / {bulletin.cells_inside} células
                 </span>
               </div>
-              {bulletin.population_exposed !== undefined && (
-                <div>
-                  <span className="text-slate-400 block text-[10px]">População Exposta</span>
-                  <span className="font-bold text-slate-100">
-                    ~{bulletin.population_exposed.toLocaleString()} hab.
-                  </span>
-                </div>
-              )}
-              {bulletin.buildings_nearby !== undefined && (
-                <div>
-                  <span className="text-slate-400 block text-[10px]">Edificações</span>
-                  <span className="font-bold text-slate-100">
-                    ~{bulletin.buildings_nearby} estruturas
-                  </span>
-                </div>
-              )}
+              <div>
+                <span className="text-slate-400 block text-[10px]">População Exposta</span>
+                <span className="font-bold text-slate-100">
+                  {bulletin.population_exposed != null
+                    ? `~${bulletin.population_exposed.toLocaleString()} hab.`
+                    : "indisponível"}
+                </span>
+              </div>
+              <div>
+                <span className="text-slate-400 block text-[10px]">Edificações</span>
+                <span className="font-bold text-slate-100">
+                  {bulletin.buildings_nearby != null
+                    ? `~${bulletin.buildings_nearby} estruturas`
+                    : "indisponível"}
+                </span>
+              </div>
             </div>
 
             <div className="pt-2 border-t border-current/20">

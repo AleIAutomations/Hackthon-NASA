@@ -93,6 +93,8 @@ def timeseries(aoi_id: str):
     return {
         "aoi_id": aoi_id,
         "daily": timeseries_data,
-        "source": aoi.get("sources", {}).get("rain", "NASA POWER"),
+        "source": aoi.get("sources", {}).get("rain", "NASA POWER")
+        + " (chuva, medido). Deformacao LOS e coerencia: ILUSTRATIVAS/estimadas, nao NISAR processado.",
+        "origins": {"rain_mm": "measured", "los_mm": "estimated", "coherence_l_band": "estimated"},
         "generated_at": load_cache().get("generated_at"),
     }

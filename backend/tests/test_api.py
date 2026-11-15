@@ -105,3 +105,10 @@ def test_summary_separates_observed_and_scenario_rain():
     r = client.get("/api/v1/summary/serra-do-mar").json()
     assert r["observed_rain_72h"]["origin"] == "measured"
     assert r["scenario_rain_72h_mm"]["origin"] == "estimated"
+
+
+def test_alert_does_not_invent_exposure():
+    poly = {"type": "Polygon", "coordinates": [[[-45.48, -23.82], [-45.36, -23.82], [-45.36, -23.72], [-45.48, -23.72], [-45.48, -23.82]]]}
+    r = client.post("/api/alerts/evaluate", json={"aoi_id": "serra-do-mar", "polygon": poly, "simulate_rain_mm": 200}).json()
+    assert r["population_exposed"] is None and r["buildings_nearby"] is None
+    assert r["is_demo"] is True and "demonstra" in r["bulletin_text"].lower()

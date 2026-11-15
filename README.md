@@ -75,7 +75,7 @@ python data_pipeline/ml_risk_model.py
 
 In accordance with NASA Space Apps Challenge 2026 rules:
 - Code architecture, technical documentation, and translations were developed with assistance from generative AI tools (Google DeepMind / Gemini and Anthropic Claude within the Antigravity IDE) under human engineering supervision.
-- Risk scoring is driven by physical slope stability (infinite slope factor of safety) and explainable statistical models (Random Forest), never a black box.
+- Risk scoring is driven by physical slope stability (infinite slope factor of safety) plus a deformation term from NISAR line-of-sight displacement. A Random Forest hook exists but is not trained yet, because we have no labelled landslide inventory; the score today is physics-based and explainable.
 - No AI-generated imagery is presented as measured satellite data, and no NASA emblems appear on synthetic assets.
 
 ---
